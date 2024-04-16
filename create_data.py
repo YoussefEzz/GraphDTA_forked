@@ -55,7 +55,8 @@ def seq_cat(prot):
 
 # from DeepDTA data
 all_prots = []
-datasets = ['kiba','davis']
+datasets = [ 'kiba','davis'
+    ]
 for dataset in datasets:
     print('convert data from DeepDTA for ', dataset)
     fpath = 'data/' + dataset + '/'
@@ -114,7 +115,13 @@ for smile in compound_iso_smiles:
     g = smile_to_graph(smile)
     smile_graph[smile] = g
 
-datasets = ['davis','kiba']
+datasets = [
+            'davis'
+            ,
+            'kiba'
+            ,
+            'urv'
+            ]
 # convert to PyTorch data format
 for dataset in datasets:
     processed_data_file_train = 'data/processed/' + dataset + '_train.pt'

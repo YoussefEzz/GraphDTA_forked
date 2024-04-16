@@ -9,6 +9,7 @@ from models.gat_gcn import GAT_GCN
 from models.gcn import GCNNet
 from models.ginconv import GINConvNet
 from utils import *
+import matplotlib.pyplot as plt
 
 # training function at each epoch
 def train(model, device, train_loader, optimizer, epoch):
@@ -42,10 +43,10 @@ def predicting(model, device, loader):
     return total_labels.numpy().flatten(),total_preds.numpy().flatten()
 
 
-datasets = [['davis','kiba'][int(sys.argv[1])]] 
+datasets = [['davis','kiba','urv'][int(sys.argv[1])]] 
 modeling = [GINConvNet, GATNet, GAT_GCN, GCNNet][int(sys.argv[2])]
 model_st = modeling.__name__
-
+print('model_st:', model_st)
 cuda_name = "cuda:0"
 if len(sys.argv)>3:
     cuda_name = ["cuda:0","cuda:1"][int(sys.argv[3])]
@@ -55,7 +56,7 @@ TRAIN_BATCH_SIZE = 512
 TEST_BATCH_SIZE = 512
 LR = 0.0005
 LOG_INTERVAL = 20
-NUM_EPOCHS = 1000
+NUM_EPOCHS = 20
 
 print('Learning rate: ', LR)
 print('Epochs: ', NUM_EPOCHS)
@@ -63,9 +64,10 @@ print('Epochs: ', NUM_EPOCHS)
 # Main program: iterate over different datasets
 for dataset in datasets:
     print('\nrunning on ', model_st + '_' + dataset )
+    print('\nrunning on dataset : ', dataset )
     processed_data_file_train = 'data/processed/' + dataset + '_train.pt'
     processed_data_file_test = 'data/processed/' + dataset + '_test.pt'
-    if ((not os.path.isfile(processed_data_file_train)) or (not os.path.isfile(processed_data_file_test))):
+    if (((not os.path.isfile(processed_data_file_train)) or (not os.path.isfile(processed_data_file_test))) and (dataset != 'urv')):
         print('please run create_data.py to prepare data in pytorch format!')
     else:
         train_data = TestbedDataset(root='data', dataset=dataset+'_train')
@@ -112,4 +114,16 @@ for dataset in datasets:
                 print('rmse improved at epoch ', best_epoch, '; best_test_mse,best_test_ci:', best_test_mse,best_test_ci,model_st,dataset)
             else:
                 print(ret[1],'No improvement since epoch ', best_epoch, '; best_test_mse,best_test_ci:', best_test_mse,best_test_ci,model_st,dataset)
+
+        
+    # Plot the training and validation errors
+
+    plt.scatter(G, P,color = 'red')
+    plt.xlabel('Actual')
+    plt.ylabel('Predicted')
+    plt.title('plot of Actual vs predicted')
+    plt.legend()
+    plt.show()
+
+    plt.waitforbuttonpress()
 
