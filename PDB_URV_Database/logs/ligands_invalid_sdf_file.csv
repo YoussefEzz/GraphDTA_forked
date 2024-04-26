@@ -1,0 +1,2 @@
+Filepath,Id,Ligand_state,SMILES,Error
+PDB_URV_DATABASE/Ligand_sdf/7VU6_ligand.sdf,7VU6,invalid,[H]C1=N/C(=C(\[H])N2C(=O)N([H])C(N([H])C3=C(\[H])C4=C([H])N(C([H])([H])[H])N=C4/C([H])=C\3Cl)N(C([H])([H])C3=C(F)C([H])=C(F)C(F)=C3[H])C2=O)N=N1C([H])([H])[H],"Explicit valence for atom # 5 N, 4, is greater than permitted"
