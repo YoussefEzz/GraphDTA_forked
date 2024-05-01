@@ -28,7 +28,7 @@ def train(model, device, train_loader, optimizer, epoch):
                                                                            len(train_loader.dataset),
                                                                            100. * batch_idx / len(train_loader),
                                                                            loss.item()))
-
+    return loss
 def predicting(model, device, loader):
     model.eval()
     total_preds = torch.Tensor()
@@ -56,7 +56,7 @@ TRAIN_BATCH_SIZE = 512
 TEST_BATCH_SIZE = 512
 LR = 0.0005
 LOG_INTERVAL = 20
-NUM_EPOCHS = 20
+NUM_EPOCHS = 50
 
 print('Learning rate: ', LR)
 print('Epochs: ', NUM_EPOCHS)
@@ -91,15 +91,19 @@ for dataset in datasets:
         optimizer = torch.optim.Adam(model.parameters(), lr=LR)
         best_mse = 1000
         best_test_mse = 1000
+        training_mse_list = []
+        validation_mse_list = []
         best_test_ci = 0
         best_epoch = -1
         model_file_name = 'model_' + model_st + '_' + dataset +  '.model'
         result_file_name = 'result_' + model_st + '_' + dataset +  '.csv'
         for epoch in range(NUM_EPOCHS):
-            train(model, device, train_loader, optimizer, epoch+1)
+            train_loss = train(model, device, train_loader, optimizer, epoch+1)
+            training_mse_list.append(train_loss)
             print('predicting for valid data')
             G,P = predicting(model, device, valid_loader)
             val = mse(G,P)
+            validation_mse_list.append(val)
             if val<best_mse:
                 best_mse = val
                 best_epoch = epoch+1
@@ -125,5 +129,21 @@ for dataset in datasets:
     plt.legend()
     plt.show()
 
+# Plot the evolution of the training and validation loss
+    # plt.plot(range(1, NUM_EPOCHS + 1), training_mse_list, label='training Loss')
+    # plt.xlabel('Epoch')
+    # plt.ylabel('prediction quadratic error')
+    # plt.title('evolution of the validation error for each of the epochs.')
+    # plt.legend()
+    # plt.show()
+
+    plt.plot(range(1, NUM_EPOCHS + 1), validation_mse_list, label='Validation Loss')
+    plt.xlabel('Epoch')
+    plt.ylabel('prediction quadratic error')
+    plt.title('evolution of the validation error for each of the epochs.')
+    plt.legend()
+    plt.show()
+
     plt.waitforbuttonpress()
 
+    
