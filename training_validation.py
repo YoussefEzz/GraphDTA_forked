@@ -126,22 +126,6 @@ def fit(dataset, model, cuda_name, TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512
             torch.save(model.state_dict(), model_file_name)
     return model, training_mse_list, validation_mse_list
             
-        # Plot the training and validation errors
-
-        # plt.scatter(G, P,color = 'red')
-        # plt.xlabel('Real')
-        # plt.ylabel('Predicted')
-        # plt.title('plot of Actual vs predicted')
-        # plt.legend()
-        # plt.show()
-
-    # Plot the evolution of the training and validation loss
-        # plt.plot(range(1, NUM_EPOCHS + 1), training_mse_list, label='training Loss')
-        # plt.xlabel('Epoch')
-        # plt.ylabel('prediction quadratic error')
-        # plt.title('evolution of the validation error for each of the epochs.')
-        # plt.legend()
-        # plt.show()
 
 # Scatter plot. Vertical axis: predicted value. Horizontal axis: real value
 def scatterplot(real_values, predicted_values, model_name, dataset):
@@ -174,16 +158,3 @@ def plot_errorevolution(training_mse_list, validation_mse_list, model_name, data
     plt.title(f'evolution of the mean square error for model {model_name} on database : {dataset}')
     plt.legend()
     plt.show()
-
-    
-
-    # plt.plot(range(1, NUM_EPOCHS + 1), validation_mse_list, label='Validation Loss')
-    # plt.xlabel('Epoch')
-    # plt.ylabel('prediction quadratic error')
-    # plt.title('evolution of the validation error for each of the epochs.')
-    # plt.legend()
-    # plt.show()
-
-    #plt.waitforbuttonpress()
-
-    

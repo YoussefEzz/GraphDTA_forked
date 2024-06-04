@@ -10,7 +10,7 @@ def Train(dataset = 'urv', model_type = GCNNet, cuda_name = "cuda:0", TRAIN_BATC
    
    # 
    print("creating pytorch data.")
-   create_pytorch_data()
+   create_pytorch_data(dataset)
    print("pytorch data created.")
    trained_model, training_mse_list, validation_mse_list = fit(dataset, model_type, cuda_name, TRAIN_BATCH_SIZE, TEST_BATCH_SIZE, LR ,NUM_EPOCHS)
    print(trained_model)

@@ -109,12 +109,13 @@ max_seq_len = 1000
 # convert train and test .csv format compound_iso_smiles,target_sequence,affinity to train and test to .pt Pytorch data format which includes the graph representation of the ligand 
 # return train and test data obtained from Pytorch Data format
 # for datasets davis, kiba and urv
-def create_pytorch_data():
+def create_pytorch_data(dataset):
     compound_iso_smiles = []
     for dt_name in [
                     #'kiba',
                     #'davis',
-                    'urv']:
+                    #'urv'
+                    dataset]:
         opts = ['train','test']
         for opt in opts:
             df = pd.read_csv('data/' + dt_name + '_' + opt + '.csv')
@@ -128,7 +129,8 @@ def create_pytorch_data():
     datasets = [
                 #'davis',
                 #'kiba',
-                'urv'
+                #'urv'
+                dataset
                 ]
     
     # convert to PyTorch data format

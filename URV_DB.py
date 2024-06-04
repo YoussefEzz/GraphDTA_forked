@@ -3,7 +3,6 @@ from Bio.PDB import PDBParser
 from Bio.PDB import PPBuilder
 import pandas as pd
 import csv
-import pandas as pd
 from rdkit import Chem
 import os
 import subprocess
@@ -204,6 +203,3 @@ def DB_Generation(URV_datapath, URV_output_folderpath):
     Protein_Generate(URV_affinity_filepath, URV_protein_folderpath, URV_logs_folderpath)
 
     train_test_Generate(URV_affinity_filepath, URV_logs_folderpath, URV_output_folderpath)
-
-    # run create_data.py to prepare data in pytorch format train.pt and test.pt
-    # create_pytorch_data()
