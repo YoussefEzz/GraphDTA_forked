@@ -145,16 +145,64 @@ def scatterplot(real_values, predicted_values, model_name, dataset):
     # # Adjust layout to make room for the legend
     # plt.tight_layout(rect=[0, 0, 0.85, 1])
     plt.show()
-    
+
+# subplots of Scatter plot. Vertical axis: predicted value. Horizontal axis: real value
+def subplots_scatterplot(real_values, predicted_values, mse_list, model_name, dataset, n_folds):
+
+    # Create a figure
+    fig, axs = plt.subplots(n_folds, 1, figsize=(100, 10))  # n_folds rows, 1 columns
+    for i in range(0, n_folds):
+        # Points for the diagonal line
+        x_line = [0, 8]
+        y_line = [0, 8]
+        axs[i].scatter(real_values[i], predicted_values[i], color = 'red')
+        # Plot the line
+        axs[i].plot(x_line, y_line, color='blue', linestyle='--')
+
+        axs[i].set_xlabel('real affinity')
+        axs[i].set_ylabel('predicted affinity')
+        axs[i].set_title(f'real vs predicted affinity for model {model_name} on dataset {dataset} fold {i + 1} with MSE {mse_list[i]:.2f}')
+        # Set the aspect ratio of the subplot to 'equal' to make it a square
+        axs[i].set_aspect('equal')
+
+    # Adjust layout to prevent overlap
+    plt.tight_layout()
+
+    # Display the plot
+    plt.show()
+
 # Plot the evolution of the training and validation loss with number of epochs
 def plot_errorevolution(training_mse_list, validation_mse_list, model_name, dataset):
+
     # Plot the evolution of the training and validation loss
     epochs_training_list = list(range(1, len(training_mse_list) + 1))
     epochs_validation_list = list(range(1, len(validation_mse_list) + 1))
     plt.plot(epochs_training_list, training_mse_list,  label='Training Loss')
     plt.plot(epochs_validation_list, validation_mse_list,  label='Validation Loss')
-    plt.xlabel('Epoch')
-    plt.ylabel('mean square error')
+    
     plt.title(f'evolution of the mean square error for model {model_name} on database : {dataset}')
     plt.legend()
+    plt.show()
+
+# subplot the evolution of the training and validation loss with number of epochs f for k folds
+def subplots_errorevolution(list_training_mse_list, list_validation_mse_list, dataset, n_folds):
+
+    # Create a figure
+    fig, axs = plt.subplots(nrows=n_folds, ncols=1, figsize=(8, 6))  # n_folds rows, 1 columns
+    epochs_list = list(range(1, len(list_training_mse_list[0]) + 1))
+    print(epochs_list)
+    print(list_training_mse_list[0])
+    for i in range(0, n_folds):
+        # Plot data on the first subplot
+        axs[i].plot(epochs_list, list_training_mse_list[i], label='Training Loss')
+        axs[i].plot(epochs_list, list_validation_mse_list[i], label='Validation Loss')
+        axs[i].set_xlabel('Epoch')
+        axs[i].set_ylabel('mean square error')
+        axs[i].set_title(f'MSE for {dataset} fold {i + 1}')
+        axs[i].legend()
+
+    # Adjust layout to prevent overlap
+    plt.tight_layout()
+
+    # Display the plot
     plt.show()

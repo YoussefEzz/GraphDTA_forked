@@ -1,0 +1,72 @@
+% Title page based on https://www.latextemplates.com/template/academic-title-page
+\begin{titlepage}
+
+  	\newcommand{\HRule}{\rule{\linewidth}{0.3mm}} % Defines a new command for horizontal lines, change thickness here
+	\center % Centre everything on the page
+	%------------------------------------------------
+	%	Headings
+	%------------------------------------------------
+	
+	%------------------------------------------------
+	%	Author(s)
+	%------------------------------------------------
+
+	% If you don't want a supervisor, uncomment the two lines below and comment the code above
+ 	%	{\large\textit{Author}}\\
+	{\large\sc\@author}\\[1.5cm] % Your name
+
+	\textsc{\LARGE MASTER’S DEGREE IN SECURITY ENGINEERING AND ARTIFICAL INTELLIGENCE (MESIIA)}\\[1.5cm]
+	
+	\textsc{\Large \deliverableName}\\[0.5cm]
+	
+	\textsc{\large Directed by Prof. Francesc Serratosa}\\[0.5cm]
+	
+	%------------------------------------------------
+	%	Title
+	%------------------------------------------------
+	
+	\HRule\\[0.4cm]
+	
+	{\huge\bfseries \@title}\\[0.4cm]
+	
+	\HRule\\[1.5cm]
+	
+	
+
+ %   \footnotesize{Comments: \comments}
+%   \vfill\vfill
+%    \homepage
+%    \vfill
+    
+    %------------------------------------------------
+    % Change log for the plan (can be deleted before delivery)
+    % When you update the plan please record what you changed and what the reason for the change. This will be useful for your supervisor.
+    %------------------------------------------------
+    % \input{./changelog.tex}
+	
+	%------------------------------------------------
+	%	Logo
+	%------------------------------------------------
+	\vfill
+	\includegraphics[width=0.3\textwidth]{./urvlogo.png}\\[2.0cm]
+	
+	 
+		
+	%------------------------------------------------
+	%	City
+	%------------------------------------------------
+	
+	
+	{\large Tarragona} % City
+
+	
+		
+	%------------------------------------------------
+	%	Date
+	%------------------------------------------------
+	
+	{\large\@date} % Date, change the \today to a set date if you want to be precise
+    \vfill
+	
+	
+\end{titlepage}
