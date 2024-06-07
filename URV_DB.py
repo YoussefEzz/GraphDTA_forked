@@ -80,7 +80,7 @@ def ligand_Generate(URV_ligandsdf_folderpath, URV_logs_folderpath):
 
         try:
             
-            # Read the .mol2 file
+            # Read the .sdf file
             supplier = Chem.SDMolSupplier(sdf_file_path, sanitize = False,removeHs=False, strictParsing=False)
 
             # Iterate over the molecules in the SDF file
@@ -109,7 +109,7 @@ def ligand_Generate(URV_ligandsdf_folderpath, URV_logs_folderpath):
                     sdf_ligand_df.loc[sdf_ligand_df['Filepath'] == sdf_file_path, 'SMILES'] = smiles
                     # print("SMILES notation of ",sdf_file_path," : ", smiles)
                 else:
-                    #print("Failed to load molecule from .mol2 file.")
+                    #print("Failed to load molecule from .sdf file.")
                     sdf_ligand_df.loc[sdf_ligand_df['Filepath'] == sdf_file_path, 'Ligand_state'] = 'failed to load'
                     raise ValueError("Failed to parse sdf file. The file may be empty or invalid.")
     

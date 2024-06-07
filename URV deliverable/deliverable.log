@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.5)  4 JUN 2024 17:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.5)  7 JUN 2024 11:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -199,51 +199,58 @@ Package tocbibind Info: The document has section divisions on input line 50.
 
 Package tocbibind Note: Using section or other style headings.
 
+) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count275
+\float@exts=\toks21
+\float@box=\box51
+\@float@everytoks=\toks22
+\@floatcapt=\box52
 ) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-10-23 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count275
-\l__pdf_internal_box=\box51
+\l__color_backend_stack_int=\count276
+\l__pdf_internal_box=\box53
 ) (deliverable.aux)
 \openout1 = `deliverable.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
  (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count276
+\scratchcounter=\count277
 \scratchdimen=\dimen155
-\scratchbox=\box52
-\nofMPsegments=\count277
-\nofMParguments=\count278
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count279
+\scratchbox=\box54
+\nofMPsegments=\count278
+\nofMParguments=\count279
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count280
 \MPscratchDim=\dimen156
-\MPnumerator=\count280
-\makeMPintoPDFobject=\count281
-\everyMPtoPDFconversion=\toks22
+\MPnumerator=\count281
+\makeMPintoPDFobject=\count282
+\everyMPtoPDFconversion=\toks24
 ) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 42.
+Package hyperref Info: Link coloring OFF on input line 43.
  (deliverable.out) (deliverable.out)
 \@outlinefile=\write3
 \openout3 = `deliverable.out'.
@@ -284,48 +291,246 @@ Package hyperref Info: Link coloring OFF on input line 42.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (title.tex
-<./urvlogo.png, id=15, 1270.7475pt x 285.9483pt>
+<./urvlogo.png, id=63, 1270.7475pt x 285.9483pt>
 File: ./urvlogo.png Graphic file (type png)
 <use ./urvlogo.png>
 Package pdftex.def Info: ./urvlogo.png  used on input line 51.
 (pdftex.def)             Requested size: 157.57297pt x 35.45547pt.
  [1
 
-{C:/Users/pc/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./urvlogo.png>]) (deliverable.toc)
+{C:/Users/pc/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./urvlogo.png>]) (deliverable.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 5.
+)
 \tf@toc=\write4
 \openout4 = `deliverable.toc'.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 65.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 65.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 65.
+<Kfold.png, id=92, 763.85374pt x 623.32875pt>
+File: Kfold.png Graphic file (type png)
+<use Kfold.png>
+Package pdftex.def Info: Kfold.png  used on input line 71.
+(pdftex.def)             Requested size: 305.53607pt x 249.32707pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.76 \end{document}
-                    [1] (deliverable.aux)
+l.75 
+      [1]
+<pdb file.png, id=104, 511.9125pt x 264.23718pt>
+File: pdb file.png Graphic file (type png)
+<use pdb file.png>
+Package pdftex.def Info: pdb file.png  used on input line 91.
+(pdftex.def)             Requested size: 393.9284pt x 203.33826pt.
+<pdb website.PNG, id=106, 959.08313pt x 397.485pt>
+File: pdb website.PNG Graphic file (type png)
+<use pdb website.PNG>
+Package pdftex.def Info: pdb website.PNG  used on input line 99.
+(pdftex.def)             Requested size: 393.9284pt x 163.26102pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.106     \begin{itemize}
+                         
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.106     \begin{itemize}
+                          <./Kfold.png> <./pdb file.png>]
+<pdb parser.png, id=118, 296.10625pt x 442.65375pt>
+File: pdb parser.png Graphic file (type png)
+<use pdb parser.png>
+Package pdftex.def Info: pdb parser.png  used on input line 112.
+(pdftex.def)             Requested size: 210.09193pt x 314.07697pt.
+ [3
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.124 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.124 
+       <./pdb website.PNG> <./pdb parser.png>]
+<sdf file.PNG, id=128, 487.8225pt x 403.5075pt>
+File: sdf file.PNG Graphic file (type png)
+<use sdf file.PNG>
+Package pdftex.def Info: sdf file.PNG  used on input line 127.
+(pdftex.def)             Requested size: 367.6649pt x 304.11987pt.
+<sdf website.PNG, id=130, 957.5775pt x 449.42906pt>
+File: sdf website.PNG Graphic file (type png)
+<use sdf website.PNG>
+Package pdftex.def Info: sdf website.PNG  used on input line 136.
+(pdftex.def)             Requested size: 472.71088pt x 221.86115pt.
+ [4
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.144     T
+           he \textbf{rdkit.Chem} package \cite{7} was used to read the mole...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.144     T
+           he \textbf{rdkit.Chem} package \cite{7} was used to read the mole... <./sdf file.PNG> <./sdf website.PNG>]
+<sdf parser.png, id=141, 372.39125pt x 583.17876pt>
+File: sdf parser.png Graphic file (type png)
+<use sdf parser.png>
+Package pdftex.def Info: sdf parser.png  used on input line 155.
+(pdftex.def)             Requested size: 262.61894pt x 411.28346pt.
+<boxplot1.png, id=142, 400.3758pt x 318.7107pt>
+File: boxplot1.png Graphic file (type png)
+<use boxplot1.png>
+Package pdftex.def Info: boxplot1.png  used on input line 170.
+(pdftex.def)             Requested size: 262.61894pt x 209.06583pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<boxplot2.png, id=143, 400.3758pt x 318.7107pt>
+File: boxplot2.png Graphic file (type png)
+<use boxplot2.png>
+Package pdftex.def Info: boxplot2.png  used on input line 177.
+(pdftex.def)             Requested size: 262.61894pt x 209.06583pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<histogram.png, id=144, 406.1574pt x 328.8285pt>
+File: histogram.png Graphic file (type png)
+<use histogram.png>
+Package pdftex.def Info: histogram.png  used on input line 183.
+(pdftex.def)             Requested size: 262.61894pt x 212.61708pt.
+[5
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.184         \end{center}
+                           <./sdf parser.png>] [6
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.193     \begin{center}
+                        
+pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.193     \begin{center}
+                         <./boxplot1.png> <./boxplot2.png> <./histogram.png>]
+<architecture.PNG, id=162, 541.27219pt x 393.72093pt>
+File: architecture.PNG Graphic file (type png)
+<use architecture.PNG>
+Package pdftex.def Info: architecture.PNG  used on input line 194.
+(pdftex.def)             Requested size: 420.19191pt x 305.65323pt.
+<GCN_model.PNG, id=163, 113.67468pt x 110.66344pt>
+File: GCN_model.PNG Graphic file (type png)
+<use GCN_model.PNG>
+Package pdftex.def Info: GCN_model.PNG  used on input line 209.
+(pdftex.def)             Requested size: 157.57297pt x 153.40125pt.
+ [7 <./architecture.PNG> <./GCN_model.PNG>]
+<GAT_model.PNG, id=174, 107.65219pt x 110.66344pt>
+File: GAT_model.PNG Graphic file (type png)
+<use GAT_model.PNG>
+Package pdftex.def Info: GAT_model.PNG  used on input line 221.
+(pdftex.def)             Requested size: 157.57297pt x 161.99614pt.
+<GIN_model.PNG, id=175, 107.65219pt x 107.65219pt>
+File: GIN_model.PNG Graphic file (type png)
+<use GIN_model.PNG>
+Package pdftex.def Info: GIN_model.PNG  used on input line 231.
+(pdftex.def)             Requested size: 157.57297pt x 157.5881pt.
+<GAT_GCN.PNG, id=176, 109.1578pt x 107.65219pt>
+File: GAT_GCN.PNG Graphic file (type png)
+<use GAT_GCN.PNG>
+Package pdftex.def Info: GAT_GCN.PNG  used on input line 241.
+(pdftex.def)             Requested size: 157.57297pt x 155.4001pt.
+ [8 <./GAT_model.PNG> <./GIN_model.PNG> <./GAT_GCN.PNG>]
+<GCN_folds10errors.png, id=190, 1727.253pt x 2883.573pt>
+File: GCN_folds10errors.png Graphic file (type png)
+<use GCN_folds10errors.png>
+Package pdftex.def Info: GCN_folds10errors.png  used on input line 267.
+(pdftex.def)             Requested size: 472.71088pt x 789.17906pt.
+ [9]
+Overfull \vbox (16.4022pt too high) has occurred while \output is active []
+
+ [10 <./GCN_folds10errors.png>]
+<GCN_folds10predictions.png, id=203, 499.3857pt x 2883.573pt>
+File: GCN_folds10predictions.png Graphic file (type png)
+<use GCN_folds10predictions.png>
+Package pdftex.def Info: GCN_folds10predictions.png  used on input line 271.
+(pdftex.def)             Requested size: 131.30946pt x 758.20326pt.
+ [11 <./GCN_folds10predictions.png>]
+<GAT_folds10errors.png, id=209, 1727.253pt x 2883.573pt>
+File: GAT_folds10errors.png Graphic file (type png)
+<use GAT_folds10errors.png>
+Package pdftex.def Info: GAT_folds10errors.png  used on input line 282.
+(pdftex.def)             Requested size: 472.71088pt x 789.17906pt.
+ [12]
+Overfull \vbox (16.4022pt too high) has occurred while \output is active []
+
+ [13 <./GAT_folds10errors.png>]
+<GAT_folds10predictions.png, id=220, 496.4949pt x 2883.573pt>
+File: GAT_folds10predictions.png Graphic file (type png)
+<use GAT_folds10predictions.png>
+Package pdftex.def Info: GAT_folds10predictions.png  used on input line 286.
+(pdftex.def)             Requested size: 131.30946pt x 762.60323pt.
+ [14 <./GAT_folds10predictions.png>]
+<GATGCN_folds10errors.png, id=226, 1727.253pt x 2883.573pt>
+File: GATGCN_folds10errors.png Graphic file (type png)
+<use GATGCN_folds10errors.png>
+Package pdftex.def Info: GATGCN_folds10errors.png  used on input line 297.
+(pdftex.def)             Requested size: 472.71088pt x 789.17906pt.
+ [15]
+Overfull \vbox (16.4022pt too high) has occurred while \output is active []
+
+ [16 <./GATGCN_folds10errors.png>]
+<GATGCN_folds10predictions.png, id=236, 508.0581pt x 2883.573pt>
+File: GATGCN_folds10predictions.png Graphic file (type png)
+<use GATGCN_folds10predictions.png>
+Package pdftex.def Info: GATGCN_folds10predictions.png  used on input line 301.
+(pdftex.def)             Requested size: 131.30946pt x 745.26733pt.
+ [17 <./GATGCN_folds10predictions.png>]
+<GINCONV_folds10errors.png, id=242, 1727.253pt x 2883.573pt>
+File: GINCONV_folds10errors.png Graphic file (type png)
+<use GINCONV_folds10errors.png>
+Package pdftex.def Info: GINCONV_folds10errors.png  used on input line 312.
+(pdftex.def)             Requested size: 472.71088pt x 789.17906pt.
+ [18]
+Overfull \vbox (16.4022pt too high) has occurred while \output is active []
+
+ [19 <./GINCONV_folds10errors.png>]
+<GINCONV_folds10predictions.png, id=253, 524.6802pt x 2883.573pt>
+File: GINCONV_folds10predictions.png Graphic file (type png)
+<use GINCONV_folds10predictions.png>
+Package pdftex.def Info: GINCONV_folds10predictions.png  used on input line 316.
+(pdftex.def)             Requested size: 131.30946pt x 721.63948pt.
+ [20 <./GINCONV_folds10predictions.png>] [21] (deliverable.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
  ***********
 Package rerunfilecheck Info: File `deliverable.out' has not changed.
-(rerunfilecheck)             Checksum: 5E671CD419A3971DFB600F181F4E61FF;281.
+(rerunfilecheck)             Checksum: 9DE932AC50C2C876EC50B23F16FBAAEF;3116.
  ) 
 Here is how much of TeX's memory you used:
- 9516 strings out of 474591
- 149061 string characters out of 5747194
- 1929533 words of memory out of 5000000
- 31584 multiletter control sequences out of 15000+600000
- 563829 words of font info for 55 fonts, out of 8000000 for 9000
+ 9842 strings out of 474591
+ 155024 string characters out of 5747194
+ 1934533 words of memory out of 5000000
+ 31847 multiletter control sequences out of 15000+600000
+ 564477 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,79p,385b,512s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on deliverable.pdf (2 pages, 266839 bytes).
+ 75i,7n,79p,550b,648s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\pc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+Output written on deliverable.pdf (22 pages, 4502891 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 8 named destinations out of 1000 (max. 500000)
- 30 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 317 PDF objects out of 1000 (max. 8388607)
+ 66 named destinations out of 1000 (max. 500000)
+ 241 words of extra memory for PDF output out of 10000 (max. 10000000)
 

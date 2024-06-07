@@ -1,0 +1,77 @@
+<mxfile host="app.diagrams.net" modified="2024-06-06T23:13:49.073Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="6puDrNbFguK6Nc43Fx-e" version="24.5.1" type="device">
+  <diagram name="Page-1" id="yy7DMqbKUrYu4xrBvo0W">
+    <mxGraphModel dx="1035" dy="511" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="uGY7x03uOlxSAUlpeSYz-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4JRmNw_HWtzl2yTSpg1i-1" target="uGY7x03uOlxSAUlpeSYz-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4JRmNw_HWtzl2yTSpg1i-1" value="sdf file&amp;nbsp;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="287" y="120" width="113" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uGY7x03uOlxSAUlpeSYz-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="uGY7x03uOlxSAUlpeSYz-1" target="uGY7x03uOlxSAUlpeSYz-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uGY7x03uOlxSAUlpeSYz-1" value="read the molecule sdf file" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="287" y="200" width="113" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uGY7x03uOlxSAUlpeSYz-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="uGY7x03uOlxSAUlpeSYz-3" target="uGY7x03uOlxSAUlpeSYz-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uGY7x03uOlxSAUlpeSYz-3" value="validate the molecule" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="287" y="290" width="113" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uGY7x03uOlxSAUlpeSYz-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="uGY7x03uOlxSAUlpeSYz-5" target="uGY7x03uOlxSAUlpeSYz-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uGY7x03uOlxSAUlpeSYz-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="uGY7x03uOlxSAUlpeSYz-5" target="uGY7x03uOlxSAUlpeSYz-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uGY7x03uOlxSAUlpeSYz-5" value="valid ?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="303.5" y="360" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uGY7x03uOlxSAUlpeSYz-11" value="exclude the molecule" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uGY7x03uOlxSAUlpeSYz-13" value="No" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="384" y="380" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uGY7x03uOlxSAUlpeSYz-14" value="yes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="310" y="440" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uGY7x03uOlxSAUlpeSYz-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="uGY7x03uOlxSAUlpeSYz-15" target="uGY7x03uOlxSAUlpeSYz-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uGY7x03uOlxSAUlpeSYz-15" value="Convert molecule to SMILES notation" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="288.5" y="470" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uGY7x03uOlxSAUlpeSYz-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="uGY7x03uOlxSAUlpeSYz-17" target="uGY7x03uOlxSAUlpeSYz-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="580" />
+              <mxPoint x="230" y="225" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uGY7x03uOlxSAUlpeSYz-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="uGY7x03uOlxSAUlpeSYz-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="343.82352941176464" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uGY7x03uOlxSAUlpeSYz-17" value="all sdf files read&amp;nbsp; ?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="303.5" y="540" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uGY7x03uOlxSAUlpeSYz-20" value="No" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="385" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uGY7x03uOlxSAUlpeSYz-21" value="yes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="287" y="620" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uGY7x03uOlxSAUlpeSYz-23" value="append the SMILES notation" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="650" width="110" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

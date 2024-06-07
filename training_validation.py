@@ -150,7 +150,7 @@ def scatterplot(real_values, predicted_values, model_name, dataset):
 def subplots_scatterplot(real_values, predicted_values, mse_list, model_name, dataset, n_folds):
 
     # Create a figure
-    fig, axs = plt.subplots(n_folds, 1, figsize=(100, 10))  # n_folds rows, 1 columns
+    fig, axs = plt.subplots(n_folds, 1, figsize=(24, 4*n_folds))  # n_folds rows, 1 columns
     for i in range(0, n_folds):
         # Points for the diagonal line
         x_line = [0, 8]
@@ -188,7 +188,7 @@ def plot_errorevolution(training_mse_list, validation_mse_list, model_name, data
 def subplots_errorevolution(list_training_mse_list, list_validation_mse_list, dataset, n_folds):
 
     # Create a figure
-    fig, axs = plt.subplots(nrows=n_folds, ncols=1, figsize=(8, 6))  # n_folds rows, 1 columns
+    fig, axs = plt.subplots(nrows=n_folds, ncols=1, figsize=(24, 4*n_folds))  # n_folds rows, 1 columns
     epochs_list = list(range(1, len(list_training_mse_list[0]) + 1))
     print(epochs_list)
     print(list_training_mse_list[0])
