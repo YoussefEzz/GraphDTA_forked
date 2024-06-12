@@ -9,13 +9,13 @@ import torch
 class TestbedDataset(InMemoryDataset):
     def __init__(self, root='/tmp', dataset='davis', 
                  xd=None, xt=None, y=None, transform=None,
-                 pre_transform=None,smile_graph=None):
+                 pre_transform=None,smile_graph=None, overwrite = True):
 
         #root is required for save preprocessed data, default is '/tmp'
         super(TestbedDataset, self).__init__(root, transform, pre_transform)
         # benchmark dataset, default = 'davis'
         self.dataset = dataset
-        if os.path.isfile(self.processed_paths[0]):
+        if os.path.isfile(self.processed_paths[0]) and (not overwrite):
             print('Pre-processed data found: {}, loading ...'.format(self.processed_paths[0]))
             self.data, self.slices = torch.load(self.processed_paths[0])
         else:

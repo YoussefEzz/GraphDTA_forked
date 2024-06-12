@@ -6,14 +6,14 @@ from models.gat_gcn import GAT_GCN
 from models.gcn import GCNNet
 from models.ginconv import GINConvNet
 
-def Train(dataset = 'urv', model_type = GCNNet, cuda_name = "cuda:0", TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512, LR = 0.0005, NUM_EPOCHS = 50, plot = True):
+def Train(dataset = 'urv', model_type = GCNNet, cuda_name = "cuda:0", TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512, LR = 0.0005, NUM_EPOCHS = 50, plot = True, overwrite = True, validation_size= 0.2):
    
    # 
    print("creating pytorch data.")
-   create_pytorch_data(dataset)
+   create_pytorch_data(dataset, overwrite = overwrite)
    print("pytorch data created.")
 
-   trained_model, training_mse_list, validation_mse_list = fit(dataset, model_type, cuda_name, TRAIN_BATCH_SIZE, TEST_BATCH_SIZE, LR ,NUM_EPOCHS)
+   trained_model, training_mse_list, validation_mse_list = fit(dataset, model_type, cuda_name, TRAIN_BATCH_SIZE, TEST_BATCH_SIZE, LR = LR, validation_size = validation_size ,NUM_EPOCHS = NUM_EPOCHS)
 
    print(trained_model)
    if(plot == True):
@@ -23,7 +23,7 @@ def Train(dataset = 'urv', model_type = GCNNet, cuda_name = "cuda:0", TRAIN_BATC
       return trained_model, training_mse_list, validation_mse_list
   
       
-def Trainfold(dataset = 'urv', model_type = GCNNet, cuda_name = "cuda:0", TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512, LR = 0.0005, NUM_EPOCHS = 50, plot = True, n_folds = 1):
+def Trainfold(dataset = 'urv', model_type = GCNNet, cuda_name = "cuda:0", TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512, LR = 0.0005, NUM_EPOCHS = 50, plot = True, n_folds = 1, overwrite = True):
    trained_models = []
    list_training_mse_list = []
    list_validation_mse_list = []
@@ -32,10 +32,10 @@ def Trainfold(dataset = 'urv', model_type = GCNNet, cuda_name = "cuda:0", TRAIN_
 
       dataset_fold = dataset + "_fold" + str(i)
       print("creating pytorch data.")
-      create_pytorch_data(dataset_fold)
+      create_pytorch_data(dataset_fold, overwrite = overwrite)
       print("pytorch data created.")
 
-      trained_model, training_mse_list, validation_mse_list = fit(dataset_fold, model_type, cuda_name, TRAIN_BATCH_SIZE, TEST_BATCH_SIZE, LR ,NUM_EPOCHS)
+      trained_model, training_mse_list, validation_mse_list = fit(dataset_fold, model_type, cuda_name, TRAIN_BATCH_SIZE, TEST_BATCH_SIZE, LR =  LR, validation_size= 0.2 ,NUM_EPOCHS = NUM_EPOCHS)
       trained_models.append(trained_model)
       list_training_mse_list.append(training_mse_list)
       list_validation_mse_list.append(validation_mse_list)

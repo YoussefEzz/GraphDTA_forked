@@ -143,9 +143,9 @@ def create_pytorch_data(dataset, overwrite = True):
 
         # make data PyTorch Geometric ready
         print('preparing ', dataset + '_train.pt in pytorch format!')
-        train_data = TestbedDataset(root='data', dataset=dataset+'_train', xd=train_drugs, xt=train_prots, y=train_Y,smile_graph=smile_graph)
+        train_data = TestbedDataset(root='data', dataset=dataset+'_train', xd=train_drugs, xt=train_prots, y=train_Y,smile_graph=smile_graph, overwrite= overwrite)
         print('preparing ', dataset + '_test.pt in pytorch format!')
-        test_data = TestbedDataset(root='data', dataset=dataset+'_test', xd=test_drugs, xt=test_prots, y=test_Y,smile_graph=smile_graph)
+        test_data = TestbedDataset(root='data', dataset=dataset+'_test', xd=test_drugs, xt=test_prots, y=test_Y,smile_graph=smile_graph, overwrite= overwrite)
         print(processed_data_file_train, ' and ', processed_data_file_test, ' have been created')        
     else:
         print(processed_data_file_train, ' and ', processed_data_file_test, ' are already created')        

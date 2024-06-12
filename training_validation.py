@@ -46,7 +46,7 @@ def predicting(model, device, loader):
 
 LOG_INTERVAL = 20
 
-def fit(dataset, model, cuda_name, TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512, LR = 0.0005, validation_size = 0.1, NUM_EPOCHS = 50):
+def fit(dataset, model, cuda_name, TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512, LR = 0.0005, validation_size = 0.2, NUM_EPOCHS = 50):
     # datasets = [['davis','kiba','urv'][int(sys.argv[1])]] 
     # modeling = [GINConvNet, GATNet, GAT_GCN, GCNNet][int(sys.argv[2])]
     modeling = model
@@ -70,11 +70,11 @@ def fit(dataset, model, cuda_name, TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512
     print('\nrunning on dataset : ', dataset )
     processed_data_file_train = 'data/processed/' + dataset + '_train.pt'
     processed_data_file_test = 'data/processed/' + dataset + '_test.pt'
-    if (((not os.path.isfile(processed_data_file_train)) or (not os.path.isfile(processed_data_file_test))) and (dataset != 'urv')):
+    if (((not os.path.isfile(processed_data_file_train)) or (not os.path.isfile(processed_data_file_test)))):
         print('please run create_data.py to prepare data in pytorch format!')
     else:
-        train_data = TestbedDataset(root='data', dataset=dataset+'_train')
-        test_data = TestbedDataset(root='data', dataset=dataset+'_test')
+        train_data = TestbedDataset(root='data', dataset=dataset+'_train', overwrite= False)
+        test_data = TestbedDataset(root='data', dataset=dataset+'_test', overwrite= False)
         
         
         #train_size = int(0.8 * len(train_data))
