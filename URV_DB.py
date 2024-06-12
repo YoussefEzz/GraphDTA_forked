@@ -5,7 +5,7 @@ import pandas as pd
 import csv
 from rdkit import Chem
 import os
-from sklearn.model_selection import KFold
+from sklearn.model_selection import KFold, train_test_split
 
 def get_sequence_from_PDB(PDB_id, URV_protein_folderpath):
     
@@ -136,7 +136,7 @@ def ligand_Generate(URV_ligandsdf_folderpath, URV_logs_folderpath):
     sdf_ligand_invalid_df.to_csv(URV_logs_folderpath + '/ligands_invalid_sdf_file.csv', index=False)  # Set index=False to avoid writing row indices
     #sdf_ligand_df.head(160)
 
-def train_test_Generate(URV_affinity_filepath, URV_logs_folderpath, URV_output_folderpath, n_folds = 1):
+def train_test_Generate(URV_affinity_filepath, URV_logs_folderpath, URV_output_folderpath, n_folds = 1, test_size = 0.2):
     # Read the Affinity TXT file into a dataframe
     affinity_df = pd.read_csv(URV_affinity_filepath, sep=r'\s+', header=None)  # Use the appropriate delimiter if your file is not tab-separated
 
@@ -182,9 +182,20 @@ def train_test_Generate(URV_affinity_filepath, URV_logs_folderpath, URV_output_f
     new_combined_df = new_combined_df.rename(columns={'SMILES': 'compound_iso_smiles', 'selected_sequence': 'target_sequence'})
 
     if(n_folds <= 1):
-        train_df = new_combined_df.copy()
+
+        # Get the indexes of the DataFrame
+        indexes = new_combined_df.index
+
+        # Split the indexes into training and testing sets
+        train_idx, test_idx = train_test_split(indexes, test_size = test_size, random_state=42)
+
+        # Use the indexes to split the DataFrame
+        train_df = new_combined_df.loc[train_idx]
+        test_df = new_combined_df.loc[test_idx]
+
+        #train_df = new_combined_df.copy()
         #train_df.head()
-        test_df = new_combined_df.copy()
+        #test_df = new_combined_df.copy()
         #test_df.head()
         train_df.to_csv(URV_output_folderpath + '/urv_train.csv', index=False)  # Set index=False to avoid writing row indices
         test_df.to_csv(URV_output_folderpath + '/urv_test.csv', index=False)  # Set index=False to avoid writing row indices
@@ -216,7 +227,7 @@ def train_test_Generate(URV_affinity_filepath, URV_logs_folderpath, URV_output_f
 
     
 
-def DB_Generation(URV_datapath, URV_output_folderpath, k_folds = 1):
+def DB_Generation(URV_datapath, URV_output_folderpath, k_folds = 1, test_size = 0.2):
     URV_ligandsdf_folderpath = URV_datapath + '/Ligand_sdf'
     URV_protein_folderpath   = URV_datapath + '/Protein'
     URV_affinity_filepath    = URV_datapath + '/Affinity.txt'
@@ -227,4 +238,4 @@ def DB_Generation(URV_datapath, URV_output_folderpath, k_folds = 1):
 
     Protein_Generate(URV_affinity_filepath, URV_protein_folderpath, URV_logs_folderpath)
 
-    train_test_Generate(URV_affinity_filepath, URV_logs_folderpath, URV_output_folderpath, k_folds)
+    train_test_Generate(URV_affinity_filepath, URV_logs_folderpath, URV_output_folderpath, k_folds, test_size)

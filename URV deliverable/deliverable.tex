@@ -58,6 +58,12 @@ The development of new drugs is costly, time consuming and often accompanied wit
 Drug repurposing can avoid the expensive and lengthy process of drug development by finding new uses for already approved drugs. In order to repurpose drugs effectively, it is useful to know which proteins are targeted by
 which drugs which is the definition of Drug-Target-Affinity(DTA)\cite{1}
 
+there is a strong motivation to build computational models that can estimate the interaction strength of new drug–target pairs based on previous drug–target
+experiments.
+
+the DTA prediction problem as a regression task where the input is a drug–target pair and the output is a continuous measurement of binding affinity
+for that pair.
+
 \section{Aim}
 
 The aim of this thesis is to make use of four existing convolutional neural network(CNN) models following the paper in \cite{1} - to take advantage of the fact that they represents drugs as graphs and use graph neural networks to predict DTA-

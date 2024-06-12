@@ -46,9 +46,8 @@ def predicting(model, device, loader):
 
 LOG_INTERVAL = 20
 
-def fit(dataset, model, cuda_name, TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512, LR = 0.0005, NUM_EPOCHS = 50):
+def fit(dataset, model, cuda_name, TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512, LR = 0.0005, validation_size = 0.1, NUM_EPOCHS = 50):
     # datasets = [['davis','kiba','urv'][int(sys.argv[1])]] 
-    datasets = [dataset]
     # modeling = [GINConvNet, GATNet, GAT_GCN, GCNNet][int(sys.argv[2])]
     modeling = model
     model_st = modeling.__class__.__name__
@@ -67,63 +66,63 @@ def fit(dataset, model, cuda_name, TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512
     # print('Epochs: ', NUM_EPOCHS)
 
     # Main program: iterate over different datasets
-    for dataset in datasets:
-        print('\nrunning on ', model_st + '_' + dataset )
-        print('\nrunning on dataset : ', dataset )
-        processed_data_file_train = 'data/processed/' + dataset + '_train.pt'
-        processed_data_file_test = 'data/processed/' + dataset + '_test.pt'
-        if (((not os.path.isfile(processed_data_file_train)) or (not os.path.isfile(processed_data_file_test))) and (dataset != 'urv')):
-            print('please run create_data.py to prepare data in pytorch format!')
-        else:
-            train_data = TestbedDataset(root='data', dataset=dataset+'_train')
-            test_data = TestbedDataset(root='data', dataset=dataset+'_test')
-            
-            
-            train_size = int(0.8 * len(train_data))
-            valid_size = len(train_data) - train_size
-            train_data, valid_data = torch.utils.data.random_split(train_data, [train_size, valid_size])        
-            
-            
-            # make data PyTorch mini-batch processing ready
-            train_loader = DataLoader(train_data, batch_size=TRAIN_BATCH_SIZE, shuffle=True)
-            valid_loader = DataLoader(valid_data, batch_size=TEST_BATCH_SIZE, shuffle=False)
-            test_loader = DataLoader(test_data, batch_size=TEST_BATCH_SIZE, shuffle=False)
+    print('\nrunning on ', model_st + '_' + dataset )
+    print('\nrunning on dataset : ', dataset )
+    processed_data_file_train = 'data/processed/' + dataset + '_train.pt'
+    processed_data_file_test = 'data/processed/' + dataset + '_test.pt'
+    if (((not os.path.isfile(processed_data_file_train)) or (not os.path.isfile(processed_data_file_test))) and (dataset != 'urv')):
+        print('please run create_data.py to prepare data in pytorch format!')
+    else:
+        train_data = TestbedDataset(root='data', dataset=dataset+'_train')
+        test_data = TestbedDataset(root='data', dataset=dataset+'_test')
+        
+        
+        #train_size = int(0.8 * len(train_data))
+        train_size = int((1.0 - validation_size) * len(train_data))
+        valid_size = len(train_data) - train_size
+        train_data, valid_data = torch.utils.data.random_split(train_data, [train_size, valid_size])        
+        
+        
+        # make data PyTorch mini-batch processing ready
+        train_loader = DataLoader(train_data, batch_size=TRAIN_BATCH_SIZE, shuffle=True)
+        valid_loader = DataLoader(valid_data, batch_size=TEST_BATCH_SIZE, shuffle=False)
+        test_loader = DataLoader(test_data, batch_size=TEST_BATCH_SIZE, shuffle=False)
 
-            # training the model
-            device = torch.device(cuda_name if torch.cuda.is_available() else "cpu")
-            model = model.to(device)
-            loss_fn = nn.MSELoss()
-            optimizer = torch.optim.Adam(model.parameters(), lr=LR)
-            best_mse = 1000
-            best_test_mse = 1000
-            training_mse_list = []
-            validation_mse_list = []
-            best_test_ci = 0
-            best_epoch = -1
-            model_file_name = 'model_' + model_st + '_' + dataset +  '.model'
-            result_file_name = 'result_' + model_st + '_' + dataset +  '.csv'
-            for epoch in range(NUM_EPOCHS):
-                train_loss = train(model, device, train_loader, optimizer, epoch+1, loss_fn)
-                training_mse_list.append(train_loss.item())
-                print('predicting for valid data')
-                G,P = predicting(model, device, valid_loader)
-                val = mse(G,P)
-                validation_mse_list.append(val)
-                # if val<best_mse:
-                #     best_mse = val
-                #     best_epoch = epoch+1
-                #     torch.save(model.state_dict(), model_file_name)
-                #     print('predicting for test data')
-                #     G,P = predicting(model, device, test_loader)
-                #     ret = [rmse(G,P),mse(G,P),pearson(G,P),spearman(G,P),ci(G,P)]
-                #     with open(result_file_name,'w') as f:
-                #         f.write(','.join(map(str,ret)))
-                #     best_test_mse = ret[1]
-                #     best_test_ci = ret[-1]
-                #     print('rmse improved at epoch ', best_epoch, '; best_test_mse,best_test_ci:', best_test_mse,best_test_ci,model_st,dataset)
-                # else:
-                #     print(ret[1],'No improvement since epoch ', best_epoch, '; best_test_mse,best_test_ci:', best_test_mse,best_test_ci,model_st,dataset)
-            torch.save(model.state_dict(), model_file_name)
+        # training the model
+        device = torch.device(cuda_name if torch.cuda.is_available() else "cpu")
+        model = model.to(device)
+        loss_fn = nn.MSELoss()
+        optimizer = torch.optim.Adam(model.parameters(), lr=LR)
+        best_mse = 1000
+        best_test_mse = 1000
+        training_mse_list = []
+        validation_mse_list = []
+        best_test_ci = 0
+        best_epoch = -1
+        model_file_name = 'model_' + model_st + '_' + dataset +  '.model'
+        result_file_name = 'result_' + model_st + '_' + dataset +  '.csv'
+        for epoch in range(NUM_EPOCHS):
+            train_loss = train(model, device, train_loader, optimizer, epoch+1, loss_fn)
+            training_mse_list.append(train_loss.item())
+            print('predicting for valid data')
+            G,P = predicting(model, device, valid_loader)
+            val = mse(G,P)
+            validation_mse_list.append(val)
+            # if val<best_mse:
+            #     best_mse = val
+            #     best_epoch = epoch+1
+            #     torch.save(model.state_dict(), model_file_name)
+            #     print('predicting for test data')
+            #     G,P = predicting(model, device, test_loader)
+            #     ret = [rmse(G,P),mse(G,P),pearson(G,P),spearman(G,P),ci(G,P)]
+            #     with open(result_file_name,'w') as f:
+            #         f.write(','.join(map(str,ret)))
+            #     best_test_mse = ret[1]
+            #     best_test_ci = ret[-1]
+            #     print('rmse improved at epoch ', best_epoch, '; best_test_mse,best_test_ci:', best_test_mse,best_test_ci,model_st,dataset)
+            # else:
+            #     print(ret[1],'No improvement since epoch ', best_epoch, '; best_test_mse,best_test_ci:', best_test_mse,best_test_ci,model_st,dataset)
+        torch.save(model.state_dict(), model_file_name)
     return model, training_mse_list, validation_mse_list
             
 
