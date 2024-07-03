@@ -28,7 +28,7 @@ def get_sequence_from_PDB(PDB_id, URV_protein_folderpath):
             if(len(PPBuilder().build_peptides(chain)) > 0):
                 seq.append(PPBuilder().build_peptides(chain)[0].get_sequence())
     # print(seq)
-    return seq  # The output is a list with the sequences of each chain
+    return seq, structure.header  # The output is a list with the sequences of each chain
 
 def Protein_Generate(URV_affinity_filepath, URV_protein_folderpath, URV_logs_folderpath):
     # Read the Affinity TXT file into a dataframe
@@ -38,37 +38,41 @@ def Protein_Generate(URV_affinity_filepath, URV_protein_folderpath, URV_logs_fol
     #print(dataframe)
 
     # Select the first column
-    protiens = dataframe.iloc[:, 0]
-    protiens = [item.replace("_ligand", "").strip() for item in protiens]
-    # print(len(protiens))
-    # print(protiens)
+    proteins = dataframe.iloc[:, 0]
+    proteins = [item.replace("_ligand", "").strip() for item in proteins]
+    # print(len(proteins))
+    # print(proteins)
 
     # Loop over the values in the first column
-    sequences = []
-    protien_df = pd.DataFrame(columns=['protien', 'sequence_length', 'first_sequence', 'first_sequence_length', 'second_sequence', 'second_sequence_length', 'selected_sequence'])
-    for protien in protiens:
+    # sequences = []
+    protein_df = pd.DataFrame(columns=['protein', 'number_of_sequences', 'longest_sequence', 'length_longest_sequence'])
+    for protein in proteins:
 
-        sequence = get_sequence_from_PDB(protien, URV_protein_folderpath)
+        sequences_list, protein_header = get_sequence_from_PDB(protein, URV_protein_folderpath)
         #print(len(sequence))
         #print(sequence[0])
 
-        if(len(sequence) == 1):
-            selected_sequence = sequence[0]
-        elif(len(sequence) == 2):
-            if(len(sequence[0]) >= len(sequence[1])):
-                selected_sequence = sequence[0]
-            else: 
-                selected_sequence = sequence[1]
+        # if(len(sequence) == 1):
+        #     selected_sequence = sequence[0]
+        # elif(len(sequence) == 2):
+        #     if(len(sequence[0]) >= len(sequence[1])):
+        #         selected_sequence = sequence[0]
+        #     else: 
+        #         selected_sequence = sequence[1]
 
-        new_row = {'protien': protien, 'sequence_length': len(sequence), 'first_sequence': sequence[0], 'first_sequence_length': len(sequence[0]), 'second_sequence': sequence[1] if len(sequence) == 2 else '' , 'second_sequence_length': len(sequence[1]) if len(sequence) == 2 else '', 'selected_sequence':selected_sequence}
-        protien_df = pd.concat([protien_df, pd.DataFrame([new_row])], ignore_index=True)
+        # obtain the longest sequence
+        longest_sequence = max(sequences_list, key=len)
+
+        
+        new_row = {'protein': protein,'number_of_sequences': len(sequences_list), 'longest_sequence': longest_sequence, 'length_longest_sequence': len(longest_sequence)}
+        protein_df = pd.concat([protein_df, pd.DataFrame([new_row])], ignore_index=True)
 
         # Cast a column as a string
-        protien_df = protien_df.astype({'protien': str})
+        protein_df = protein_df.astype({'protein': str})
     # print(sequences)
     # print(len(sequences))
-    protien_df.to_csv(URV_logs_folderpath + '/protiens_file.csv', index=False, quoting=csv.QUOTE_NONNUMERIC)  # Set index=False to avoid writing row indices
-    #protien_df.head(152)
+    protein_df.to_csv(URV_logs_folderpath + '/proteins_file.csv', index=False, quoting=csv.QUOTE_NONNUMERIC)  # Set index=False to avoid writing row indices
+    #protein_df.head(152)
 
 def ligand_Generate(URV_ligandsdf_folderpath, URV_logs_folderpath):
 
@@ -151,20 +155,20 @@ def train_test_Generate(URV_affinity_filepath, URV_logs_folderpath, URV_output_f
     # print(affinity_df)
 
     # Select the protein id first column
-    protien_id = affinity_df.iloc[:, 0]
+    protein_id = affinity_df.iloc[:, 0]
 
     # Select the affinity second column
-    protien_affinity = affinity_df.iloc[:, 1]
+    protein_affinity = affinity_df.iloc[:, 1]
 
 
     # read the ligands csv file
     ligands_df = pd.read_csv(URV_logs_folderpath + '/ligands_valid_sdf_file.csv')
 
     # read the protein csv file
-    proteins_df = pd.read_csv(URV_logs_folderpath + '/protiens_file.csv')
+    proteins_df = pd.read_csv(URV_logs_folderpath + '/proteins_file.csv')
 
-    # Rename column 'protien' to 'Id'
-    proteins_df = proteins_df.rename(columns={'protien': 'Id'})
+    # Rename column 'protein' to 'Id'
+    proteins_df = proteins_df.rename(columns={'protein': 'Id'})
 
     # Merge ligands and proteins DataFrames based on common 'Id' column
     combined_df = pd.merge(affinity_df, ligands_df, on='Id')
@@ -175,11 +179,11 @@ def train_test_Generate(URV_affinity_filepath, URV_logs_folderpath, URV_output_f
     combined_df.to_csv(URV_logs_folderpath + '/combined_file.csv', index=False)  # Set index=False to avoid writing row indices
 
     # Selecting specific columns
-    selected_columns = ['SMILES', 'selected_sequence', 'affinity']  # Replace with your desired column names
+    selected_columns = ['SMILES', 'longest_sequence', 'affinity']  # Replace with your desired column names
     new_combined_df = combined_df[selected_columns].copy()  # Creating a new DataFrame with selected columns
 
     # Rename columns 
-    new_combined_df = new_combined_df.rename(columns={'SMILES': 'compound_iso_smiles', 'selected_sequence': 'target_sequence'})
+    new_combined_df = new_combined_df.rename(columns={'SMILES': 'compound_iso_smiles', 'longest_sequence': 'target_sequence'})
 
     if(n_folds <= 1):
 
@@ -233,7 +237,7 @@ def DB_Generation(URV_datapath, URV_output_folderpath, k_folds = 1, test_size = 
     URV_affinity_filepath    = URV_datapath + '/Affinity.txt'
     URV_logs_folderpath      = URV_datapath + '/logs'
 
-    # generate protien(ligand)  
+    # generate protein(ligand)  
     ligand_Generate(URV_ligandsdf_folderpath, URV_logs_folderpath)
 
     Protein_Generate(URV_affinity_filepath, URV_protein_folderpath, URV_logs_folderpath)

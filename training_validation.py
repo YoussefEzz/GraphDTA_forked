@@ -46,7 +46,7 @@ def predicting(model, device, loader):
 
 LOG_INTERVAL = 20
 
-def fit(dataset, model, cuda_name, TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512, LR = 0.0005, validation_size = 0.2, NUM_EPOCHS = 50):
+def fit(dataset, model, cuda_name, TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512, LR = 0.0005, validation_size = 0.2, NUM_EPOCHS = 50, best_model_flag = True):
     # datasets = [['davis','kiba','urv'][int(sys.argv[1])]] 
     # modeling = [GINConvNet, GATNet, GAT_GCN, GCNNet][int(sys.argv[2])]
     modeling = model
@@ -91,6 +91,10 @@ def fit(dataset, model, cuda_name, TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512
         # training the model
         device = torch.device(cuda_name if torch.cuda.is_available() else "cpu")
         model = model.to(device)
+        best_model = model
+        best_validation_mse = 1000
+        best_epoch = -1
+
         loss_fn = nn.MSELoss()
         optimizer = torch.optim.Adam(model.parameters(), lr=LR)
         best_mse = 1000
@@ -98,16 +102,25 @@ def fit(dataset, model, cuda_name, TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512
         training_mse_list = []
         validation_mse_list = []
         best_test_ci = 0
-        best_epoch = -1
+        
         model_file_name = 'model_' + model_st + '_' + dataset +  '.model'
         result_file_name = 'result_' + model_st + '_' + dataset +  '.csv'
+
+        
         for epoch in range(NUM_EPOCHS):
             train_loss = train(model, device, train_loader, optimizer, epoch+1, loss_fn)
             training_mse_list.append(train_loss.item())
             print('predicting for valid data')
             G,P = predicting(model, device, valid_loader)
-            val = mse(G,P)
-            validation_mse_list.append(val)
+            validation_mse = mse(G,P)
+            validation_mse_list.append(validation_mse)
+            
+
+            if best_model_flag == True:
+                if validation_mse < best_validation_mse:
+                    best_validation_mse = validation_mse
+                    best_model = model
+                    best_epoch = epoch+1
             # if val<best_mse:
             #     best_mse = val
             #     best_epoch = epoch+1
@@ -122,8 +135,14 @@ def fit(dataset, model, cuda_name, TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512
             #     print('rmse improved at epoch ', best_epoch, '; best_test_mse,best_test_ci:', best_test_mse,best_test_ci,model_st,dataset)
             # else:
             #     print(ret[1],'No improvement since epoch ', best_epoch, '; best_test_mse,best_test_ci:', best_test_mse,best_test_ci,model_st,dataset)
-        torch.save(model.state_dict(), model_file_name)
-    return model, training_mse_list, validation_mse_list
+        if best_model_flag == True:
+            torch.save(best_model.state_dict(), model_file_name)
+        else:
+            torch.save(model.state_dict(), model_file_name)
+    if best_model_flag == True:
+        return best_model, training_mse_list, validation_mse_list, best_epoch
+    else:
+        return model, training_mse_list, validation_mse_list
             
 
 # Scatter plot. Vertical axis: predicted value. Horizontal axis: real value
@@ -171,14 +190,15 @@ def subplots_scatterplot(real_values, predicted_values, mse_list, model_name, da
     plt.show()
 
 # Plot the evolution of the training and validation loss with number of epochs
-def plot_errorevolution(training_mse_list, validation_mse_list, model_name, dataset):
+def plot_errorevolution(training_mse_list, validation_mse_list, model_name, dataset, best_epoch):
 
     # Plot the evolution of the training and validation loss
     epochs_training_list = list(range(1, len(training_mse_list) + 1))
     epochs_validation_list = list(range(1, len(validation_mse_list) + 1))
     plt.plot(epochs_training_list, training_mse_list,  label='Training Loss')
     plt.plot(epochs_validation_list, validation_mse_list,  label='Validation Loss')
-    
+    plt.axvline(x = best_epoch, color='r', linestyle='--')
+
     plt.title(f'evolution of the mean square error for model {model_name} on database : {dataset}')
     plt.legend()
     plt.show()
