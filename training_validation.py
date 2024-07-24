@@ -10,6 +10,7 @@ from models.gcn import GCNNet
 from models.ginconv import GINConvNet
 from utils import *
 import matplotlib.pyplot as plt
+from matplotlib.table import Table
 
 # training function at each epoch
 def train(model, device, train_loader, optimizer, epoch, loss_fn):
@@ -190,17 +191,37 @@ def subplots_scatterplot(real_values, predicted_values, mse_list, model_name, da
     plt.show()
 
 # Plot the evolution of the training and validation loss with number of epochs
-def plot_errorevolution(training_mse_list, validation_mse_list, model_name, dataset, best_epoch):
-
+def plot_errorevolution(training_mse_list, validation_mse_list, model_name, dataset, best_epoch, LR, NUM_EPOCHS, TRAIN_BATCH_SIZE, validation_size):
+    plt.figure(figsize=(20, 6))
     # Plot the evolution of the training and validation loss
     epochs_training_list = list(range(1, len(training_mse_list) + 1))
     epochs_validation_list = list(range(1, len(validation_mse_list) + 1))
     plt.plot(epochs_training_list, training_mse_list,  label='Training Loss')
     plt.plot(epochs_validation_list, validation_mse_list,  label='Validation Loss')
-    plt.axvline(x = best_epoch, color='r', linestyle='--')
+    plt.axvline(x = best_epoch, color='r', linestyle='--', label='best model')
+
+    # Add the training parameters outside the plot
+    # Parameters to display in the table
+    parameters = {
+        "learning rate": LR,
+        "epochs": NUM_EPOCHS,
+        "batch size": TRAIN_BATCH_SIZE,
+        "validation size": validation_size,
+        "MSE": validation_mse_list[best_epoch - 1]
+    }
+
+    # Create the table and add it to the plot
+    table_data = [[key, value] for key, value in parameters.items()]
+    table = plt.table(cellText=table_data, loc='right', cellLoc='center', colLoc='center', bbox=[1.2, 0.1, 0.3, 0.8])
+
+    # Customize the table appearance
+    table.auto_set_font_size(False)
+    table.set_fontsize(12)
+    table.scale(1, 1)
 
     plt.title(f'evolution of the mean square error for model {model_name} on database : {dataset}')
-    plt.legend()
+    plt.legend( bbox_to_anchor=(1, 1), ncol=1, fontsize=12)
+    plt.subplots_adjust(right=0.75)
     plt.show()
 
 # subplot the evolution of the training and validation loss with number of epochs f for k folds

@@ -17,7 +17,7 @@ def Train(dataset = 'urv', model_type = GCNNet, cuda_name = "cuda:0", TRAIN_BATC
 
    print(trained_model)
    if(plot == True):
-      plot_errorevolution(training_mse_list, validation_mse_list, model_type.__class__.__name__, dataset, best_epoch)
+      plot_errorevolution(training_mse_list, validation_mse_list, model_type.__class__.__name__, dataset, best_epoch, LR, NUM_EPOCHS, TRAIN_BATCH_SIZE, validation_size)
       return trained_model
    else:
       return trained_model, training_mse_list, validation_mse_list
