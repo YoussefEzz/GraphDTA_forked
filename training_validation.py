@@ -148,10 +148,18 @@ def fit(dataset, model, cuda_name, TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512
 
 # Scatter plot. Vertical axis: predicted value. Horizontal axis: real value
 def scatterplot(real_values, predicted_values, model_name, dataset):
-
+    x_line = [0, 11]
+    y_line = [0, 11]
     # Points for the diagonal line
-    x_line = [0, 8]
-    y_line = [0, 8]
+    if "davis" in dataset:
+        x_line = [0, 11]
+        y_line = [0, 11]
+    elif "kiba" in dataset:
+        x_line = [0, 18]
+        y_line = [0, 18]
+    else: 
+        x_line = [0, 11]
+        y_line = [0, 11]
     plt.scatter(real_values, predicted_values, color = 'red')
     # Plot the line
     plt.plot(x_line, y_line, color='blue', linestyle='--')
