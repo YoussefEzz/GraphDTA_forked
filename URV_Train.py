@@ -13,11 +13,12 @@ def Train(dataset = 'urv', model_type = GCNNet, cuda_name = "cuda:0", TRAIN_BATC
    create_pytorch_data(dataset, overwrite = overwrite)
    print("pytorch data created.")
 
-   trained_model, training_mse_list, validation_mse_list, best_epoch = fit(dataset, model_type, cuda_name, TRAIN_BATCH_SIZE, TEST_BATCH_SIZE, LR = LR, validation_size = validation_size ,NUM_EPOCHS = NUM_EPOCHS)
+   trained_model, training_mse_list, validation_mse_list, best_epoch, train_size, valid_size = fit(dataset, model_type, cuda_name, TRAIN_BATCH_SIZE, TEST_BATCH_SIZE, LR = LR, validation_size = validation_size ,NUM_EPOCHS = NUM_EPOCHS)
 
+   print("trained_model")
    print(trained_model)
    if(plot == True):
-      plot_errorevolution(training_mse_list, validation_mse_list, model_type.__class__.__name__, dataset, best_epoch, LR, NUM_EPOCHS, TRAIN_BATCH_SIZE, validation_size)
+      plot_errorevolution(training_mse_list, validation_mse_list, model_type.__class__.__name__, dataset, best_epoch, LR, NUM_EPOCHS, TRAIN_BATCH_SIZE, validation_size, train_size, valid_size)
       return trained_model
    else:
       return trained_model, training_mse_list, validation_mse_list

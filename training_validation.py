@@ -141,9 +141,9 @@ def fit(dataset, model, cuda_name, TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512
         else:
             torch.save(model.state_dict(), model_file_name)
     if best_model_flag == True:
-        return best_model, training_mse_list, validation_mse_list, best_epoch
+        return best_model, training_mse_list, validation_mse_list, best_epoch, train_size, valid_size
     else:
-        return model, training_mse_list, validation_mse_list
+        return model, training_mse_list, validation_mse_list, train_size, valid_size
             
 
 # Scatter plot. Vertical axis: predicted value. Horizontal axis: real value
@@ -199,7 +199,7 @@ def subplots_scatterplot(real_values, predicted_values, mse_list, model_name, da
     plt.show()
 
 # Plot the evolution of the training and validation loss with number of epochs
-def plot_errorevolution(training_mse_list, validation_mse_list, model_name, dataset, best_epoch, LR, NUM_EPOCHS, TRAIN_BATCH_SIZE, validation_size):
+def plot_errorevolution(training_mse_list, validation_mse_list, model_name, dataset, best_epoch, LR, NUM_EPOCHS, TRAIN_BATCH_SIZE, validation_size, train_size, valid_size):
     plt.figure(figsize=(20, 6))
     # Plot the evolution of the training and validation loss
     epochs_training_list = list(range(1, len(training_mse_list) + 1))
@@ -211,10 +211,13 @@ def plot_errorevolution(training_mse_list, validation_mse_list, model_name, data
     # Add the training parameters outside the plot
     # Parameters to display in the table
     parameters = {
+        "optimizer": "ADAM",
         "learning rate": LR,
         "epochs": NUM_EPOCHS,
-        "batch size": TRAIN_BATCH_SIZE,
-        "validation size": validation_size,
+        "train batch size" : TRAIN_BATCH_SIZE,
+        "train size" : train_size,
+        "validation size": valid_size,
+        "validation percentage": str(validation_size * 100) + ' %',
         "MSE": validation_mse_list[best_epoch - 1]
     }
 
