@@ -34,16 +34,20 @@ def train(model, device, train_loader, optimizer, epoch, loss_fn):
 # equivalent to feedforward
 def predicting(model, device, loader):
     model.eval()
-    total_preds = torch.Tensor()
-    total_labels = torch.Tensor()
+    model = model.to(device)
+    total_preds = torch.Tensor().to(device)
+    total_labels = torch.Tensor().to(device)
     print('Make prediction for {} samples...'.format(len(loader.dataset)))
     with torch.no_grad():
         for data in loader:
             data = data.to(device)
+            # print(f"Input data device: {data.x.device}")
+            # print(f"Model device: {next(model.parameters()).device}")
             output = model(data)
-            total_preds = torch.cat((total_preds, output.cpu()), 0)
-            total_labels = torch.cat((total_labels, data.y.view(-1, 1).cpu()), 0)
-    return total_labels.numpy().flatten(),total_preds.numpy().flatten()
+            
+            total_preds = torch.cat((total_preds, output), 0)
+            total_labels = torch.cat((total_labels, data.y.view(-1, 1)), 0)
+    return total_labels.cpu().numpy().flatten(),total_preds.cpu().numpy().flatten()
 
 LOG_INTERVAL = 20
 
