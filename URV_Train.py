@@ -24,10 +24,13 @@ def Train(dataset = 'urv', model_type = GCNNet, cuda_name = "cuda:0", TRAIN_BATC
       return trained_model, training_mse_list, validation_mse_list
   
       
-def Trainfold(dataset = 'urv', model_type = GCNNet, cuda_name = "cuda:0", TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512, LR = 0.0005, NUM_EPOCHS = 50, plot = True, n_folds = 1, overwrite = True):
+def Trainfold(dataset = 'urv', model_type = GCNNet, cuda_name = "cuda:0", TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512, LR = 0.0005, NUM_EPOCHS = 50, plot = True, n_folds = 1, overwrite = True, validation_size= 0.2):
    trained_models = []
    list_training_mse_list = []
    list_validation_mse_list = []
+   list_best_epochs = []
+   list_train_size = []
+   list_valid_size = []
 
    for i in range(1, n_folds + 1):
 
@@ -36,13 +39,16 @@ def Trainfold(dataset = 'urv', model_type = GCNNet, cuda_name = "cuda:0", TRAIN_
       create_pytorch_data(dataset_fold, overwrite = overwrite)
       print("pytorch data created.")
 
-      trained_model, training_mse_list, validation_mse_list = fit(dataset_fold, model_type, cuda_name, TRAIN_BATCH_SIZE, TEST_BATCH_SIZE, LR =  LR, validation_size= 0.2 ,NUM_EPOCHS = NUM_EPOCHS)
+      trained_model, training_mse_list, validation_mse_list, best_epoch, train_size, valid_size = fit(dataset_fold, model_type, cuda_name, TRAIN_BATCH_SIZE, TEST_BATCH_SIZE, LR =  LR, validation_size= validation_size ,NUM_EPOCHS = NUM_EPOCHS)
       trained_models.append(trained_model)
       list_training_mse_list.append(training_mse_list)
       list_validation_mse_list.append(validation_mse_list)
+      list_best_epochs.append(best_epoch)
+      list_train_size.append(train_size)
+      list_valid_size.append(valid_size)
 
    if(plot == True):
-      subplots_errorevolution(list_training_mse_list, list_validation_mse_list, dataset, n_folds)
+      subplots_errorevolution(list_training_mse_list, list_validation_mse_list, model_type.__class__.__name__, dataset, n_folds, list_best_epochs, LR, NUM_EPOCHS, TRAIN_BATCH_SIZE, validation_size, list_train_size, list_valid_size)
       return trained_model
    else:
       return trained_model, list_training_mse_list, list_validation_mse_list

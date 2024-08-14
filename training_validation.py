@@ -240,21 +240,48 @@ def plot_errorevolution(training_mse_list, validation_mse_list, model_name, data
     plt.show()
 
 # subplot the evolution of the training and validation loss with number of epochs f for k folds
-def subplots_errorevolution(list_training_mse_list, list_validation_mse_list, dataset, n_folds):
+def subplots_errorevolution(list_training_mse_list, list_validation_mse_list, model_name, dataset, n_folds, list_best_epochs, LR, NUM_EPOCHS, TRAIN_BATCH_SIZE, validation_size, list_train_size, list_valid_size):
 
     # Create a figure
     fig, axs = plt.subplots(nrows=n_folds, ncols=1, figsize=(24, 4*n_folds))  # n_folds rows, 1 columns
     epochs_list = list(range(1, len(list_training_mse_list[0]) + 1))
-    print(epochs_list)
-    print(list_training_mse_list[0])
+    # print(epochs_list)
+    # print(list_training_mse_list[0])
     for i in range(0, n_folds):
+
+        epochs_training_list = list(range(1, len(list_training_mse_list[i]) + 1))
+        epochs_validation_list = list(range(1, len(list_validation_mse_list[i]) + 1))
         # Plot data on the first subplot
-        axs[i].plot(epochs_list, list_training_mse_list[i], label='Training Loss')
-        axs[i].plot(epochs_list, list_validation_mse_list[i], label='Validation Loss')
+        axs[i].plot(epochs_training_list, list_training_mse_list[i], label='Training Loss')
+        axs[i].plot(epochs_validation_list, list_validation_mse_list[i], label='Validation Loss')
+        axs[i].axvline(x = list_best_epochs[i], color='r', linestyle='--', label='best model')
         axs[i].set_xlabel('Epoch')
         axs[i].set_ylabel('mean square error')
         axs[i].set_title(f'MSE for {dataset} fold {i + 1}')
         axs[i].legend()
+
+        # Add the training parameters outside the plot
+        # Parameters to display in the table
+        parameters = {
+            "fold": i + 1,
+            "optimizer": "ADAM",
+            "learning rate": LR,
+            "epochs": NUM_EPOCHS,
+            "train batch size" : TRAIN_BATCH_SIZE,
+            "train size" : list_train_size[i],
+            "validation size": list_valid_size[i],
+            "validation percentage": str(validation_size * 100) + ' %',
+            "MSE": list_validation_mse_list[i][list_best_epochs[i] - 1]
+        }
+
+        # Create the table and add it to the plot
+        table_data = [[key, value] for key, value in parameters.items()]
+        table = axs[i].table(cellText=table_data, loc='right', cellLoc='center', colLoc='center', bbox=[1.2, 0.1, 0.3, 0.8])
+
+        # Customize the table appearance
+        table.auto_set_font_size(False)
+        table.set_fontsize(12)
+        table.scale(1, 1)
 
     # Adjust layout to prevent overlap
     plt.tight_layout()
