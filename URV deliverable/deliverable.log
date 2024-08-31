@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.5)  10 JUN 2024 13:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.5)  26 AUG 2024 21:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/pc/Desktop/subjects/Master thesis/GraphDTA_forked/URV deliverable/deliverable.tex"
-(c:/Users/pc/Desktop/subjects/Master thesis/GraphDTA_forked/URV deliverable/deliverable.tex
+**"c:/Users/pc/Desktop/Master/Master thesis/GraphDTA_forked/URV deliverable/deliverable.tex"
+(c:/Users/pc/Desktop/Master/Master thesis/GraphDTA_forked/URV deliverable/deliverable.tex
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -291,7 +291,7 @@ Package hyperref Info: Link coloring OFF on input line 43.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (title.tex
-<./urvlogo.png, id=63, 1270.7475pt x 285.9483pt>
+<./urvlogo.png, id=207, 1270.7475pt x 285.9483pt>
 File: ./urvlogo.png Graphic file (type png)
 <use ./urvlogo.png>
 Package pdftex.def Info: ./urvlogo.png  used on input line 51.
@@ -305,232 +305,404 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 5.
-)
-\tf@toc=\write4
-\openout4 = `deliverable.toc'.
-
-<Kfold.png, id=92, 763.85374pt x 623.32875pt>
-File: Kfold.png Graphic file (type png)
-<use Kfold.png>
-Package pdftex.def Info: Kfold.png  used on input line 77.
-(pdftex.def)             Requested size: 305.53607pt x 249.32707pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.81 
-      [1]
-<pdb file.png, id=104, 511.9125pt x 264.23718pt>
-File: pdb file.png Graphic file (type png)
-<use pdb file.png>
-Package pdftex.def Info: pdb file.png  used on input line 97.
-(pdftex.def)             Requested size: 393.9284pt x 203.33826pt.
-<pdb website.PNG, id=106, 959.08313pt x 397.485pt>
-File: pdb website.PNG Graphic file (type png)
-<use pdb website.PNG>
-Package pdftex.def Info: pdb website.PNG  used on input line 105.
-(pdftex.def)             Requested size: 393.9284pt x 163.26102pt.
+l.49 ...CONV-based model}{23}{subsubsection.9.3.4}
+                                                  % [1])
+\tf@toc=\write4
+\openout4 = `deliverable.toc'.
 
+<Benzene.png, id=286, 139.14671pt x 169.3491pt>
+File: Benzene.png Graphic file (type png)
+<use Benzene.png>
+Package pdftex.def Info: Benzene.png  used on input line 94.
+(pdftex.def)             Requested size: 105.04596pt x 127.85132pt.
+ [2]
+<affinity measurements/kd.png, id=295, 448.5558pt x 104.0688pt>
+File: affinity measurements/kd.png Graphic file (type png)
+<use affinity measurements/kd.png>
+Package pdftex.def Info: affinity measurements/kd.png  used on input line 130.
+(pdftex.def)             Requested size: 236.35544pt x 54.837pt.
+ [3 <./Benzene.png> <./affinity measurements/kd.png>]
+<affinity measurements/ki.png, id=302, 432.4155pt x 252.945pt>
+File: affinity measurements/ki.png Graphic file (type png)
+<use affinity measurements/ki.png>
+Package pdftex.def Info: affinity measurements/ki.png  used on input line 146.
+(pdftex.def)             Requested size: 236.35544pt x 138.25948pt.
+<affinity measurements/IC50.png, id=303, 579.1236pt x 132.9768pt>
+File: affinity measurements/IC50.png Graphic file (type png)
+<use affinity measurements/IC50.png>
+Package pdftex.def Info: affinity measurements/IC50.png  used on input line 167.
+(pdftex.def)             Requested size: 236.35544pt x 54.27126pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 161--169
 
-[2
+ []
+
+[4 <./affinity measurements/ki.png> <./affinity measurements/IC50.png>]
+<davis/linear pkd.png, id=310, 499.3857pt x 395.3169pt>
+File: davis/linear pkd.png Graphic file (type png)
+<use davis/linear pkd.png>
+Package pdftex.def Info: davis/linear pkd.png  used on input line 187.
+(pdftex.def)             Requested size: 236.35544pt x 187.10188pt.
+<davis/log pkd.png, id=311, 499.3857pt x 398.9304pt>
+File: davis/log pkd.png Graphic file (type png)
+<use davis/log pkd.png>
+Package pdftex.def Info: davis/log pkd.png  used on input line 192.
+(pdftex.def)             Requested size: 236.35544pt x 188.81215pt.
+<davis/boxplot.png, id=312, 406.8801pt x 318.7107pt>
+File: davis/boxplot.png Graphic file (type png)
+<use davis/boxplot.png>
+Package pdftex.def Info: davis/boxplot.png  used on input line 204.
+(pdftex.def)             Requested size: 236.35544pt x 185.13924pt.
+<davis/histogram.png, id=313, 427.1157pt x 328.8285pt>
+File: davis/histogram.png Graphic file (type png)
+<use davis/histogram.png>
+Package pdftex.def Info: davis/histogram.png  used on input line 208.
+(pdftex.def)             Requested size: 236.35544pt x 181.9651pt.
+<davis/smiles histogram.png, id=314, 419.166pt x 328.8285pt>
+File: davis/smiles histogram.png Graphic file (type png)
+<use davis/smiles histogram.png>
+Package pdftex.def Info: davis/smiles histogram.png  used on input line 217.
+(pdftex.def)             Requested size: 236.35544pt x 185.41714pt.
+<davis/protein histogram.png, id=315, 419.166pt x 328.8285pt>
+File: davis/protein histogram.png Graphic file (type png)
+<use davis/protein histogram.png>
+Package pdftex.def Info: davis/protein histogram.png  used on input line 221.
+(pdftex.def)             Requested size: 236.35544pt x 185.41714pt.
+ [5
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.112     \begin{itemize}
-                         
+l.224 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.112     \begin{itemize}
-                          <./Kfold.png> <./pdb file.png>]
-<pdb parser.png, id=118, 296.10625pt x 442.65375pt>
-File: pdb parser.png Graphic file (type png)
-<use pdb parser.png>
-Package pdftex.def Info: pdb parser.png  used on input line 118.
-(pdftex.def)             Requested size: 210.09193pt x 314.07697pt.
- [3
+l.224 
+       <./davis/linear pkd.png> <./davis/log pkd.png> <./davis/boxplot.png> <./davis/histogram.png>]
+<kiba/kiba adjustments.png, id=330, 367.59555pt x 193.61223pt>
+File: kiba/kiba adjustments.png Graphic file (type png)
+<use kiba/kiba adjustments.png>
+Package pdftex.def Info: kiba/kiba adjustments.png  used on input line 230.
+(pdftex.def)             Requested size: 210.09193pt x 110.65259pt.
+<kiba/boxplot.png, id=331, 419.166pt x 318.7107pt>
+File: kiba/boxplot.png Graphic file (type png)
+<use kiba/boxplot.png>
+Package pdftex.def Info: kiba/boxplot.png  used on input line 239.
+(pdftex.def)             Requested size: 236.35544pt x 179.71199pt.
+<kiba/histogram.png, id=332, 425.6703pt x 328.8285pt>
+File: kiba/histogram.png Graphic file (type png)
+<use kiba/histogram.png>
+Package pdftex.def Info: kiba/histogram.png  used on input line 243.
+(pdftex.def)             Requested size: 236.35544pt x 182.58727pt.
+<kiba/smiles histogram.png, id=333, 425.6703pt x 328.8285pt>
+File: kiba/smiles histogram.png Graphic file (type png)
+<use kiba/smiles histogram.png>
+Package pdftex.def Info: kiba/smiles histogram.png  used on input line 255.
+(pdftex.def)             Requested size: 236.35544pt x 182.58727pt.
+<kiba/protein histogram.png, id=334, 425.6703pt x 328.8285pt>
+File: kiba/protein histogram.png Graphic file (type png)
+<use kiba/protein histogram.png>
+Package pdftex.def Info: kiba/protein histogram.png  used on input line 259.
+(pdftex.def)             Requested size: 236.35544pt x 182.58727pt.
+ [6 <./davis/smiles histogram.png> <./davis/protein histogram.png> <./kiba/kiba adjustments.png> <./kiba/boxplot.png> <./kiba/histogram.png>]
+<boxplot2.png, id=348, 400.3758pt x 318.7107pt>
+File: boxplot2.png Graphic file (type png)
+<use boxplot2.png>
+Package pdftex.def Info: boxplot2.png  used on input line 279.
+(pdftex.def)             Requested size: 236.35544pt x 188.14952pt.
+<histogram.png, id=349, 406.1574pt x 328.8285pt>
+File: histogram.png Graphic file (type png)
+<use histogram.png>
+Package pdftex.def Info: histogram.png  used on input line 283.
+(pdftex.def)             Requested size: 236.35544pt x 191.35286pt.
+<URV/smiles histogram.png, id=350, 406.1574pt x 328.8285pt>
+File: URV/smiles histogram.png Graphic file (type png)
+<use URV/smiles histogram.png>
+Package pdftex.def Info: URV/smiles histogram.png  used on input line 292.
+(pdftex.def)             Requested size: 236.35544pt x 191.35286pt.
+<URV/protein histogram.png, id=351, 412.6617pt x 328.8285pt>
+File: URV/protein histogram.png Graphic file (type png)
+<use URV/protein histogram.png>
+Package pdftex.def Info: URV/protein histogram.png  used on input line 296.
+(pdftex.def)             Requested size: 236.35544pt x 188.33734pt.
+ [7 <./kiba/smiles histogram.png> <./kiba/protein histogram.png> <./boxplot2.png> <./histogram.png>]
+<pdb file.png, id=364, 511.9125pt x 264.23718pt>
+File: pdb file.png Graphic file (type png)
+<use pdb file.png>
+Package pdftex.def Info: pdb file.png  used on input line 309.
+(pdftex.def)             Requested size: 393.9284pt x 203.33826pt.
+<pdb website.PNG, id=366, 959.08313pt x 397.485pt>
+File: pdb website.PNG Graphic file (type png)
+<use pdb website.PNG>
+Package pdftex.def Info: pdb website.PNG  used on input line 317.
+(pdftex.def)             Requested size: 393.9284pt x 163.26102pt.
+ [8
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.130 
-      
+l.321 
+       <./URV/smiles histogram.png> <./URV/protein histogram.png> <./pdb file.png>]
+<pdb parser.png, id=376, 296.10625pt x 442.65375pt>
+File: pdb parser.png Graphic file (type png)
+<use pdb parser.png>
+Package pdftex.def Info: pdb parser.png  used on input line 330.
+(pdftex.def)             Requested size: 210.09193pt x 314.07697pt.
+ [9
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.130 
-       <./pdb website.PNG> <./pdb parser.png>]
-<sdf file.PNG, id=128, 487.8225pt x 403.5075pt>
-File: sdf file.PNG Graphic file (type png)
-<use sdf file.PNG>
-Package pdftex.def Info: sdf file.PNG  used on input line 133.
-(pdftex.def)             Requested size: 367.6649pt x 304.11987pt.
-<sdf website.PNG, id=130, 957.5775pt x 449.42906pt>
-File: sdf website.PNG Graphic file (type png)
-<use sdf website.PNG>
-Package pdftex.def Info: sdf website.PNG  used on input line 142.
-(pdftex.def)             Requested size: 472.71088pt x 221.86115pt.
- [4
+l.342 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.150     T
-           he \textbf{rdkit.Chem} package \cite{7} was used to read the mole...
+l.342 
+       <./pdb website.PNG> <./pdb parser.png>]
+<sdf file.PNG, id=386, 487.8225pt x 403.5075pt>
+File: sdf file.PNG Graphic file (type png)
+<use sdf file.PNG>
+Package pdftex.def Info: sdf file.PNG  used on input line 345.
+(pdftex.def)             Requested size: 367.6649pt x 304.11987pt.
+<sdf website.PNG, id=388, 957.5775pt x 449.42906pt>
+File: sdf website.PNG Graphic file (type png)
+<use sdf website.PNG>
+Package pdftex.def Info: sdf website.PNG  used on input line 354.
+(pdftex.def)             Requested size: 472.71088pt x 221.86115pt.
+ [10
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.150     T
-           he \textbf{rdkit.Chem} package \cite{7} was used to read the mole... <./sdf file.PNG> <./sdf website.PNG>]
-<sdf parser.png, id=141, 372.39125pt x 583.17876pt>
-File: sdf parser.png Graphic file (type png)
-<use sdf parser.png>
-Package pdftex.def Info: sdf parser.png  used on input line 161.
-(pdftex.def)             Requested size: 262.61894pt x 411.28346pt.
-<boxplot1.png, id=142, 400.3758pt x 318.7107pt>
-File: boxplot1.png Graphic file (type png)
-<use boxplot1.png>
-Package pdftex.def Info: boxplot1.png  used on input line 176.
-(pdftex.def)             Requested size: 262.61894pt x 209.06583pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<boxplot2.png, id=143, 400.3758pt x 318.7107pt>
-File: boxplot2.png Graphic file (type png)
-<use boxplot2.png>
-Package pdftex.def Info: boxplot2.png  used on input line 183.
-(pdftex.def)             Requested size: 262.61894pt x 209.06583pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<histogram.png, id=144, 406.1574pt x 328.8285pt>
-File: histogram.png Graphic file (type png)
-<use histogram.png>
-Package pdftex.def Info: histogram.png  used on input line 189.
-(pdftex.def)             Requested size: 262.61894pt x 212.61708pt.
-[5
+l.362         T
+               he \textbf{rdkit.Chem} package \cite{7} was used to read the ...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.190         \end{center}
-                           <./sdf parser.png>] [6
+l.362         T
+               he \textbf{rdkit.Chem} package \cite{7} was used to read the ... <./sdf file.PNG> <./sdf website.PNG>]
+<sdf parser.png, id=399, 372.39125pt x 583.17876pt>
+File: sdf parser.png Graphic file (type png)
+<use sdf parser.png>
+Package pdftex.def Info: sdf parser.png  used on input line 373.
+(pdftex.def)             Requested size: 262.61894pt x 411.28346pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 380.
+
+[11
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.199     \begin{center}
-                        
-pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.199     \begin{center}
-                         <./boxplot1.png> <./boxplot2.png> <./histogram.png>]
-<architecture.PNG, id=162, 541.27219pt x 393.72093pt>
+l.390                 \end{itemize}
+                                    <./sdf parser.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 391.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 400.
+
+<DTA overview.png, id=410, 508.99838pt x 410.3071pt>
+File: DTA overview.png Graphic file (type png)
+<use DTA overview.png>
+Package pdftex.def Info: DTA overview.png  used on input line 415.
+(pdftex.def)             Requested size: 236.35544pt x 190.52786pt.
+<fork.PNG, id=411, 518.6878pt x 147.55125pt>
+File: fork.PNG Graphic file (type png)
+<use fork.PNG>
+Package pdftex.def Info: fork.PNG  used on input line 427.
+(pdftex.def)             Requested size: 367.6649pt x 104.59549pt.
+[12 <./DTA overview.png>]
+<refactor.png, id=418, 869.2475pt x 272.01625pt>
+File: refactor.png Graphic file (type png)
+<use refactor.png>
+Package pdftex.def Info: refactor.png  used on input line 436.
+(pdftex.def)             Requested size: 420.19191pt x 131.4919pt.
+<architecture.PNG, id=419, 541.27219pt x 393.72093pt>
 File: architecture.PNG Graphic file (type png)
 <use architecture.PNG>
-Package pdftex.def Info: architecture.PNG  used on input line 200.
+Package pdftex.def Info: architecture.PNG  used on input line 446.
 (pdftex.def)             Requested size: 420.19191pt x 305.65323pt.
-<GCN_model.PNG, id=163, 113.67468pt x 110.66344pt>
+ [13 <./fork.PNG> <./refactor.png> <./architecture.PNG>]
+<GCN_model.PNG, id=426, 113.67468pt x 110.66344pt>
 File: GCN_model.PNG Graphic file (type png)
 <use GCN_model.PNG>
-Package pdftex.def Info: GCN_model.PNG  used on input line 215.
+Package pdftex.def Info: GCN_model.PNG  used on input line 461.
 (pdftex.def)             Requested size: 157.57297pt x 153.40125pt.
- [7 <./architecture.PNG> <./GCN_model.PNG>]
-<GAT_model.PNG, id=174, 107.65219pt x 110.66344pt>
+<GAT_model.PNG, id=427, 107.65219pt x 110.66344pt>
 File: GAT_model.PNG Graphic file (type png)
 <use GAT_model.PNG>
-Package pdftex.def Info: GAT_model.PNG  used on input line 227.
+Package pdftex.def Info: GAT_model.PNG  used on input line 473.
 (pdftex.def)             Requested size: 157.57297pt x 161.99614pt.
-<GIN_model.PNG, id=175, 107.65219pt x 107.65219pt>
+<GIN_model.PNG, id=428, 107.65219pt x 107.65219pt>
 File: GIN_model.PNG Graphic file (type png)
 <use GIN_model.PNG>
-Package pdftex.def Info: GIN_model.PNG  used on input line 237.
+Package pdftex.def Info: GIN_model.PNG  used on input line 483.
 (pdftex.def)             Requested size: 157.57297pt x 157.5881pt.
-<GAT_GCN.PNG, id=176, 109.1578pt x 107.65219pt>
+ [14 <./GCN_model.PNG> <./GAT_model.PNG>]
+<GAT_GCN.PNG, id=443, 109.1578pt x 107.65219pt>
 File: GAT_GCN.PNG Graphic file (type png)
 <use GAT_GCN.PNG>
-Package pdftex.def Info: GAT_GCN.PNG  used on input line 247.
+Package pdftex.def Info: GAT_GCN.PNG  used on input line 493.
 (pdftex.def)             Requested size: 157.57297pt x 155.4001pt.
- [8 <./GAT_model.PNG> <./GIN_model.PNG> <./GAT_GCN.PNG>]
-<GCN_folds10errors.png, id=190, 1727.253pt x 2883.573pt>
-File: GCN_folds10errors.png Graphic file (type png)
-<use GCN_folds10errors.png>
-Package pdftex.def Info: GCN_folds10errors.png  used on input line 273.
-(pdftex.def)             Requested size: 472.71088pt x 789.17906pt.
- [9]
-Overfull \vbox (16.4022pt too high) has occurred while \output is active []
-
- [10 <./GCN_folds10errors.png>]
-<GCN_folds10predictions.png, id=203, 499.3857pt x 2883.573pt>
-File: GCN_folds10predictions.png Graphic file (type png)
-<use GCN_folds10predictions.png>
-Package pdftex.def Info: GCN_folds10predictions.png  used on input line 277.
-(pdftex.def)             Requested size: 131.30946pt x 758.20326pt.
- [11 <./GCN_folds10predictions.png>]
-<GAT_folds10errors.png, id=209, 1727.253pt x 2883.573pt>
-File: GAT_folds10errors.png Graphic file (type png)
-<use GAT_folds10errors.png>
-Package pdftex.def Info: GAT_folds10errors.png  used on input line 288.
-(pdftex.def)             Requested size: 472.71088pt x 789.17906pt.
- [12]
-Overfull \vbox (16.4022pt too high) has occurred while \output is active []
-
- [13 <./GAT_folds10errors.png>]
-<GAT_folds10predictions.png, id=220, 496.4949pt x 2883.573pt>
-File: GAT_folds10predictions.png Graphic file (type png)
-<use GAT_folds10predictions.png>
-Package pdftex.def Info: GAT_folds10predictions.png  used on input line 292.
-(pdftex.def)             Requested size: 131.30946pt x 762.60323pt.
- [14 <./GAT_folds10predictions.png>]
-<GATGCN_folds10errors.png, id=226, 1727.253pt x 2883.573pt>
-File: GATGCN_folds10errors.png Graphic file (type png)
-<use GATGCN_folds10errors.png>
-Package pdftex.def Info: GATGCN_folds10errors.png  used on input line 303.
-(pdftex.def)             Requested size: 472.71088pt x 789.17906pt.
- [15]
-Overfull \vbox (16.4022pt too high) has occurred while \output is active []
-
- [16 <./GATGCN_folds10errors.png>]
-<GATGCN_folds10predictions.png, id=236, 508.0581pt x 2883.573pt>
-File: GATGCN_folds10predictions.png Graphic file (type png)
-<use GATGCN_folds10predictions.png>
-Package pdftex.def Info: GATGCN_folds10predictions.png  used on input line 307.
-(pdftex.def)             Requested size: 131.30946pt x 745.26733pt.
- [17 <./GATGCN_folds10predictions.png>]
-<GINCONV_folds10errors.png, id=242, 1727.253pt x 2883.573pt>
-File: GINCONV_folds10errors.png Graphic file (type png)
-<use GINCONV_folds10errors.png>
-Package pdftex.def Info: GINCONV_folds10errors.png  used on input line 318.
-(pdftex.def)             Requested size: 472.71088pt x 789.17906pt.
- [18]
-Overfull \vbox (16.4022pt too high) has occurred while \output is active []
-
- [19 <./GINCONV_folds10errors.png>]
-<GINCONV_folds10predictions.png, id=253, 524.6802pt x 2883.573pt>
-File: GINCONV_folds10predictions.png Graphic file (type png)
-<use GINCONV_folds10predictions.png>
-Package pdftex.def Info: GINCONV_folds10predictions.png  used on input line 322.
-(pdftex.def)             Requested size: 131.30946pt x 721.63948pt.
- [20 <./GINCONV_folds10predictions.png>] [21] (deliverable.aux)
+ [15 <./GIN_model.PNG> <./GAT_GCN.PNG>]
+<train_test_plots/davis GCN train.png, id=455, 1391.9202pt x 381.5856pt>
+File: train_test_plots/davis GCN train.png Graphic file (type png)
+<use train_test_plots/davis GCN train.png>
+Package pdftex.def Info: train_test_plots/davis GCN train.png  used on input line 516.
+(pdftex.def)             Requested size: 525.23788pt x 143.9909pt.
+<train_test_plots/davis GCN test.png, id=456, 436.5108pt x 328.8285pt>
+File: train_test_plots/davis GCN test.png Graphic file (type png)
+<use train_test_plots/davis GCN test.png>
+Package pdftex.def Info: train_test_plots/davis GCN test.png  used on input line 520.
+(pdftex.def)             Requested size: 315.14594pt x 237.4036pt.
+<train_test_plots/davis GATGCN train.png, id=457, 1391.9202pt x 381.5856pt>
+File: train_test_plots/davis GATGCN train.png Graphic file (type png)
+<use train_test_plots/davis GATGCN train.png>
+Package pdftex.def Info: train_test_plots/davis GATGCN train.png  used on input line 526.
+(pdftex.def)             Requested size: 525.23788pt x 143.9909pt.
+<train_test_plots/davis GATGCN test.png, id=458, 441.5697pt x 328.8285pt>
+File: train_test_plots/davis GATGCN test.png Graphic file (type png)
+<use train_test_plots/davis GATGCN test.png>
+Package pdftex.def Info: train_test_plots/davis GATGCN test.png  used on input line 530.
+(pdftex.def)             Requested size: 315.14594pt x 234.6841pt.
+ [16 <./train_test_plots/davis GCN train.png> <./train_test_plots/davis GCN test.png> <./train_test_plots/davis GATGCN train.png>]
+<train_test_plots/davis GAT train.png, id=466, 1391.9202pt x 381.5856pt>
+File: train_test_plots/davis GAT train.png Graphic file (type png)
+<use train_test_plots/davis GAT train.png>
+Package pdftex.def Info: train_test_plots/davis GAT train.png  used on input line 536.
+(pdftex.def)             Requested size: 525.23788pt x 143.9909pt.
+<train_test_plots/davis GAT test.png, id=467, 435.0654pt x 328.8285pt>
+File: train_test_plots/davis GAT test.png Graphic file (type png)
+<use train_test_plots/davis GAT test.png>
+Package pdftex.def Info: train_test_plots/davis GAT test.png  used on input line 540.
+(pdftex.def)             Requested size: 315.14594pt x 238.19135pt.
+ [17 <./train_test_plots/davis GATGCN test.png> <./train_test_plots/davis GAT train.png> <./train_test_plots/davis GAT test.png>]
+<train_test_plots/davis GInCONV train.png, id=475, 1391.9202pt x 381.5856pt>
+File: train_test_plots/davis GInCONV train.png Graphic file (type png)
+<use train_test_plots/davis GInCONV train.png>
+Package pdftex.def Info: train_test_plots/davis GInCONV train.png  used on input line 546.
+(pdftex.def)             Requested size: 525.23788pt x 143.9909pt.
+<train_test_plots/davis GINCONV test.png, id=476, 458.1918pt x 328.8285pt>
+File: train_test_plots/davis GINCONV test.png Graphic file (type png)
+<use train_test_plots/davis GINCONV test.png>
+Package pdftex.def Info: train_test_plots/davis GINCONV test.png  used on input line 550.
+(pdftex.def)             Requested size: 315.14594pt x 226.16939pt.
+<train_test_plots/kiba GCN train.png, id=477, 1391.9202pt x 381.5856pt>
+File: train_test_plots/kiba GCN train.png Graphic file (type png)
+<use train_test_plots/kiba GCN train.png>
+Package pdftex.def Info: train_test_plots/kiba GCN train.png  used on input line 557.
+(pdftex.def)             Requested size: 525.23788pt x 143.9909pt.
+<train_test_plots/kiba GCN test.png, id=478, 443.0151pt x 328.8285pt>
+File: train_test_plots/kiba GCN test.png Graphic file (type png)
+<use train_test_plots/kiba GCN test.png>
+Package pdftex.def Info: train_test_plots/kiba GCN test.png  used on input line 561.
+(pdftex.def)             Requested size: 315.14594pt x 233.92145pt.
+ [18 <./train_test_plots/davis GInCONV train.png> <./train_test_plots/davis GINCONV test.png> <./train_test_plots/kiba GCN train.png>]
+<train_test_plots/kiba GATGCN train.png, id=487, 1398.4245pt x 381.5856pt>
+File: train_test_plots/kiba GATGCN train.png Graphic file (type png)
+<use train_test_plots/kiba GATGCN train.png>
+Package pdftex.def Info: train_test_plots/kiba GATGCN train.png  used on input line 567.
+(pdftex.def)             Requested size: 525.23788pt x 143.32132pt.
+<train_test_plots/kiba GATGCN test.png, id=488, 447.3513pt x 328.8285pt>
+File: train_test_plots/kiba GATGCN test.png Graphic file (type png)
+<use train_test_plots/kiba GATGCN test.png>
+Package pdftex.def Info: train_test_plots/kiba GATGCN test.png  used on input line 571.
+(pdftex.def)             Requested size: 315.14594pt x 231.64851pt.
+<train_test_plots/kiba GAT train.png, id=489, 1382.5251pt x 381.5856pt>
+File: train_test_plots/kiba GAT train.png Graphic file (type png)
+<use train_test_plots/kiba GAT train.png>
+Package pdftex.def Info: train_test_plots/kiba GAT train.png  used on input line 577.
+(pdftex.def)             Requested size: 525.23788pt x 144.96909pt.
+ [19 <./train_test_plots/kiba GCN test.png> <./train_test_plots/kiba GATGCN train.png> <./train_test_plots/kiba GATGCN test.png>]
+<train_test_plots/kiba GAT test.png, id=497, 441.5697pt x 328.8285pt>
+File: train_test_plots/kiba GAT test.png Graphic file (type png)
+<use train_test_plots/kiba GAT test.png>
+Package pdftex.def Info: train_test_plots/kiba GAT test.png  used on input line 581.
+(pdftex.def)             Requested size: 315.14594pt x 234.6841pt.
+<train_test_plots/kiba GINCONV train.png, id=498, 1391.9202pt x 381.5856pt>
+File: train_test_plots/kiba GINCONV train.png Graphic file (type png)
+<use train_test_plots/kiba GINCONV train.png>
+Package pdftex.def Info: train_test_plots/kiba GINCONV train.png  used on input line 587.
+(pdftex.def)             Requested size: 525.23788pt x 143.9909pt.
+<train_test_plots/kiba GINCONV test.png, id=499, 456.0237pt x 328.8285pt>
+File: train_test_plots/kiba GINCONV test.png Graphic file (type png)
+<use train_test_plots/kiba GINCONV test.png>
+Package pdftex.def Info: train_test_plots/kiba GINCONV test.png  used on input line 591.
+(pdftex.def)             Requested size: 315.14594pt x 227.25317pt.
+ [20 <./train_test_plots/kiba GAT train.png> <./train_test_plots/kiba GAT test.png> <./train_test_plots/kiba GINCONV train.png>]
+<train_test_plots/URV GCN train.png, id=507, 1382.5251pt x 381.5856pt>
+File: train_test_plots/URV GCN train.png Graphic file (type png)
+<use train_test_plots/URV GCN train.png>
+Package pdftex.def Info: train_test_plots/URV GCN train.png  used on input line 598.
+(pdftex.def)             Requested size: 525.23788pt x 144.96909pt.
+<train_test_plots/URV GCN test.png, id=508, 430.7292pt x 328.8285pt>
+File: train_test_plots/URV GCN test.png Graphic file (type png)
+<use train_test_plots/URV GCN test.png>
+Package pdftex.def Info: train_test_plots/URV GCN test.png  used on input line 602.
+(pdftex.def)             Requested size: 315.14594pt x 240.59473pt.
+ [21 <./train_test_plots/kiba GINCONV test.png> <./train_test_plots/URV GCN train.png> <./train_test_plots/URV GCN test.png>]
+<train_test_plots/URV GATGCN train.png, id=516, 1391.9202pt x 381.5856pt>
+File: train_test_plots/URV GATGCN train.png Graphic file (type png)
+<use train_test_plots/URV GATGCN train.png>
+Package pdftex.def Info: train_test_plots/URV GATGCN train.png  used on input line 608.
+(pdftex.def)             Requested size: 525.23788pt x 143.9909pt.
+<train_test_plots/URV GATGCN test.png, id=517, 435.0654pt x 328.8285pt>
+File: train_test_plots/URV GATGCN test.png Graphic file (type png)
+<use train_test_plots/URV GATGCN test.png>
+Package pdftex.def Info: train_test_plots/URV GATGCN test.png  used on input line 612.
+(pdftex.def)             Requested size: 315.14594pt x 238.19135pt.
+<train_test_plots/URV GAT train.png, id=518, 1389.0294pt x 381.5856pt>
+File: train_test_plots/URV GAT train.png Graphic file (type png)
+<use train_test_plots/URV GAT train.png>
+Package pdftex.def Info: train_test_plots/URV GAT train.png  used on input line 618.
+(pdftex.def)             Requested size: 525.23788pt x 144.28786pt.
+<train_test_plots/URV GAT test.png, id=519, 429.2838pt x 328.8285pt>
+File: train_test_plots/URV GAT test.png Graphic file (type png)
+<use train_test_plots/URV GAT test.png>
+Package pdftex.def Info: train_test_plots/URV GAT test.png  used on input line 622.
+(pdftex.def)             Requested size: 315.14594pt x 241.39754pt.
+ [22 <./train_test_plots/URV GATGCN train.png> <./train_test_plots/URV GATGCN test.png> <./train_test_plots/URV GAT train.png>]
+<train_test_plots/URV GINCONV train.png, id=527, 1389.0294pt x 381.5856pt>
+File: train_test_plots/URV GINCONV train.png Graphic file (type png)
+<use train_test_plots/URV GINCONV train.png>
+Package pdftex.def Info: train_test_plots/URV GINCONV train.png  used on input line 628.
+(pdftex.def)             Requested size: 525.23788pt x 144.28786pt.
+<train_test_plots/URV GINCONV test.png, id=528, 446.6286pt x 328.8285pt>
+File: train_test_plots/URV GINCONV test.png Graphic file (type png)
+<use train_test_plots/URV GINCONV test.png>
+Package pdftex.def Info: train_test_plots/URV GINCONV test.png  used on input line 632.
+(pdftex.def)             Requested size: 315.14594pt x 232.02483pt.
+<summary.png, id=529, 590.205pt x 390.7398pt>
+File: summary.png Graphic file (type png)
+<use summary.png>
+Package pdftex.def Info: summary.png  used on input line 638.
+(pdftex.def)             Requested size: 525.23788pt x 347.73347pt.
+ [23 <./train_test_plots/URV GAT test.png> <./train_test_plots/URV GINCONV train.png> <./train_test_plots/URV GINCONV test.png>] [24 <./summary.png>] [25] (deliverable.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
  ***********
 Package rerunfilecheck Info: File `deliverable.out' has not changed.
-(rerunfilecheck)             Checksum: 9DE932AC50C2C876EC50B23F16FBAAEF;3116.
+(rerunfilecheck)             Checksum: 4B24C4776B0705DABF4610C6992C5D17;9193.
  ) 
 Here is how much of TeX's memory you used:
- 9842 strings out of 474591
- 155024 string characters out of 5747194
- 1935533 words of memory out of 5000000
- 31847 multiletter control sequences out of 15000+600000
+ 10177 strings out of 474591
+ 165666 string characters out of 5747194
+ 1942533 words of memory out of 5000000
+ 32135 multiletter control sequences out of 15000+600000
  564477 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,7n,79p,550b,648s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\pc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on deliverable.pdf (22 pages, 4503153 bytes).
+ 75i,9n,79p,533b,636s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\pc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on deliverable.pdf (26 pages, 3332411 bytes).
 PDF statistics:
- 317 PDF objects out of 1000 (max. 8388607)
- 66 named destinations out of 1000 (max. 500000)
- 241 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 632 PDF objects out of 1000 (max. 8388607)
+ 113 named destinations out of 1000 (max. 500000)
+ 704 words of extra memory for PDF output out of 10000 (max. 10000000)
 

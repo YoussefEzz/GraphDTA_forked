@@ -66,132 +66,378 @@ for that pair.
 
 \section{Aim}
 
-The aim of this thesis is to make use of four existing convolutional neural network(CNN) models following the paper in \cite{1} - to take advantage of the fact that they represents drugs as graphs and use graph neural networks to predict DTA-
+The aim of this thesis is to make use of four existing Graph-based convolutional neural network(GCN) models following the paper in \cite{1} - to take advantage of the fact that they represent drugs as graphs and use graph neural networks to predict DTA-
 in order to train a neural network on a new small in-house URV dataset of sample size 332 patterns. but since the CNN models typically require large datasets for training like the datasets 
 davis and kiba that have sample sizes of 30058 ( 25047 train + 5011 test ) and 118257 (98547 train + 19710 test) respectively used to train the CNN models in \cite{1} the approach taken will be:
-\begin{itemize}
-    \item Apply k-folding with k = 10 to get 10 different combinations of train and test patterns for URV dataset
-    
-    \begin{figure}[H]
-        \centering
-        \includegraphics[scale=0.4]{Kfold.png} % Replace 'example-image' with the path to your image file
-        \caption{k-folding.}
-        \label{fig 1}
-    \end{figure}
-            
-\end{itemize} 
-
 the GIT repository of the code \cite{2} used in the referenced paper \cite{1} was forked to Git repository \cite{3} to experiment with the 
 code in the referenced paper and obtain the results. code refactoring was done to run experiments in python notebooks instead of terminals
 
-\section{URV dataset}
-    \subsection{protein representation}
-    the protein data are initially provided as \textbf{Protein Data Bank(PDB)} files. PDB is a file format used to store 3D structural information about proteins. It is one of the most widely used formats for representing and exchanging structural data in bioinformatics and structural biology.
-    PDB files contain atomic coordinates of atoms in a molecule, along with metadata and additional information such as experimental methods used to determine the structure.
-
-    the PDB file name is named after the protein ID. if a PDB file e.g. \textbf{6M2N\_protein.pdb}  is open with any text editor e.g. notepad++, the metadata including its ID, name, type
-    are in the header and title tags as shown in figure \ref{fig 2} for protein ID \textbf{6M2N} 
-
-        \begin{figure}[h]
-            \centering
-            \includegraphics[width=0.75\textwidth]{pdb file.png} % Replace 'example-image' with the path to your image file
-            \caption{PDB file example.}
-            \label{fig 2}
-        \end{figure}
-
-    more informtion can be viewed at the PDB website \cite{4} for the same protein ID \textbf{6M2N}
-        \begin{figure}[h]
-            \centering
-            \includegraphics[width=0.75\textwidth]{pdb website.PNG} % Replace 'example-image' with the path to your image file
-            \caption{PDB file example.}
-            \label{fig 3}
-        \end{figure}
-
-    a protein can be either Single Chain or Multi-Chain, so it can be composed of one chain of amino acids(sequence) or more usually two, we pick the longest sequence as the representation for the protein
-    this is done using \textbf{Bio.PDB} module in the \textbf{Biopython} library that provides tools for working with Protein Data Bank (PDB) files in python. classes used are:
+\section{Drug Representation}
+    \subsection{SMILES notation}
+    Simplified Molecular Input Line Entry System (SMILES) was invented to represent molecules to be readable by computers.
+    enabling several efficient applications, including
+    fast retrieval and substructure searching. From the SMILES code,
+    drug descriptors like the number of heavy atoms or valence electrons
+    can be inferred and readily used as features for affinity prediction.
+    One could also view the SMILES code as a string
     \begin{itemize}
-        \item \textbf{PDBParser} used to parse PDB files, create a structure object and read the atomic coordinates and other structural information from a PDB file and converts it into a hierarchical structure object, which can be easily manipulated and analyzed. 
-        \item \textbf{PDBBuilder} used to identify and construct polypeptides (chains of amino acids) from a structure object (such as a protein structure obtained from a PDB file)             
-    
-        \begin{figure}[h]
-            \centering
-            \includegraphics[width=0.4\textwidth]{pdb parser.png} % Replace 'example-image' with the path to your image file
-            \caption{PDB file example.}
-            \label{fig 4}
-        \end{figure}
-
-    \end{itemize} 
-
-    \subsection{drug(ligand) representation}
-    the ligand data are provided as \textbf{Structure Data file(SDF)} file format used for representing chemical compounds and their associated data. It is primarily used to store information about molecules, including their structure and various properties, in a structured way.
-
-    the SDF file name is named after the protein ID with which the ligand is paired. consider SDF file \textbf{6M2N\_ligand.sdf} shown in fig \ref{fig 5} where its name does not indicate any information about the ligand but suggests it will be paired with previous protein
-    to get information about the ligand itself, it can be open using a text editor e.g. notepad++ and at the end of the file information that identify the ligand can be found e.g. \textbf{chemical formula} and \textbf{Simplified Molecular Input Line Entry System(SMILES)} notation which is is a chemical notation that allows a user to represent a chemical structure in a way that can be used by the computer.
-    
-    \begin{figure}[h]
+        \item Methane: "C"
+        \item Ethanol: "CCO"
+        \item Benzene: "c1ccccc1" 
+        \item Glucose: "OC[C@@H]1OC@HC@@HC@H[C@H]1O"     
+    \end{itemize}
+    for example the benzene molecule with the SMILES notation "c1ccccc1" has six carbon atoms in a circular and planar shape which can be inferred from the SMILES notation and 
+    it's worth mentioning that this is a famous example of an aromatic molecule where aromaticity is an important feature of stability.
+    \begin{figure}[H]
         \centering
-        \includegraphics[width=0.7\textwidth]{sdf file.PNG} % Replace 'example-image' with the path to your image file
-        \caption{SDF file example.}
-        \label{fig 5}
+        \begin{minipage}{0.2\textwidth}
+        \includegraphics[width=\textwidth]{Benzene.png}
+        \end{minipage}   
     \end{figure}
 
-    while the chemical formula may not be unique, the SMILES notation is always unique. so it can be used in many websites e.g. the chemspider website\cite{6}  to search for more information about the ligand
-
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.9\textwidth]{sdf website.PNG} % Replace 'example-image' with the path to your image file
-        \caption{SDF website.}
-        \label{fig 6}
-    \end{figure}
-
-    An SDF ligand file is read and first the molecule is validated(sanitized) to check if error exist in the structure, if the structure is valid the SMILES notation
-    is extracted and appended to valid ligands SDF file else it is excluded and added to invalid ligands SDF file.
-
-    The \textbf{rdkit.Chem} package \cite{7} was used to read the molecule using Chem.SDMolSupplier function, validate it using Chem.SanitizeMol and convert it to SMILES notation
-    using function Chem.MolToSmiles
-
+\section{Protein Representation}
+    \subsection{Protein Sequence}
+    A protein sequence is the order of amino acids in a protein. Amino acids are the building blocks of proteins, and there are about 20 different amino acids that can be found in proteins. The sequence of amino acids in a protein determines its three-dimensional structure and its function.
+    so The sequence is a string of ASCII characters which represent amino
+    acids. 
+    \\Each amino acid type is encoded with an integer based on its
+    associated alphabetical symbol [e.g. Alanine (A) is 1, Cystine (C) is
+    3, Aspartic Acid (D) is 4 and so on], allowing the protein to be represented as an integer sequence.
+    imagine a protein as a word. Each letter in the word represents an amino acid. The order of the letters in the word determines the meaning of the word. Similarly, the order of amino acids in a protein determines its function.
+    \\ an example of a protein sequence, representing the first 7 amino acids of the protein insulin:
+    \textbf{GIVEQCC...}
+    This sequence represents the following amino acids:
     \begin{itemize}
-        \item \textbf{Chem.SDMolSupplier} used to read the molecule.
-        \item \textbf{Chem.SanitizeMol} used to validate the molecule             
-        \item \textbf{Chem.MolToSmiles} obtain the SMILES notation of the molecule 
+        \item \textbf{G}: Glycine
+        \item \textbf{I}: Isoleucine
+        \item \textbf{V}: Valine 
+        \item \textbf{E}: Glutamic acid
+        \item \textbf{Q}: Glutamine
+        \item \textbf{C}: Cysteine
+        \item \textbf{C}: Cysteine    
     \end{itemize}
 
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.5\textwidth]{sdf parser.png} % Replace 'example-image' with the path to your image file
-        \caption{SDF workflow.}
-        \label{fig 7}
-    \end{figure}
+\section{Binding affinity measurements}
+    \subsection{The kinase dissociation constant \textbf{kd}}
+        It measures the equilibrium between the ligand(drug)-protein complex and the dissociated components. \\
+        It corresponds to the affinity which the ligand has for the binding site. \\
+        under usual conditions the dissociation constant gives the ligand concentration at which half of the protein molecules have ligand bound.\\
+        Ligands with higher, more favorable free energy of association bind “tighter” and therefore have greater preference for the bound state. Because \textbf{kd} is defined as a dissociation constant, higher affinity ligands have lower \textbf{kd} values.\\ 
+        As an equilibrium constant, we can express it as the ratio of product concentrations over reactants:
+        \begin{figure}[H]
+            \centering
+            \begin{minipage}{0.45\textwidth}
+            \includegraphics[width=\textwidth]{affinity measurements/kd.png}
+            \end{minipage}   
+        \end{figure}
+        where
+        \begin{itemize}
+            \item [P] is the free protein concentration
+            \item [L] is the free ligand concentration
+            \item [PL] is the protein-ligand complex         
+        \end{itemize}
 
-    \subsection{affinity representation}
-        affinity is the continouos variable that represents the interaction between the ligand and the protein smaller value means less affinity and 
-        higher value indicates strong affinity.
+    \subsection{The kinase Inhibition Constant \textbf{ki}}
+        represents the affinity of the drug molecule for its target receptor, specifically in the context of competitive inhibition.
+
+        \begin{figure}[H]
+            \centering
+            \begin{minipage}{0.45\textwidth}
+            \includegraphics[width=\textwidth]{affinity measurements/ki.png}
+            \end{minipage}   
+        \end{figure}
+        where
+        \begin{itemize}
+            \item [E] is the free enzyme concentration
+            \item [I] is the inhibitor or drug
+            \item [S] is the substrate or the molecules that an enzyme acts upon.
+            \item [ES] is the enzyme-substrate complex concentration (ES)
+            \item [P] is the product concentration which is the Protein in this case
+            \item [km] is the Michaelis constant is a kinetic parameter, not an equilibrium constant. It gives the substrate concentration at which half of the maximum enzymatic reaction rate is attained. It is determined not only by the substrate’s binding affinity, but also by how quickly the enzyme-substrate complex is turned over into product.   
+                       \\ It's a measure of the affinity of an enzyme for its substrate.      
+        \end{itemize}
+
+    \subsection{inhibitory concentration 50\% \textbf{IC50}}
+        the concentration at which the inhibitor causes a 50 inhibition of enzymatic activity
+        less precise than \textbf{Ki} or \textbf{Kd} \\
+        A lower IC50 value indicates a higher affinity of the drug for the receptor \\
+        \begin{figure}[H]
+            \centering
+            \begin{minipage}{0.45\textwidth}
+            \includegraphics[width=\textwidth]{affinity measurements/IC50.png}
+            \end{minipage}   
+        \end{figure}
+        where
+        \begin{itemize}
+            \item [S] is the substrate or the molecules that an enzyme acts upon.
+            \item [ki] is The kinase Inhibition Constant
+            \item [km] is the Michaelis constant is a kinetic parameter, not an equilibrium constant. It gives the substrate concentration at which half of the maximum enzymatic reaction rate is attained. It is determined not only by the substrate’s binding affinity, but also by how quickly the enzyme-substrate complex is turned over into product.   
+                       \\ It's a measure of the affinity of an enzyme for its substrate.      
+        \end{itemize}
+
+\section{Datasets}
+    \subsection{davis benchmark dataset}
+        \subsubsection{binding affinity measurement}
+            davis dataset uses The kinase dissociation constant \textbf{kd} values after transformation into negative logarithm (base 10) logspace (pKd) using equation $pK_d = -\log_{10} (K_d / 1e9)$.
+            with values of \textbf{pkd} ranging ranging from 5.0 to 10.8 where (pKd=5) indicates weak or no interaction which corresponds to $kd = 10000 $ nM or nanoMolar.
+
+            \begin{figure}[H]
+                \centering
+                \begin{minipage}{0.45\textwidth}
+                \includegraphics[width=\textwidth]{davis/linear pkd.png}
+                \caption{linear}
+                \end{minipage}
+                \hfill
+                \begin{minipage}{0.45\textwidth}
+                \includegraphics[width=\textwidth]{davis/log pkd.png}
+                \caption{log}
+                \end{minipage}
+            \end{figure}
+
+        \subsubsection{structure}
+            contains the pkd binding affinities for all pairs of 68 drugs and 442 targets, total of 30056 interactions
+            25047 train set + 5011 test set.
+            69\% of which have affinity values of 10000 nM (pKd=5) indicating weak or no interaction.
+            \begin{figure}[H]
+                \centering
+                \begin{minipage}{0.45\textwidth}
+                \includegraphics[width=\textwidth]{davis/boxplot.png}
+                \end{minipage}
+                \hfill
+                \begin{minipage}{0.45\textwidth}
+                \includegraphics[width=\textwidth]{davis/histogram.png}
+                \end{minipage}
+            \end{figure}
+
+            also some statistics about davis dataset below show the histogram distribution of SMILES notation and protein sequence with respect to number of characters 
+
+            \begin{figure}[H]
+                \centering
+                \begin{minipage}{0.45\textwidth}
+                \includegraphics[width=\textwidth]{davis/smiles histogram.png}
+                \end{minipage}
+                \hfill
+                \begin{minipage}{0.45\textwidth}
+                \includegraphics[width=\textwidth]{davis/protein histogram.png}
+                \end{minipage}
+            \end{figure}
+
+    \subsection{kiba benchmark dataset}
+        \subsubsection{binding affinity measurement}
+            kiba dataset uses the so called KIBA score which is the integration of heterogeneous information from IC50, Ki , and Kd measurements into a single bioactivity score called by the 
+            following adjustments
+                \begin{center}
+                    \includegraphics[width=0.4\textwidth]{kiba/kiba adjustments.png}
+                \end{center}
+        \subsubsection{structure}
+            measured as KIBA scores and ranging from 0.0 least affinity to 17.2 highest affinity
+            Total of 118257 interactions(98547 train set + 19710 test set)
+            most interactions between 10 and 15 kiba score
+            \begin{figure}[H]
+                \centering
+                \begin{minipage}{0.45\textwidth}
+                \includegraphics[width=\textwidth]{kiba/boxplot.png}
+                \end{minipage}
+                \hfill
+                \begin{minipage}{0.45\textwidth}
+                \includegraphics[width=\textwidth]{kiba/histogram.png}
+                \end{minipage}
+            \end{figure}
+            KIBA, on the other hand, has about three-times more interactions with KIBA scores. KIBA values are computed from the
+            combination of heterogenous information sources such as IC50, Ki and Kd. the filtered version of the KIBA
+            dataset is used, in which each protein and ligand has at least ten interactions. 
+
+            also some statistics about kiba dataset below show the histogram distribution of SMILES notation and protein sequence with respect to number of characters 
+
+            \begin{figure}[H]
+                \centering
+                \begin{minipage}{0.45\textwidth}
+                \includegraphics[width=\textwidth]{kiba/smiles histogram.png}
+                \end{minipage}
+                \hfill
+                \begin{minipage}{0.45\textwidth}
+                \includegraphics[width=\textwidth]{kiba/protein histogram.png}
+                \end{minipage}
+            \end{figure}
+
+    \subsection{URV dataset}
+        \subsubsection{binding affinity measurement}
+        In URV-May-2024 database, the URV systematically collected all structures from the Protein Data Bank (PDB) \cite{11} containing the SARS-CoV-2 Mpro protein - also known as the main protease or 3CL protease, is a key enzyme in the replication and transcription of the SARS-CoV-2 virus, which causes COVID-19 -, devoid of mutations and crystallized with a non-covalent inhibitor. 
+        Subsequently, we refined this dataset by selecting structures with available IC50 values from ChEMBL \cite{12} and BindingDB \cite{13} databases, resulting in a final set of 233 structures. 
+        For each structure, we obtained the inhibitor's structure in SDF format, the protein-inhibitor complex in PDB format, and the corresponding IC50 value for Mpro inhibition.
+        IC50 represents the concentration of inhibitor required to inhibit 50\% of enzyme activity. Additionally, we transformed IC50 values into pIC50, the negative logarithm (base 10) of the IC50 value, where a higher pIC50 value indicates a more potent inhibitor.
+        \subsubsection{structure}
+        affinity values are provided and some statistics about them are provided below but the measurement unit is unknown.
 
         affinity values are provided in csv file linked with protein ID and the protein ID in turn is found in the names of the files of both ligand and the protein
 
         the following figures explain statistics of the affinity values of the 322 pairs, note that jitter was added to one version of the box plot for the sake of clarity
         
-        \begin{figure}[h]
+        \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\textwidth]{boxplot1.png} 
-            \caption{}
-            \label{fig 8}
+            \begin{minipage}{0.45\textwidth}
+            \includegraphics[width=\textwidth]{boxplot2.png}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.45\textwidth}
+            \includegraphics[width=\textwidth]{histogram.png}
+            \end{minipage}
         \end{figure}
+
+        also some statistics about URV dataset below show the histogram distribution of SMILES notation and protein sequence with respect to number of characters
+
+        \begin{figure}[H]
+            \centering
+            \begin{minipage}{0.45\textwidth}
+            \includegraphics[width=\textwidth]{URV/smiles histogram.png}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.45\textwidth}
+            \includegraphics[width=\textwidth]{URV/protein histogram.png}
+            \end{minipage}
+        \end{figure}
+
+        \subsubsection{protein preprocessing}
+        the protein data are initially provided as \textbf{Protein Data Bank(PDB)} files. PDB is a file format used to store 3D structural information about proteins. It is one of the most widely used formats for representing and exchanging structural data in bioinformatics and structural biology.
+        PDB files contain atomic coordinates of atoms in a molecule, along with metadata and additional information such as experimental methods used to determine the structure.
+
+        the PDB file name is named after the protein ID. if a PDB file e.g. \textbf{6M2N\_protein.pdb}  is open with any text editor e.g. notepad++, the metadata including its ID, name, type
+        are in the header and title tags as shown in figure \ref{fig 2} for protein ID \textbf{6M2N} 
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.75\textwidth]{pdb file.png} % Replace 'example-image' with the path to your image file
+                \caption{PDB file example.}
+                \label{fig 2}
+            \end{figure}
+
+        more informtion can be viewed at the PDB website \cite{4} for the same protein ID \textbf{6M2N}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.75\textwidth]{pdb website.PNG} % Replace 'example-image' with the path to your image file
+                \caption{PDB file example.}
+                \label{fig 3}
+            \end{figure}
+
+        a protein can be either Single Chain or Multi-Chain, so it can be composed of one chain of amino acids(sequence) - up to four - but usually two, we pick the longest sequence as the representation for the protein
+        this is done using \textbf{Bio.PDB} module in the \textbf{Biopython} library that provides tools for working with Protein Data Bank (PDB) files in python. classes used are:
+        \begin{itemize}
+            \item \textbf{PDBParser} used to parse PDB files, create a structure object and read the atomic coordinates and other structural information from a PDB file and converts it into a hierarchical structure object, which can be easily manipulated and analyzed. 
+            \item \textbf{PDBBuilder} used to identify and construct polypeptides (chains of amino acids) from a structure object (such as a protein structure obtained from a PDB file)             
         
-        \begin{figure}[h]
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.4\textwidth]{pdb parser.png} % Replace 'example-image' with the path to your image file
+                \caption{PDB file example.}
+                \label{fig 4}
+            \end{figure}
+
+        \end{itemize} 
+
+        \subsubsection{drug(ligand) preprocessing}
+        the ligand data are provided as \textbf{Structure Data file(SDF)} file format used for representing chemical compounds and their associated data. It is primarily used to store information about molecules, including their structure and various properties, in a structured way.
+
+        the SDF file name is named after the protein ID with which the ligand is paired. consider SDF file \textbf{6M2N\_ligand.sdf} shown in fig \ref{fig 5} where its name does not indicate any information about the ligand but suggests it will be paired with previous protein
+        to get information about the ligand itself, it can be open using a text editor e.g. notepad++ and at the end of the file information that identify the ligand can be found e.g. \textbf{chemical formula} and \textbf{Simplified Molecular Input Line Entry System(SMILES)} notation which is is a chemical notation that allows a user to represent a chemical structure in a way that can be used by the computer.
+        
+        \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\textwidth]{boxplot2.png}
-            \caption{}
-            \label{fig 9}
+            \includegraphics[width=0.7\textwidth]{sdf file.PNG} % Replace 'example-image' with the path to your image file
+            \caption{SDF file example.}
+            \label{fig 5}
         \end{figure}
 
-        \begin{center}
-            \includegraphics[width=0.5\textwidth]{histogram.png}
-        \end{center}
+        while the chemical formula may not be unique, the SMILES notation is always unique. so it can be used in many websites e.g. the chemspider website\cite{6}  to search for more information about the ligand
 
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.9\textwidth]{sdf website.PNG} % Replace 'example-image' with the path to your image file
+            \caption{SDF website.}
+            \label{fig 6}
+        \end{figure}
+
+        An SDF ligand file is read and first the molecule is validated(sanitized) to check if error exist in the structure, if the structure is valid the SMILES notation
+        is extracted and appended to valid ligands SDF file else it is excluded and added to invalid ligands SDF file.
+
+        The \textbf{rdkit.Chem} package \cite{7} was used to read the molecule using Chem.SDMolSupplier function, validate it using Chem.SanitizeMol and convert it to SMILES notation
+        using function Chem.MolToSmiles
+
+        \begin{itemize}
+            \item \textbf{Chem.SDMolSupplier} used to read the molecule.
+            \item \textbf{Chem.SanitizeMol} used to validate the molecule             
+            \item \textbf{Chem.MolToSmiles} obtain the SMILES notation of the molecule 
+        \end{itemize}
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.5\textwidth]{sdf parser.png} % Replace 'example-image' with the path to your image file
+            \caption{SDF workflow.}
+            \label{fig 7}
+        \end{figure}
+
+        \section{Previous Work and contribution}
+        \subsection{Previous Work}
+            \subsubsection{collaborative filtering (2017) \cite{8}} 
+                The SimBoost model uses the affinity similarities among drugs and among targets to build new features.
+                collaborative filtering is used in the following way:
+                \begin{itemize}
+                    \item Gradient Boosting Machines (GBM): 
+                    GBMs are powerful machine learning models that can capture complex relationships between features. SimBoost uses GBMs to learn the relationship between drug similarity, target similarity, and binding affinity.
+                    \item Similarity-Based Approach: 
+                    SimBoost utilizes a similarity measure to identify drugs and targets that are similar to the query drug and target. This allows the model to leverage existing data on similar compounds and targets to make predictions for new ones.
+                    \item Read-Across: 
+                    By combining GBMs with a similarity-based approach, SimBoost performs a "read-across" from known data to predict binding affinities for new drug-target pairs.
+                \end{itemize}
+            \subsubsection{DeepDTA model (2018) \cite{9}}
+                DeepDTA uses a deep neural network architecture with two branches to learn complex relationships between drug and target features. It combines:
+                \begin{itemize}
+                    \item convolutional neural networks (CNNs):
+                         for capturing local patterns in molecular structures of drugs.
+                    \item recurrent neural networks (RNNs):
+                         for capturing sequential information in protein sequences.
+                \end{itemize}
+                protein representation learned from RNN then combined with the drug representations learned by CNN to predict the binding affinity.
+            \subsubsection{WideDTA model (2019) \cite{10}}
+                WIDEDTA uses CNNs to learn complex patterns from both the drug SMILES notation and target protein sequence representations. CNNs are particularly well-suited for capturing local patterns in molecular structures and protein sequences.
+                in which the sequences of the drugs and proteins are first summarized as higher-order features.\\
+                WIDEDTA is considered an extension to and outperforms DEEPDTA. 
     
+    
+        \subsection{Contribution}
+            \subsubsection{GraphDTA paper (2020)}
+            a new neural network architecture capable of directly modeling drugs as molecular graphs outperforms previous deep learning models.
+            so This paper tests the hypothesis that a graph structure could yield a better representation for drugs
+            directly modeling drugs as molecular graphs and the results show that it outperforms previous deep learning models
+ 
+            \begin{figure}[H]
+                \centering
+                \begin{minipage}{0.45\textwidth}
+                \includegraphics[width=\textwidth]{DTA overview.png}
+                \end{minipage}   
+            \end{figure}
             
+            \subsubsection{Work done in the thesis}
+            the work done includes the following:
+            \begin{itemize}
+                \item \textbf{fork the repository}: 
+                \\first the repository of the GraphDTA paper was forked in order to run the code and view the results.
+                \begin{figure}[H]
+                    \centering
+                    \begin{minipage}{0.7\textwidth}
+                    \includegraphics[width=\textwidth]{fork.PNG}
+                    \end{minipage}   
+                \end{figure}
 
+                \item \textbf{code refactoring}: 
+                \\second the code was refactored by writing several functions such as Train, Test and generate the URV database in order to write python notebook files that facilitates tuning the parameters and plotting the results by calling these functions instead of just using commands in terminal.
+                \begin{figure}[H]
+                    \centering
+                    \begin{minipage}{0.8\textwidth}
+                    \includegraphics[width=\textwidth]{refactor.png}
+                    \end{minipage}   
+                \end{figure}
+
+                \end{itemize}
 
 \section{Network architecture}
     The overall architecture combines the information from the molecular graph and the protein sequence to make a prediction. it is a PyTorch implementation of a Graph Convolutional Network (GCN) based model
@@ -263,64 +509,140 @@ The model uses ReLU activations, dropout for regularization, and global max pool
         The GCNNet class is a neural network model designed for processing two types of input data: molecular graphs (represented by SMILES strings) and protein sequences. This model uses a combination of Graph Convolutional Networks (GCNs) for the molecular graphs and 1D Convolutional Networks (Conv1D) for the protein sequences.
 
 \section{Results}
-    \subsection{train and test GCN model on the URV dataset with k folds = 10}
-    Apply k-folding with k = 10 to get 10 different combinations of train and test patterns for URV dataset using GCN model gives the following error evolutions and real predicted affinity
+    \subsection{for davis dataset}
+        \subsubsection{train and test of GCN-based model}
+        by training the network with the parameters suggested by the paper shown we obtain the error loss curve for training and validation set 
+        \begin{center}
+            \includegraphics[width=1.0\textwidth]{train_test_plots/davis GCN train.png}
+        \end{center}
+        and the resulting predicted-actual curve is as follows:
+        \begin{center}
+            \includegraphics[width=0.6\textwidth]{train_test_plots/davis GCN test.png}
+        \end{center}
+
+        \subsubsection{train and test of GATGCN-based model}
+        by training the network with the parameters suggested by the paper shown we obtain the error loss curve for training and validation set 
+        \begin{center}
+            \includegraphics[width=1.0\textwidth]{train_test_plots/davis GATGCN train.png}
+        \end{center}
+        and the resulting predicted-actual curve is as follows:
+        \begin{center}
+            \includegraphics[width=0.6\textwidth]{train_test_plots/davis GATGCN test.png}
+        \end{center}
+
+        \subsubsection{train and test GAT-based model}
+        by training the network with the parameters suggested by the paper shown we obtain the error loss curve for training and validation set 
+        \begin{center}
+            \includegraphics[width=1.0\textwidth]{train_test_plots/davis GAT train.png}
+        \end{center}
+        and the resulting predicted-actual curve is as follows:
+        \begin{center}
+            \includegraphics[width=0.6\textwidth]{train_test_plots/davis GAT test.png}
+        \end{center}
+
+        \subsubsection{train and test GINCONV-based model}
+        by training the network with the parameters suggested by the paper shown we obtain the error loss curve for training and validation set 
+        \begin{center}
+            \includegraphics[width=1.0\textwidth]{train_test_plots/davis GInCONV train.png}
+        \end{center}
+        and the resulting predicted-actual curve is as follows:
+        \begin{center}
+            \includegraphics[width=0.6\textwidth]{train_test_plots/davis GINCONV test.png}
+        \end{center}
     
-    the mean MSE is 0.84
+    \subsection{for kiba dataset}
+        \subsubsection{train and test GCN-based model}
+        by training the network with the parameters suggested by the paper shown we obtain the error loss curve for training and validation set 
+        \begin{center}
+            \includegraphics[width=1.0\textwidth]{train_test_plots/kiba GCN train.png}
+        \end{center}
+        and the resulting predicted-actual curve is as follows:
+        \begin{center}
+            \includegraphics[width=0.6\textwidth]{train_test_plots/kiba GCN test.png}
+        \end{center}
+
+        \subsubsection{train and test GATGCN-based model}
+        by training the network with the parameters suggested by the paper shown we obtain the error loss curve for training and validation set 
+        \begin{center}
+            \includegraphics[width=1.0\textwidth]{train_test_plots/kiba GATGCN train.png}
+        \end{center}
+        and the resulting predicted-actual curve is as follows:
+        \begin{center}
+            \includegraphics[width=0.6\textwidth]{train_test_plots/kiba GATGCN test.png}
+        \end{center}
+
+        \subsubsection{train and test GAT-based model}
+        by training the network with the parameters suggested by the paper shown we obtain the error loss curve for training and validation set 
+        \begin{center}
+            \includegraphics[width=1.0\textwidth]{train_test_plots/kiba GAT train.png}
+        \end{center}
+        and the resulting predicted-actual curve is as follows:
+        \begin{center}
+            \includegraphics[width=0.6\textwidth]{train_test_plots/kiba GAT test.png}
+        \end{center}
+
+        \subsubsection{train and test GINCONV-based model}
+        by training the network with the parameters suggested by the paper shown we obtain the error loss curve for training and validation set 
+        \begin{center}
+            \includegraphics[width=1.0\textwidth]{train_test_plots/kiba GINCONV train.png}
+        \end{center}
+        and the resulting predicted-actual curve is as follows:
+        \begin{center}
+            \includegraphics[width=0.6\textwidth]{train_test_plots/kiba GINCONV test.png}
+        \end{center}
     
-    the mean standard deviation is 0.97
-    \begin{center}
-        \includegraphics[width=0.9\textwidth]{GCN_folds10errors.png}
-    \end{center}
+    \subsection{for URV dataset}
+        \subsubsection{train and test GCN-based model}
+        by training the network while tuning the parameters starting with those suggested by the paper shown we obtain the error loss curve for training and validation set 
+        \begin{center}
+            \includegraphics[width=1.0\textwidth]{train_test_plots/URV GCN train.png}
+        \end{center}
+        and the resulting predicted-actual curve is as follows:
+        \begin{center}
+            \includegraphics[width=0.6\textwidth]{train_test_plots/URV GCN test.png}
+        \end{center}
 
-    \begin{center}
-        \includegraphics[width=0.25\textwidth]{GCN_folds10predictions.png}
-    \end{center}
+        \subsubsection{train and test GATGCN-based model}
+        by training the network while tuning the parameters starting with those suggested by the paper shown we obtain the error loss curve for training and validation set 
+        \begin{center}
+            \includegraphics[width=1.0\textwidth]{train_test_plots/URV GATGCN train.png}
+        \end{center}
+        and the resulting predicted-actual curve is as follows:
+        \begin{center}
+            \includegraphics[width=0.6\textwidth]{train_test_plots/URV GATGCN test.png}
+        \end{center}
 
-    \subsection{train and test GAT model on the URV dataset with k folds = 10}
-    Apply k-folding with k = 10 to get 10 different combinations of train and test patterns for URV dataset using GAT model gives the following error evolutions and real predicted affinity
+        \subsubsection{train and test GAT-based model}
+        by training the network while tuning the parameters starting with those suggested by the paper shown we obtain the error loss curve for training and validation set 
+        \begin{center}
+            \includegraphics[width=1.0\textwidth]{train_test_plots/URV GAT train.png}
+        \end{center}
+        and the resulting predicted-actual curve is as follows:
+        \begin{center}
+            \includegraphics[width=0.6\textwidth]{train_test_plots/URV GAT test.png}
+        \end{center}
+
+        \subsubsection{train and test GINCONV-based model}
+        by training the network while tuning the parameters starting with those suggested by the paper shown we obtain the error loss curve for training and validation set 
+        \begin{center}
+            \includegraphics[width=1.0\textwidth]{train_test_plots/URV GINCONV train.png}
+        \end{center}
+        and the resulting predicted-actual curve is as follows:
+        \begin{center}
+            \includegraphics[width=0.6\textwidth]{train_test_plots/URV GINCONV test.png}
+        \end{center}
     
-    the mean MSE is 1.50
+    \subsection{Summary and conclusion}
+        the results are summarized in the following table
+        \begin{center}
+            \includegraphics[width=1.0\textwidth]{summary.png}
+        \end{center}
+        it was noticed that best MSE was obtained in results of kiba dataset then davis and finally the results of URV dataset - either in paper or in thesis - and this might be due to the following reasons:
+        \begin{enumerate}
+            \item the sample size of the data including train and test sets is largest in kiba then davis followed by URV and this helps the network learn more robust and generalizable patterns, thus make accurate predictions on unseen data..
+            \item kiba dataset has the best diversity specially for the target proteins as it integrates different bioactivity scores and this is crucial to train a model capable of generalizing to unseen drug-target pairs.  
+        \end{enumerate}
 
-    the mean standard deviation is 1.13
-
-    \begin{center}
-        \includegraphics[width=0.9\textwidth]{GAT_folds10errors.png}
-    \end{center}
-
-    \begin{center}
-        \includegraphics[width=0.25\textwidth]{GAT_folds10predictions.png}
-    \end{center}
-
-    \subsection{train and test GATGCN model on the URV dataset with k folds = 10}
-    Apply k-folding with k = 10 to get 10 different combinations of train and test patterns for URV dataset using GATGCN model gives the following error evolutions and real predicted affinity
-    
-    the mean MSE is 0.44
-
-    the mean standard deviation is 0.24
-
-    \begin{center}
-        \includegraphics[width=0.9\textwidth]{GATGCN_folds10errors.png}
-    \end{center}
-
-    \begin{center}
-        \includegraphics[width=0.25\textwidth]{GATGCN_folds10predictions.png}
-    \end{center}
-
-    \subsection{train and test GINCONV model on the URV dataset with k folds = 10}
-    Apply k-folding with k = 10 to get 10 different combinations of train and test patterns for URV dataset using GINCONV model gives the following error evolutions and real predicted affinity
-    
-    the mean MSE is 0.76
-
-    the mean standard deviation is 0.56
-
-    \begin{center}
-        \includegraphics[width=0.9\textwidth]{GINCONV_folds10errors.png}
-    \end{center}
-
-    \begin{center}
-        \includegraphics[width=0.25\textwidth]{GINCONV_folds10predictions.png}
-    \end{center}
 %\addcontentsline{toc}{section}{Bibliography} % Add Bibliography to TOC
 %\printbibliography 
 \begin{thebibliography}{3}
@@ -348,7 +670,38 @@ Bio.PDB Biopython module: \url{https://biopython.org/wiki/The_Biopython_Structur
 chemspider website: \url{https://www.chemspider.com/}.
 
 \bibitem{7}
-chemspider website: \url{https://www.rdkit.org/docs/source/rdkit.Chem.html}.
+rdkit library: \url{https://www.rdkit.org/docs/source/rdkit.Chem.html}.
+
+\bibitem{8}
+[He et al.] Tong He; Marten Heidemeyer; Fuqiang Ban; Artem Cherkasov and Martin Ester "SimBoost: a read-across approach
+for predicting drug–target binding affinities using gradient boosting machines",
+    \\Journal of Cheminformatics, 9, Article number: 24 (2017)
+    \\Available at
+    \url{https://jcheminf.biomedcentral.com/articles/10.1186/s13321-017-0209-z}.
+
+\bibitem{9}
+[Ozturk et al.] Hakime Ozturk; Arzucan Ozgur and Elif Ozkirimli "DeepDTA: deep drug–target binding
+affinity prediction",
+    \\Journal of Bioinformatics, Volume 34, Issue 17, September 2018, Pages i821–i829,
+    \\Available at
+    \url{https://academic.oup.com/bioinformatics/article/34/17/i821/5093245}.
+
+\bibitem{10}
+[Ozturk et al.] Hakime Ozturk; Arzucan Ozgur and Elif Ozkirimli "WIDEDTA: PREDICTION OF DRUG-TARGET BINDING AFFINITY",
+    \\Available at
+    \url{https://arxiv.org/abs/1902.04166}.
+
+\bibitem{11}
+Berman, H.M., Westbrook, J., Feng, Z., Gilliland, G., Bhat, T.N., Weissig, H., Shindyalov, I.N., Bourne, P.E. (2000). The Protein Data Bank. Nucleic Acids Research, 28(1), 235-242. 
+[doi:10.1093/nar/28.1.235]
+
+\bibitem{12}
+Zdrazil, B., Felix, E., Hunter, F., et al. (2024). The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Research, 52(D1), D1180–D1192. 
+[doi:10.1093/nar/gkad1004]
+
+\bibitem{13}
+Gilson, M. K., Liu, T., Baitaluk, M., et al. (2016). BindingDB in 2015: A public database for medicinal chemistry, computational chemistry and systems pharmacology. Nucleic Acids Research, 44(D1), D1045–D1053. 
+[doi:10.1093/nar/gkv1072]
 
 \end{thebibliography}
 

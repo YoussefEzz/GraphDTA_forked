@@ -1,6 +1,6 @@
-PWD c:\Users\pc\Desktop\subjects\Master thesis\GraphDTA_forked\URV deliverable
+PWD c:\Users\pc\Desktop\Master\Master thesis\GraphDTA_forked\URV deliverable
 INPUT C:\Users\pc\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\pc\Desktop\subjects\Master thesis\GraphDTA_forked\URV deliverable\deliverable.tex
+INPUT c:\Users\pc\Desktop\Master\Master thesis\GraphDTA_forked\URV deliverable\deliverable.tex
 OUTPUT deliverable.log
 INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
@@ -159,15 +159,141 @@ INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
 INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
 OUTPUT deliverable.toc
-INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
-INPUT .\Kfold.png
-INPUT .\Kfold.png
-INPUT .\Kfold.png
-INPUT .\Kfold.png
-INPUT .\Kfold.png
-INPUT .\Kfold.png
-INPUT .\Kfold.png
 INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
+INPUT .\Benzene.png
+INPUT .\Benzene.png
+INPUT .\Benzene.png
+INPUT .\Benzene.png
+INPUT .\Benzene.png
+INPUT .\Benzene.png
+INPUT .\Benzene.png
+INPUT .\affinity measurements\kd.png
+INPUT .\affinity measurements\kd.png
+INPUT .\affinity measurements\kd.png
+INPUT .\affinity measurements\kd.png
+INPUT .\affinity measurements\kd.png
+INPUT .\affinity measurements\kd.png
+INPUT .\affinity measurements\kd.png
+INPUT .\affinity measurements\ki.png
+INPUT .\affinity measurements\ki.png
+INPUT .\affinity measurements\ki.png
+INPUT .\affinity measurements\ki.png
+INPUT .\affinity measurements\ki.png
+INPUT .\affinity measurements\ki.png
+INPUT .\affinity measurements\ki.png
+INPUT .\affinity measurements\IC50.png
+INPUT .\affinity measurements\IC50.png
+INPUT .\affinity measurements\IC50.png
+INPUT .\affinity measurements\IC50.png
+INPUT .\affinity measurements\IC50.png
+INPUT .\affinity measurements\IC50.png
+INPUT .\affinity measurements\IC50.png
+INPUT .\davis\linear pkd.png
+INPUT .\davis\linear pkd.png
+INPUT .\davis\linear pkd.png
+INPUT .\davis\linear pkd.png
+INPUT .\davis\linear pkd.png
+INPUT .\davis\linear pkd.png
+INPUT .\davis\linear pkd.png
+INPUT .\davis\log pkd.png
+INPUT .\davis\log pkd.png
+INPUT .\davis\log pkd.png
+INPUT .\davis\log pkd.png
+INPUT .\davis\log pkd.png
+INPUT .\davis\log pkd.png
+INPUT .\davis\log pkd.png
+INPUT .\davis\boxplot.png
+INPUT .\davis\boxplot.png
+INPUT .\davis\boxplot.png
+INPUT .\davis\boxplot.png
+INPUT .\davis\boxplot.png
+INPUT .\davis\boxplot.png
+INPUT .\davis\boxplot.png
+INPUT .\davis\histogram.png
+INPUT .\davis\histogram.png
+INPUT .\davis\histogram.png
+INPUT .\davis\histogram.png
+INPUT .\davis\histogram.png
+INPUT .\davis\histogram.png
+INPUT .\davis\histogram.png
+INPUT .\davis\smiles histogram.png
+INPUT .\davis\smiles histogram.png
+INPUT .\davis\smiles histogram.png
+INPUT .\davis\smiles histogram.png
+INPUT .\davis\smiles histogram.png
+INPUT .\davis\smiles histogram.png
+INPUT .\davis\smiles histogram.png
+INPUT .\davis\protein histogram.png
+INPUT .\davis\protein histogram.png
+INPUT .\davis\protein histogram.png
+INPUT .\davis\protein histogram.png
+INPUT .\davis\protein histogram.png
+INPUT .\davis\protein histogram.png
+INPUT .\davis\protein histogram.png
+INPUT .\kiba\kiba adjustments.png
+INPUT .\kiba\kiba adjustments.png
+INPUT .\kiba\kiba adjustments.png
+INPUT .\kiba\kiba adjustments.png
+INPUT .\kiba\kiba adjustments.png
+INPUT .\kiba\kiba adjustments.png
+INPUT .\kiba\kiba adjustments.png
+INPUT .\kiba\boxplot.png
+INPUT .\kiba\boxplot.png
+INPUT .\kiba\boxplot.png
+INPUT .\kiba\boxplot.png
+INPUT .\kiba\boxplot.png
+INPUT .\kiba\boxplot.png
+INPUT .\kiba\boxplot.png
+INPUT .\kiba\histogram.png
+INPUT .\kiba\histogram.png
+INPUT .\kiba\histogram.png
+INPUT .\kiba\histogram.png
+INPUT .\kiba\histogram.png
+INPUT .\kiba\histogram.png
+INPUT .\kiba\histogram.png
+INPUT .\kiba\smiles histogram.png
+INPUT .\kiba\smiles histogram.png
+INPUT .\kiba\smiles histogram.png
+INPUT .\kiba\smiles histogram.png
+INPUT .\kiba\smiles histogram.png
+INPUT .\kiba\smiles histogram.png
+INPUT .\kiba\smiles histogram.png
+INPUT .\kiba\protein histogram.png
+INPUT .\kiba\protein histogram.png
+INPUT .\kiba\protein histogram.png
+INPUT .\kiba\protein histogram.png
+INPUT .\kiba\protein histogram.png
+INPUT .\kiba\protein histogram.png
+INPUT .\kiba\protein histogram.png
+INPUT .\boxplot2.png
+INPUT .\boxplot2.png
+INPUT .\boxplot2.png
+INPUT .\boxplot2.png
+INPUT .\boxplot2.png
+INPUT .\boxplot2.png
+INPUT .\boxplot2.png
+INPUT .\histogram.png
+INPUT .\histogram.png
+INPUT .\histogram.png
+INPUT .\histogram.png
+INPUT .\histogram.png
+INPUT .\histogram.png
+INPUT .\histogram.png
+INPUT .\URV\smiles histogram.png
+INPUT .\URV\smiles histogram.png
+INPUT .\URV\smiles histogram.png
+INPUT .\URV\smiles histogram.png
+INPUT .\URV\smiles histogram.png
+INPUT .\URV\smiles histogram.png
+INPUT .\URV\smiles histogram.png
+INPUT .\URV\protein histogram.png
+INPUT .\URV\protein histogram.png
+INPUT .\URV\protein histogram.png
+INPUT .\URV\protein histogram.png
+INPUT .\URV\protein histogram.png
+INPUT .\URV\protein histogram.png
+INPUT .\URV\protein histogram.png
 INPUT .\pdb file.png
 INPUT .\pdb file.png
 INPUT .\pdb file.png
@@ -210,27 +336,27 @@ INPUT .\sdf parser.png
 INPUT .\sdf parser.png
 INPUT .\sdf parser.png
 INPUT .\sdf parser.png
-INPUT .\boxplot1.png
-INPUT .\boxplot1.png
-INPUT .\boxplot1.png
-INPUT .\boxplot1.png
-INPUT .\boxplot1.png
-INPUT .\boxplot1.png
-INPUT .\boxplot1.png
-INPUT .\boxplot2.png
-INPUT .\boxplot2.png
-INPUT .\boxplot2.png
-INPUT .\boxplot2.png
-INPUT .\boxplot2.png
-INPUT .\boxplot2.png
-INPUT .\boxplot2.png
-INPUT .\histogram.png
-INPUT .\histogram.png
-INPUT .\histogram.png
-INPUT .\histogram.png
-INPUT .\histogram.png
-INPUT .\histogram.png
-INPUT .\histogram.png
+INPUT .\DTA overview.png
+INPUT .\DTA overview.png
+INPUT .\DTA overview.png
+INPUT .\DTA overview.png
+INPUT .\DTA overview.png
+INPUT .\DTA overview.png
+INPUT .\DTA overview.png
+INPUT .\fork.PNG
+INPUT .\fork.PNG
+INPUT .\fork.PNG
+INPUT .\fork.PNG
+INPUT .\fork.PNG
+INPUT .\fork.PNG
+INPUT .\fork.PNG
+INPUT .\refactor.png
+INPUT .\refactor.png
+INPUT .\refactor.png
+INPUT .\refactor.png
+INPUT .\refactor.png
+INPUT .\refactor.png
+INPUT .\refactor.png
 INPUT .\architecture.PNG
 INPUT .\architecture.PNG
 INPUT .\architecture.PNG
@@ -266,62 +392,181 @@ INPUT .\GAT_GCN.PNG
 INPUT .\GAT_GCN.PNG
 INPUT .\GAT_GCN.PNG
 INPUT .\GAT_GCN.PNG
-INPUT .\GCN_folds10errors.png
-INPUT .\GCN_folds10errors.png
-INPUT .\GCN_folds10errors.png
-INPUT .\GCN_folds10errors.png
-INPUT .\GCN_folds10errors.png
-INPUT .\GCN_folds10errors.png
-INPUT .\GCN_folds10errors.png
-INPUT .\GCN_folds10predictions.png
-INPUT .\GCN_folds10predictions.png
-INPUT .\GCN_folds10predictions.png
-INPUT .\GCN_folds10predictions.png
-INPUT .\GCN_folds10predictions.png
-INPUT .\GCN_folds10predictions.png
-INPUT .\GCN_folds10predictions.png
-INPUT .\GAT_folds10errors.png
-INPUT .\GAT_folds10errors.png
-INPUT .\GAT_folds10errors.png
-INPUT .\GAT_folds10errors.png
-INPUT .\GAT_folds10errors.png
-INPUT .\GAT_folds10errors.png
-INPUT .\GAT_folds10errors.png
-INPUT .\GAT_folds10predictions.png
-INPUT .\GAT_folds10predictions.png
-INPUT .\GAT_folds10predictions.png
-INPUT .\GAT_folds10predictions.png
-INPUT .\GAT_folds10predictions.png
-INPUT .\GAT_folds10predictions.png
-INPUT .\GAT_folds10predictions.png
-INPUT .\GATGCN_folds10errors.png
-INPUT .\GATGCN_folds10errors.png
-INPUT .\GATGCN_folds10errors.png
-INPUT .\GATGCN_folds10errors.png
-INPUT .\GATGCN_folds10errors.png
-INPUT .\GATGCN_folds10errors.png
-INPUT .\GATGCN_folds10errors.png
-INPUT .\GATGCN_folds10predictions.png
-INPUT .\GATGCN_folds10predictions.png
-INPUT .\GATGCN_folds10predictions.png
-INPUT .\GATGCN_folds10predictions.png
-INPUT .\GATGCN_folds10predictions.png
-INPUT .\GATGCN_folds10predictions.png
-INPUT .\GATGCN_folds10predictions.png
-INPUT .\GINCONV_folds10errors.png
-INPUT .\GINCONV_folds10errors.png
-INPUT .\GINCONV_folds10errors.png
-INPUT .\GINCONV_folds10errors.png
-INPUT .\GINCONV_folds10errors.png
-INPUT .\GINCONV_folds10errors.png
-INPUT .\GINCONV_folds10errors.png
-INPUT .\GINCONV_folds10predictions.png
-INPUT .\GINCONV_folds10predictions.png
-INPUT .\GINCONV_folds10predictions.png
-INPUT .\GINCONV_folds10predictions.png
-INPUT .\GINCONV_folds10predictions.png
-INPUT .\GINCONV_folds10predictions.png
-INPUT .\GINCONV_folds10predictions.png
+INPUT .\train_test_plots\davis GCN train.png
+INPUT .\train_test_plots\davis GCN train.png
+INPUT .\train_test_plots\davis GCN train.png
+INPUT .\train_test_plots\davis GCN train.png
+INPUT .\train_test_plots\davis GCN train.png
+INPUT .\train_test_plots\davis GCN train.png
+INPUT .\train_test_plots\davis GCN train.png
+INPUT .\train_test_plots\davis GCN test.png
+INPUT .\train_test_plots\davis GCN test.png
+INPUT .\train_test_plots\davis GCN test.png
+INPUT .\train_test_plots\davis GCN test.png
+INPUT .\train_test_plots\davis GCN test.png
+INPUT .\train_test_plots\davis GCN test.png
+INPUT .\train_test_plots\davis GCN test.png
+INPUT .\train_test_plots\davis GATGCN train.png
+INPUT .\train_test_plots\davis GATGCN train.png
+INPUT .\train_test_plots\davis GATGCN train.png
+INPUT .\train_test_plots\davis GATGCN train.png
+INPUT .\train_test_plots\davis GATGCN train.png
+INPUT .\train_test_plots\davis GATGCN train.png
+INPUT .\train_test_plots\davis GATGCN train.png
+INPUT .\train_test_plots\davis GATGCN test.png
+INPUT .\train_test_plots\davis GATGCN test.png
+INPUT .\train_test_plots\davis GATGCN test.png
+INPUT .\train_test_plots\davis GATGCN test.png
+INPUT .\train_test_plots\davis GATGCN test.png
+INPUT .\train_test_plots\davis GATGCN test.png
+INPUT .\train_test_plots\davis GATGCN test.png
+INPUT .\train_test_plots\davis GAT train.png
+INPUT .\train_test_plots\davis GAT train.png
+INPUT .\train_test_plots\davis GAT train.png
+INPUT .\train_test_plots\davis GAT train.png
+INPUT .\train_test_plots\davis GAT train.png
+INPUT .\train_test_plots\davis GAT train.png
+INPUT .\train_test_plots\davis GAT train.png
+INPUT .\train_test_plots\davis GAT test.png
+INPUT .\train_test_plots\davis GAT test.png
+INPUT .\train_test_plots\davis GAT test.png
+INPUT .\train_test_plots\davis GAT test.png
+INPUT .\train_test_plots\davis GAT test.png
+INPUT .\train_test_plots\davis GAT test.png
+INPUT .\train_test_plots\davis GAT test.png
+INPUT .\train_test_plots\davis GInCONV train.png
+INPUT .\train_test_plots\davis GInCONV train.png
+INPUT .\train_test_plots\davis GInCONV train.png
+INPUT .\train_test_plots\davis GInCONV train.png
+INPUT .\train_test_plots\davis GInCONV train.png
+INPUT .\train_test_plots\davis GInCONV train.png
+INPUT .\train_test_plots\davis GInCONV train.png
+INPUT .\train_test_plots\davis GINCONV test.png
+INPUT .\train_test_plots\davis GINCONV test.png
+INPUT .\train_test_plots\davis GINCONV test.png
+INPUT .\train_test_plots\davis GINCONV test.png
+INPUT .\train_test_plots\davis GINCONV test.png
+INPUT .\train_test_plots\davis GINCONV test.png
+INPUT .\train_test_plots\davis GINCONV test.png
+INPUT .\train_test_plots\kiba GCN train.png
+INPUT .\train_test_plots\kiba GCN train.png
+INPUT .\train_test_plots\kiba GCN train.png
+INPUT .\train_test_plots\kiba GCN train.png
+INPUT .\train_test_plots\kiba GCN train.png
+INPUT .\train_test_plots\kiba GCN train.png
+INPUT .\train_test_plots\kiba GCN train.png
+INPUT .\train_test_plots\kiba GCN test.png
+INPUT .\train_test_plots\kiba GCN test.png
+INPUT .\train_test_plots\kiba GCN test.png
+INPUT .\train_test_plots\kiba GCN test.png
+INPUT .\train_test_plots\kiba GCN test.png
+INPUT .\train_test_plots\kiba GCN test.png
+INPUT .\train_test_plots\kiba GCN test.png
+INPUT .\train_test_plots\kiba GATGCN train.png
+INPUT .\train_test_plots\kiba GATGCN train.png
+INPUT .\train_test_plots\kiba GATGCN train.png
+INPUT .\train_test_plots\kiba GATGCN train.png
+INPUT .\train_test_plots\kiba GATGCN train.png
+INPUT .\train_test_plots\kiba GATGCN train.png
+INPUT .\train_test_plots\kiba GATGCN train.png
+INPUT .\train_test_plots\kiba GATGCN test.png
+INPUT .\train_test_plots\kiba GATGCN test.png
+INPUT .\train_test_plots\kiba GATGCN test.png
+INPUT .\train_test_plots\kiba GATGCN test.png
+INPUT .\train_test_plots\kiba GATGCN test.png
+INPUT .\train_test_plots\kiba GATGCN test.png
+INPUT .\train_test_plots\kiba GATGCN test.png
+INPUT .\train_test_plots\kiba GAT train.png
+INPUT .\train_test_plots\kiba GAT train.png
+INPUT .\train_test_plots\kiba GAT train.png
+INPUT .\train_test_plots\kiba GAT train.png
+INPUT .\train_test_plots\kiba GAT train.png
+INPUT .\train_test_plots\kiba GAT train.png
+INPUT .\train_test_plots\kiba GAT train.png
+INPUT .\train_test_plots\kiba GAT test.png
+INPUT .\train_test_plots\kiba GAT test.png
+INPUT .\train_test_plots\kiba GAT test.png
+INPUT .\train_test_plots\kiba GAT test.png
+INPUT .\train_test_plots\kiba GAT test.png
+INPUT .\train_test_plots\kiba GAT test.png
+INPUT .\train_test_plots\kiba GAT test.png
+INPUT .\train_test_plots\kiba GINCONV train.png
+INPUT .\train_test_plots\kiba GINCONV train.png
+INPUT .\train_test_plots\kiba GINCONV train.png
+INPUT .\train_test_plots\kiba GINCONV train.png
+INPUT .\train_test_plots\kiba GINCONV train.png
+INPUT .\train_test_plots\kiba GINCONV train.png
+INPUT .\train_test_plots\kiba GINCONV train.png
+INPUT .\train_test_plots\kiba GINCONV test.png
+INPUT .\train_test_plots\kiba GINCONV test.png
+INPUT .\train_test_plots\kiba GINCONV test.png
+INPUT .\train_test_plots\kiba GINCONV test.png
+INPUT .\train_test_plots\kiba GINCONV test.png
+INPUT .\train_test_plots\kiba GINCONV test.png
+INPUT .\train_test_plots\kiba GINCONV test.png
+INPUT .\train_test_plots\URV GCN train.png
+INPUT .\train_test_plots\URV GCN train.png
+INPUT .\train_test_plots\URV GCN train.png
+INPUT .\train_test_plots\URV GCN train.png
+INPUT .\train_test_plots\URV GCN train.png
+INPUT .\train_test_plots\URV GCN train.png
+INPUT .\train_test_plots\URV GCN train.png
+INPUT .\train_test_plots\URV GCN test.png
+INPUT .\train_test_plots\URV GCN test.png
+INPUT .\train_test_plots\URV GCN test.png
+INPUT .\train_test_plots\URV GCN test.png
+INPUT .\train_test_plots\URV GCN test.png
+INPUT .\train_test_plots\URV GCN test.png
+INPUT .\train_test_plots\URV GCN test.png
+INPUT .\train_test_plots\URV GATGCN train.png
+INPUT .\train_test_plots\URV GATGCN train.png
+INPUT .\train_test_plots\URV GATGCN train.png
+INPUT .\train_test_plots\URV GATGCN train.png
+INPUT .\train_test_plots\URV GATGCN train.png
+INPUT .\train_test_plots\URV GATGCN train.png
+INPUT .\train_test_plots\URV GATGCN train.png
+INPUT .\train_test_plots\URV GATGCN test.png
+INPUT .\train_test_plots\URV GATGCN test.png
+INPUT .\train_test_plots\URV GATGCN test.png
+INPUT .\train_test_plots\URV GATGCN test.png
+INPUT .\train_test_plots\URV GATGCN test.png
+INPUT .\train_test_plots\URV GATGCN test.png
+INPUT .\train_test_plots\URV GATGCN test.png
+INPUT .\train_test_plots\URV GAT train.png
+INPUT .\train_test_plots\URV GAT train.png
+INPUT .\train_test_plots\URV GAT train.png
+INPUT .\train_test_plots\URV GAT train.png
+INPUT .\train_test_plots\URV GAT train.png
+INPUT .\train_test_plots\URV GAT train.png
+INPUT .\train_test_plots\URV GAT train.png
+INPUT .\train_test_plots\URV GAT test.png
+INPUT .\train_test_plots\URV GAT test.png
+INPUT .\train_test_plots\URV GAT test.png
+INPUT .\train_test_plots\URV GAT test.png
+INPUT .\train_test_plots\URV GAT test.png
+INPUT .\train_test_plots\URV GAT test.png
+INPUT .\train_test_plots\URV GAT test.png
+INPUT .\train_test_plots\URV GINCONV train.png
+INPUT .\train_test_plots\URV GINCONV train.png
+INPUT .\train_test_plots\URV GINCONV train.png
+INPUT .\train_test_plots\URV GINCONV train.png
+INPUT .\train_test_plots\URV GINCONV train.png
+INPUT .\train_test_plots\URV GINCONV train.png
+INPUT .\train_test_plots\URV GINCONV train.png
+INPUT .\train_test_plots\URV GINCONV test.png
+INPUT .\train_test_plots\URV GINCONV test.png
+INPUT .\train_test_plots\URV GINCONV test.png
+INPUT .\train_test_plots\URV GINCONV test.png
+INPUT .\train_test_plots\URV GINCONV test.png
+INPUT .\train_test_plots\URV GINCONV test.png
+INPUT .\train_test_plots\URV GINCONV test.png
+INPUT .\summary.png
+INPUT .\summary.png
+INPUT .\summary.png
+INPUT .\summary.png
+INPUT .\summary.png
+INPUT .\summary.png
+INPUT .\summary.png
 INPUT deliverable.aux
 INPUT .\deliverable.out
 INPUT .\deliverable.out
@@ -333,7 +578,15 @@ INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\c
 INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmcsc10.pfb
 INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmcsc10.pfb
+INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb

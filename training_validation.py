@@ -51,7 +51,15 @@ def predicting(model, device, loader):
 
 LOG_INTERVAL = 20
 
-def fit(dataset, model, cuda_name, TRAIN_BATCH_SIZE = 512, TEST_BATCH_SIZE = 512, LR = 0.0005, validation_size = 0.2, NUM_EPOCHS = 50, best_model_flag = True):
+def fit(dataset, 
+        model, 
+        cuda_name, 
+        TRAIN_BATCH_SIZE = 512, 
+        TEST_BATCH_SIZE = 512, 
+        LR = 0.0005, 
+        validation_size = 0.2, 
+        NUM_EPOCHS = 50, 
+        best_model_flag = True):
     # datasets = [['davis','kiba','urv'][int(sys.argv[1])]] 
     # modeling = [GINConvNet, GATNet, GAT_GCN, GCNNet][int(sys.argv[2])]
     modeling = model
