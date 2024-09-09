@@ -159,8 +159,8 @@ INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
 INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
 OUTPUT deliverable.toc
-INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
+INPUT C:\Users\pc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT .\Benzene.png
 INPUT .\Benzene.png
 INPUT .\Benzene.png
@@ -357,20 +357,34 @@ INPUT .\refactor.png
 INPUT .\refactor.png
 INPUT .\refactor.png
 INPUT .\refactor.png
-INPUT .\architecture.PNG
-INPUT .\architecture.PNG
-INPUT .\architecture.PNG
-INPUT .\architecture.PNG
-INPUT .\architecture.PNG
-INPUT .\architecture.PNG
-INPUT .\architecture.PNG
-INPUT .\GCN_model.PNG
-INPUT .\GCN_model.PNG
-INPUT .\GCN_model.PNG
-INPUT .\GCN_model.PNG
-INPUT .\GCN_model.PNG
-INPUT .\GCN_model.PNG
-INPUT .\GCN_model.PNG
+INPUT .\model\architecture.drawio.png
+INPUT .\model\architecture.drawio.png
+INPUT .\model\architecture.drawio.png
+INPUT .\model\architecture.drawio.png
+INPUT .\model\architecture.drawio.png
+INPUT .\model\architecture.drawio.png
+INPUT .\model\architecture.drawio.png
+INPUT .\model\Protein branch.drawio.png
+INPUT .\model\Protein branch.drawio.png
+INPUT .\model\Protein branch.drawio.png
+INPUT .\model\Protein branch.drawio.png
+INPUT .\model\Protein branch.drawio.png
+INPUT .\model\Protein branch.drawio.png
+INPUT .\model\Protein branch.drawio.png
+INPUT .\model\GCN_Model.drawio.png
+INPUT .\model\GCN_Model.drawio.png
+INPUT .\model\GCN_Model.drawio.png
+INPUT .\model\GCN_Model.drawio.png
+INPUT .\model\GCN_Model.drawio.png
+INPUT .\model\GCN_Model.drawio.png
+INPUT .\model\GCN_Model.drawio.png
+INPUT .\model\GCN-based.drawio.png
+INPUT .\model\GCN-based.drawio.png
+INPUT .\model\GCN-based.drawio.png
+INPUT .\model\GCN-based.drawio.png
+INPUT .\model\GCN-based.drawio.png
+INPUT .\model\GCN-based.drawio.png
+INPUT .\model\GCN-based.drawio.png
 INPUT .\GAT_model.PNG
 INPUT .\GAT_model.PNG
 INPUT .\GAT_model.PNG
@@ -378,13 +392,6 @@ INPUT .\GAT_model.PNG
 INPUT .\GAT_model.PNG
 INPUT .\GAT_model.PNG
 INPUT .\GAT_model.PNG
-INPUT .\GIN_model.PNG
-INPUT .\GIN_model.PNG
-INPUT .\GIN_model.PNG
-INPUT .\GIN_model.PNG
-INPUT .\GIN_model.PNG
-INPUT .\GIN_model.PNG
-INPUT .\GIN_model.PNG
 INPUT .\GAT_GCN.PNG
 INPUT .\GAT_GCN.PNG
 INPUT .\GAT_GCN.PNG
@@ -392,6 +399,20 @@ INPUT .\GAT_GCN.PNG
 INPUT .\GAT_GCN.PNG
 INPUT .\GAT_GCN.PNG
 INPUT .\GAT_GCN.PNG
+INPUT .\GIN_model.PNG
+INPUT .\GIN_model.PNG
+INPUT .\GIN_model.PNG
+INPUT .\GIN_model.PNG
+INPUT .\GIN_model.PNG
+INPUT .\GIN_model.PNG
+INPUT .\GIN_model.PNG
+INPUT .\model\Combined_representation.drawio.png
+INPUT .\model\Combined_representation.drawio.png
+INPUT .\model\Combined_representation.drawio.png
+INPUT .\model\Combined_representation.drawio.png
+INPUT .\model\Combined_representation.drawio.png
+INPUT .\model\Combined_representation.drawio.png
+INPUT .\model\Combined_representation.drawio.png
 INPUT .\train_test_plots\davis GCN train.png
 INPUT .\train_test_plots\davis GCN train.png
 INPUT .\train_test_plots\davis GCN train.png

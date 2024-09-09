@@ -1,6 +1,6 @@
 \contentsline {section}{Contents}{1}{section*.1}%
 \contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
-\contentsline {section}{\numberline {2}Aim}{2}{section.2}%
+\contentsline {section}{\numberline {2}Abstract}{2}{section.2}%
 \contentsline {section}{\numberline {3}Drug Representation}{2}{section.3}%
 \contentsline {subsection}{\numberline {3.1}SMILES notation}{2}{subsection.3.1}%
 \contentsline {section}{\numberline {4}Protein Representation}{3}{section.4}%
@@ -29,23 +29,29 @@
 \contentsline {subsection}{\numberline {7.2}Contribution}{12}{subsection.7.2}%
 \contentsline {subsubsection}{\numberline {7.2.1}GraphDTA paper (2020)}{12}{subsubsection.7.2.1}%
 \contentsline {subsubsection}{\numberline {7.2.2}Work done in the thesis}{12}{subsubsection.7.2.2}%
-\contentsline {section}{\numberline {8}Network architecture}{13}{section.8}%
-\contentsline {subsection}{\numberline {8.1}GCN-based graph representation learning}{15}{subsection.8.1}%
-\contentsline {section}{\numberline {9}Results}{16}{section.9}%
-\contentsline {subsection}{\numberline {9.1}for davis dataset}{16}{subsection.9.1}%
-\contentsline {subsubsection}{\numberline {9.1.1}train and test of GCN-based model}{16}{subsubsection.9.1.1}%
-\contentsline {subsubsection}{\numberline {9.1.2}train and test of GATGCN-based model}{16}{subsubsection.9.1.2}%
-\contentsline {subsubsection}{\numberline {9.1.3}train and test GAT-based model}{17}{subsubsection.9.1.3}%
-\contentsline {subsubsection}{\numberline {9.1.4}train and test GINCONV-based model}{18}{subsubsection.9.1.4}%
-\contentsline {subsection}{\numberline {9.2}for kiba dataset}{18}{subsection.9.2}%
-\contentsline {subsubsection}{\numberline {9.2.1}train and test GCN-based model}{18}{subsubsection.9.2.1}%
-\contentsline {subsubsection}{\numberline {9.2.2}train and test GATGCN-based model}{19}{subsubsection.9.2.2}%
-\contentsline {subsubsection}{\numberline {9.2.3}train and test GAT-based model}{19}{subsubsection.9.2.3}%
-\contentsline {subsubsection}{\numberline {9.2.4}train and test GINCONV-based model}{20}{subsubsection.9.2.4}%
-\contentsline {subsection}{\numberline {9.3}for URV dataset}{21}{subsection.9.3}%
-\contentsline {subsubsection}{\numberline {9.3.1}train and test GCN-based model}{21}{subsubsection.9.3.1}%
-\contentsline {subsubsection}{\numberline {9.3.2}train and test GATGCN-based model}{22}{subsubsection.9.3.2}%
-\contentsline {subsubsection}{\numberline {9.3.3}train and test GAT-based model}{22}{subsubsection.9.3.3}%
-\contentsline {subsubsection}{\numberline {9.3.4}train and test GINCONV-based model}{23}{subsubsection.9.3.4}%
-\contentsline {subsection}{\numberline {9.4}Summary and conclusion}{23}{subsection.9.4}%
-\contentsline {section}{References}{24}{section*.2}%
+\contentsline {section}{\numberline {8}GraphDTA Network architecture}{13}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Protein sequence branch}{14}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}SMILES graph branch}{15}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}GCN-based model}{15}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.2}GAT-based model}{16}{subsubsection.8.2.2}%
+\contentsline {subsubsection}{\numberline {8.2.3}GATGCN-based model}{17}{subsubsection.8.2.3}%
+\contentsline {subsubsection}{\numberline {8.2.4}GIN-based model}{17}{subsubsection.8.2.4}%
+\contentsline {subsection}{\numberline {8.3}combined fully connected layers}{18}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Results}{18}{section.9}%
+\contentsline {subsection}{\numberline {9.1}for davis dataset}{18}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}train and test of GCN-based model}{18}{subsubsection.9.1.1}%
+\contentsline {subsubsection}{\numberline {9.1.2}train and test of GATGCN-based model}{19}{subsubsection.9.1.2}%
+\contentsline {subsubsection}{\numberline {9.1.3}train and test GAT-based model}{20}{subsubsection.9.1.3}%
+\contentsline {subsubsection}{\numberline {9.1.4}train and test GINCONV-based model}{21}{subsubsection.9.1.4}%
+\contentsline {subsection}{\numberline {9.2}for kiba dataset}{21}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}train and test GCN-based model}{21}{subsubsection.9.2.1}%
+\contentsline {subsubsection}{\numberline {9.2.2}train and test GATGCN-based model}{22}{subsubsection.9.2.2}%
+\contentsline {subsubsection}{\numberline {9.2.3}train and test GAT-based model}{22}{subsubsection.9.2.3}%
+\contentsline {subsubsection}{\numberline {9.2.4}train and test GINCONV-based model}{23}{subsubsection.9.2.4}%
+\contentsline {subsection}{\numberline {9.3}for URV dataset}{24}{subsection.9.3}%
+\contentsline {subsubsection}{\numberline {9.3.1}train and test GCN-based model}{24}{subsubsection.9.3.1}%
+\contentsline {subsubsection}{\numberline {9.3.2}train and test GATGCN-based model}{25}{subsubsection.9.3.2}%
+\contentsline {subsubsection}{\numberline {9.3.3}train and test GAT-based model}{25}{subsubsection.9.3.3}%
+\contentsline {subsubsection}{\numberline {9.3.4}train and test GINCONV-based model}{26}{subsubsection.9.3.4}%
+\contentsline {subsection}{\numberline {9.4}Summary and conclusion}{26}{subsection.9.4}%
+\contentsline {section}{References}{27}{section*.2}%

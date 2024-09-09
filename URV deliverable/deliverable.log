@@ -1,10 +1,13 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.5)  26 AUG 2024 21:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.5)  5 SEP 2024 01:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/pc/Desktop/Master/Master thesis/GraphDTA_forked/URV deliverable/deliverable.tex"
-(c:/Users/pc/Desktop/Master/Master thesis/GraphDTA_forked/URV deliverable/deliverable.tex
+**"c:/Users/pc/Desktop/Master/Master thesis/GraphDTA_forked/URV deliverable/del
+iverable.tex"
+
+(c:/Users/pc/Desktop/Master/Master thesis/GraphDTA_forked/URV deliverable/deliv
+erable.tex
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
 (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -23,40 +26,53 @@ File: size11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
-) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
-) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/preprint\fullpage.sty
+)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/preprint\fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip50
-) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks19
-) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen141
 \Gin@req@width=\dimen142
 ) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2023-10-27 v7.01d Hypertext links for LaTeX
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
-) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.st
+y
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -64,23 +80,33 @@ Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 ) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekey
+s.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 ) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro.sty
+)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro.st
+y
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 ) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2023-10-05 v2.54 Cross-referencing by name of section
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitles
+tring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count194
@@ -91,15 +117,18 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \@linkdim=\dimen143
 \Hy@linkcounter=\count196
 \Hy@pagecounter=\count197
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2023-10-27 v7.01d Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count198
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2023-10-27 v7.01d Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -112,16 +141,21 @@ Package hyperref Info: Backreferencing OFF on input line 4188.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4435.
 \c@Hy@tempcnt=\count199
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4773.
 \XeTeXLinkMargin=\dimen144
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.st
+y
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
 ))
 \Fld@menulength=\count266
 \Field@Width=\dimen145
@@ -144,28 +178,38 @@ package with kernel methods
 Package hyperref Info: Driver (autodetected): hpdftex.
  (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2023-10-27 v7.01d Hyperref driver for pdfTeX
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
 with kernel methods
 )
 \Fld@listcount=\count270
 \c@bookmark@seq@number=\count271
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilech
+eck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecoun
+ter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
 )
 \Hy@SectionHShift=\skip51
-) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Package option `hidelinks' ignored on input line 218.
 Package xcolor Info: Driver file: pdftex.def on input line 227.
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
 Package xcolor Info: Model `RGB' extended on input line 1369.
@@ -175,9 +219,11 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
-) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
 \Gm@cnth=\count272
@@ -192,7 +238,9 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen153
 \Gm@layoutvoffset=\dimen154
 \Gm@dimlist=\toks20
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/tocbibind\tocbibind.sty
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/tocbibind\tocbibind.sty
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has section divisions on input line 50.
 
@@ -206,7 +254,9 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box51
 \@float@everytoks=\toks22
 \@floatcapt=\box52
-) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex
+.def
 File: l3backend-pdftex.def 2023-10-23 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count276
 \l__pdf_internal_box=\box53
@@ -231,7 +281,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
 LaTeX Font Info:    ... okay on input line 43.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
 LaTeX Font Info:    ... okay on input line 43.
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count277
 \scratchdimen=\dimen155
@@ -244,10 +295,14 @@ LaTeX Font Info:    ... okay on input line 43.
 \MPnumerator=\count281
 \makeMPintoPDFobject=\count282
 \everyMPtoPDFconversion=\toks24
-) (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+)
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base
+.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\pc\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package hyperref Info: Link coloring OFF on input line 43.
@@ -291,14 +346,15 @@ Package hyperref Info: Link coloring OFF on input line 43.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (title.tex
-<./urvlogo.png, id=207, 1270.7475pt x 285.9483pt>
+<./urvlogo.png, id=231, 1270.7475pt x 285.9483pt>
 File: ./urvlogo.png Graphic file (type png)
 <use ./urvlogo.png>
 Package pdftex.def Info: ./urvlogo.png  used on input line 51.
 (pdftex.def)             Requested size: 157.57297pt x 35.45547pt.
  [1
 
-{C:/Users/pc/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./urvlogo.png>]) (deliverable.toc
+{C:/Users/pc/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./urvlogo.png>]
+) (deliverable.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -306,403 +362,495 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 5.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.49 ...CONV-based model}{23}{subsubsection.9.3.4}
+l.49 ... GAT-based model}{22}{subsubsection.9.2.3}
                                                   % [1])
 \tf@toc=\write4
 \openout4 = `deliverable.toc'.
 
-<Benzene.png, id=286, 139.14671pt x 169.3491pt>
+ [2]
+<Benzene.png, id=320, 139.14671pt x 169.3491pt>
 File: Benzene.png Graphic file (type png)
 <use Benzene.png>
-Package pdftex.def Info: Benzene.png  used on input line 94.
+Package pdftex.def Info: Benzene.png  used on input line 103.
 (pdftex.def)             Requested size: 105.04596pt x 127.85132pt.
- [2]
-<affinity measurements/kd.png, id=295, 448.5558pt x 104.0688pt>
+<affinity measurements/kd.png, id=321, 448.5558pt x 104.0688pt>
 File: affinity measurements/kd.png Graphic file (type png)
 <use affinity measurements/kd.png>
-Package pdftex.def Info: affinity measurements/kd.png  used on input line 130.
+Package pdftex.def Info: affinity measurements/kd.png  used on input line 139.
 (pdftex.def)             Requested size: 236.35544pt x 54.837pt.
- [3 <./Benzene.png> <./affinity measurements/kd.png>]
-<affinity measurements/ki.png, id=302, 432.4155pt x 252.945pt>
+ [3 <./Benzene.png>]
+<affinity measurements/ki.png, id=327, 432.4155pt x 252.945pt>
 File: affinity measurements/ki.png Graphic file (type png)
 <use affinity measurements/ki.png>
-Package pdftex.def Info: affinity measurements/ki.png  used on input line 146.
+Package pdftex.def Info: affinity measurements/ki.png  used on input line 155.
 (pdftex.def)             Requested size: 236.35544pt x 138.25948pt.
-<affinity measurements/IC50.png, id=303, 579.1236pt x 132.9768pt>
+<affinity measurements/IC50.png, id=328, 579.1236pt x 132.9768pt>
 File: affinity measurements/IC50.png Graphic file (type png)
 <use affinity measurements/IC50.png>
-Package pdftex.def Info: affinity measurements/IC50.png  used on input line 167.
+Package pdftex.def Info: affinity measurements/IC50.png  used on input line 176
+.
 (pdftex.def)             Requested size: 236.35544pt x 54.27126pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--169
+Underfull \hbox (badness 10000) in paragraph at lines 170--178
 
  []
 
-[4 <./affinity measurements/ki.png> <./affinity measurements/IC50.png>]
-<davis/linear pkd.png, id=310, 499.3857pt x 395.3169pt>
+[4 <./affinity measurements/kd.png> <./affinity measurements/ki.png> <./affinit
+y measurements/IC50.png>]
+<davis/linear pkd.png, id=336, 499.3857pt x 395.3169pt>
 File: davis/linear pkd.png Graphic file (type png)
 <use davis/linear pkd.png>
-Package pdftex.def Info: davis/linear pkd.png  used on input line 187.
+Package pdftex.def Info: davis/linear pkd.png  used on input line 196.
 (pdftex.def)             Requested size: 236.35544pt x 187.10188pt.
-<davis/log pkd.png, id=311, 499.3857pt x 398.9304pt>
+<davis/log pkd.png, id=337, 499.3857pt x 398.9304pt>
 File: davis/log pkd.png Graphic file (type png)
 <use davis/log pkd.png>
-Package pdftex.def Info: davis/log pkd.png  used on input line 192.
+Package pdftex.def Info: davis/log pkd.png  used on input line 201.
 (pdftex.def)             Requested size: 236.35544pt x 188.81215pt.
-<davis/boxplot.png, id=312, 406.8801pt x 318.7107pt>
+<davis/boxplot.png, id=338, 406.8801pt x 318.7107pt>
 File: davis/boxplot.png Graphic file (type png)
 <use davis/boxplot.png>
-Package pdftex.def Info: davis/boxplot.png  used on input line 204.
+Package pdftex.def Info: davis/boxplot.png  used on input line 213.
 (pdftex.def)             Requested size: 236.35544pt x 185.13924pt.
-<davis/histogram.png, id=313, 427.1157pt x 328.8285pt>
+<davis/histogram.png, id=339, 427.1157pt x 328.8285pt>
 File: davis/histogram.png Graphic file (type png)
 <use davis/histogram.png>
-Package pdftex.def Info: davis/histogram.png  used on input line 208.
+Package pdftex.def Info: davis/histogram.png  used on input line 217.
 (pdftex.def)             Requested size: 236.35544pt x 181.9651pt.
-<davis/smiles histogram.png, id=314, 419.166pt x 328.8285pt>
+<davis/smiles histogram.png, id=340, 419.166pt x 328.8285pt>
 File: davis/smiles histogram.png Graphic file (type png)
 <use davis/smiles histogram.png>
-Package pdftex.def Info: davis/smiles histogram.png  used on input line 217.
+Package pdftex.def Info: davis/smiles histogram.png  used on input line 226.
 (pdftex.def)             Requested size: 236.35544pt x 185.41714pt.
-<davis/protein histogram.png, id=315, 419.166pt x 328.8285pt>
+<davis/protein histogram.png, id=341, 419.166pt x 328.8285pt>
 File: davis/protein histogram.png Graphic file (type png)
 <use davis/protein histogram.png>
-Package pdftex.def Info: davis/protein histogram.png  used on input line 221.
+Package pdftex.def Info: davis/protein histogram.png  used on input line 230.
 (pdftex.def)             Requested size: 236.35544pt x 185.41714pt.
  [5
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
+s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.224 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+l.232             \end{figure}
+                              
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
+s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.224 
-       <./davis/linear pkd.png> <./davis/log pkd.png> <./davis/boxplot.png> <./davis/histogram.png>]
-<kiba/kiba adjustments.png, id=330, 367.59555pt x 193.61223pt>
+l.232             \end{figure}
+                               <./davis/linear pkd.png> <./davis/log pkd.png> <
+./davis/boxplot.png> <./davis/histogram.png>]
+<kiba/kiba adjustments.png, id=356, 367.59555pt x 193.61223pt>
 File: kiba/kiba adjustments.png Graphic file (type png)
 <use kiba/kiba adjustments.png>
-Package pdftex.def Info: kiba/kiba adjustments.png  used on input line 230.
+Package pdftex.def Info: kiba/kiba adjustments.png  used on input line 239.
 (pdftex.def)             Requested size: 210.09193pt x 110.65259pt.
-<kiba/boxplot.png, id=331, 419.166pt x 318.7107pt>
+<kiba/boxplot.png, id=357, 419.166pt x 318.7107pt>
 File: kiba/boxplot.png Graphic file (type png)
 <use kiba/boxplot.png>
-Package pdftex.def Info: kiba/boxplot.png  used on input line 239.
+Package pdftex.def Info: kiba/boxplot.png  used on input line 248.
 (pdftex.def)             Requested size: 236.35544pt x 179.71199pt.
-<kiba/histogram.png, id=332, 425.6703pt x 328.8285pt>
+<kiba/histogram.png, id=358, 425.6703pt x 328.8285pt>
 File: kiba/histogram.png Graphic file (type png)
 <use kiba/histogram.png>
-Package pdftex.def Info: kiba/histogram.png  used on input line 243.
+Package pdftex.def Info: kiba/histogram.png  used on input line 252.
 (pdftex.def)             Requested size: 236.35544pt x 182.58727pt.
-<kiba/smiles histogram.png, id=333, 425.6703pt x 328.8285pt>
+<kiba/smiles histogram.png, id=359, 425.6703pt x 328.8285pt>
 File: kiba/smiles histogram.png Graphic file (type png)
 <use kiba/smiles histogram.png>
-Package pdftex.def Info: kiba/smiles histogram.png  used on input line 255.
+Package pdftex.def Info: kiba/smiles histogram.png  used on input line 264.
 (pdftex.def)             Requested size: 236.35544pt x 182.58727pt.
-<kiba/protein histogram.png, id=334, 425.6703pt x 328.8285pt>
+<kiba/protein histogram.png, id=360, 425.6703pt x 328.8285pt>
 File: kiba/protein histogram.png Graphic file (type png)
 <use kiba/protein histogram.png>
-Package pdftex.def Info: kiba/protein histogram.png  used on input line 259.
+Package pdftex.def Info: kiba/protein histogram.png  used on input line 268.
 (pdftex.def)             Requested size: 236.35544pt x 182.58727pt.
- [6 <./davis/smiles histogram.png> <./davis/protein histogram.png> <./kiba/kiba adjustments.png> <./kiba/boxplot.png> <./kiba/histogram.png>]
-<boxplot2.png, id=348, 400.3758pt x 318.7107pt>
+ [6 <./davis/smiles histogram.png> <./davis/protein histogram.png> <./kiba/kiba
+ adjustments.png> <./kiba/boxplot.png> <./kiba/histogram.png>]
+<boxplot2.png, id=374, 400.3758pt x 318.7107pt>
 File: boxplot2.png Graphic file (type png)
 <use boxplot2.png>
-Package pdftex.def Info: boxplot2.png  used on input line 279.
+Package pdftex.def Info: boxplot2.png  used on input line 288.
 (pdftex.def)             Requested size: 236.35544pt x 188.14952pt.
-<histogram.png, id=349, 406.1574pt x 328.8285pt>
+<histogram.png, id=375, 406.1574pt x 328.8285pt>
 File: histogram.png Graphic file (type png)
 <use histogram.png>
-Package pdftex.def Info: histogram.png  used on input line 283.
+Package pdftex.def Info: histogram.png  used on input line 292.
 (pdftex.def)             Requested size: 236.35544pt x 191.35286pt.
-<URV/smiles histogram.png, id=350, 406.1574pt x 328.8285pt>
+<URV/smiles histogram.png, id=376, 406.1574pt x 328.8285pt>
 File: URV/smiles histogram.png Graphic file (type png)
 <use URV/smiles histogram.png>
-Package pdftex.def Info: URV/smiles histogram.png  used on input line 292.
+Package pdftex.def Info: URV/smiles histogram.png  used on input line 301.
 (pdftex.def)             Requested size: 236.35544pt x 191.35286pt.
-<URV/protein histogram.png, id=351, 412.6617pt x 328.8285pt>
+<URV/protein histogram.png, id=377, 412.6617pt x 328.8285pt>
 File: URV/protein histogram.png Graphic file (type png)
 <use URV/protein histogram.png>
-Package pdftex.def Info: URV/protein histogram.png  used on input line 296.
+Package pdftex.def Info: URV/protein histogram.png  used on input line 305.
 (pdftex.def)             Requested size: 236.35544pt x 188.33734pt.
- [7 <./kiba/smiles histogram.png> <./kiba/protein histogram.png> <./boxplot2.png> <./histogram.png>]
-<pdb file.png, id=364, 511.9125pt x 264.23718pt>
+ [7 <./kiba/smiles histogram.png> <./kiba/protein histogram.png> <./boxplot2.pn
+g> <./histogram.png>]
+<pdb file.png, id=390, 511.9125pt x 264.23718pt>
 File: pdb file.png Graphic file (type png)
 <use pdb file.png>
-Package pdftex.def Info: pdb file.png  used on input line 309.
+Package pdftex.def Info: pdb file.png  used on input line 318.
 (pdftex.def)             Requested size: 393.9284pt x 203.33826pt.
-<pdb website.PNG, id=366, 959.08313pt x 397.485pt>
+<pdb website.PNG, id=392, 959.08313pt x 397.485pt>
 File: pdb website.PNG Graphic file (type png)
 <use pdb website.PNG>
-Package pdftex.def Info: pdb website.PNG  used on input line 317.
+Package pdftex.def Info: pdb website.PNG  used on input line 326.
 (pdftex.def)             Requested size: 393.9284pt x 163.26102pt.
  [8
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
+s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.321 
-       <./URV/smiles histogram.png> <./URV/protein histogram.png> <./pdb file.png>]
-<pdb parser.png, id=376, 296.10625pt x 442.65375pt>
+l.330 
+       <./URV/smiles histogram.png> <./URV/protein histogram.png> <./pdb file.p
+ng>]
+<pdb parser.png, id=402, 296.10625pt x 442.65375pt>
 File: pdb parser.png Graphic file (type png)
 <use pdb parser.png>
-Package pdftex.def Info: pdb parser.png  used on input line 330.
+Package pdftex.def Info: pdb parser.png  used on input line 339.
 (pdftex.def)             Requested size: 210.09193pt x 314.07697pt.
  [9
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
+s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.342 
+l.351 
       
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
+s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.342 
+l.351 
        <./pdb website.PNG> <./pdb parser.png>]
-<sdf file.PNG, id=386, 487.8225pt x 403.5075pt>
+<sdf file.PNG, id=412, 487.8225pt x 403.5075pt>
 File: sdf file.PNG Graphic file (type png)
 <use sdf file.PNG>
-Package pdftex.def Info: sdf file.PNG  used on input line 345.
+Package pdftex.def Info: sdf file.PNG  used on input line 354.
 (pdftex.def)             Requested size: 367.6649pt x 304.11987pt.
-<sdf website.PNG, id=388, 957.5775pt x 449.42906pt>
+<sdf website.PNG, id=414, 957.5775pt x 449.42906pt>
 File: sdf website.PNG Graphic file (type png)
 <use sdf website.PNG>
-Package pdftex.def Info: sdf website.PNG  used on input line 354.
+Package pdftex.def Info: sdf website.PNG  used on input line 363.
 (pdftex.def)             Requested size: 472.71088pt x 221.86115pt.
  [10
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
+s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.362         T
+l.371         T
                he \textbf{rdkit.Chem} package \cite{7} was used to read the ...
-pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
+s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.362         T
-               he \textbf{rdkit.Chem} package \cite{7} was used to read the ... <./sdf file.PNG> <./sdf website.PNG>]
-<sdf parser.png, id=399, 372.39125pt x 583.17876pt>
+l.371         T
+               he \textbf{rdkit.Chem} package \cite{7} was used to read the ...
+ <./sdf file.PNG> <./sdf website.PNG>]
+<sdf parser.png, id=425, 372.39125pt x 583.17876pt>
 File: sdf parser.png Graphic file (type png)
 <use sdf parser.png>
-Package pdftex.def Info: sdf parser.png  used on input line 373.
+Package pdftex.def Info: sdf parser.png  used on input line 382.
 (pdftex.def)             Requested size: 262.61894pt x 411.28346pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 380.
+(hyperref)                removing `\@ifnextchar' on input line 389.
 
 [11
-pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
+s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.390                 \end{itemize}
+l.399                 \end{itemize}
                                     <./sdf parser.png>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 391.
-
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ifnextchar' on input line 400.
 
-<DTA overview.png, id=410, 508.99838pt x 410.3071pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 409.
+
+<DTA overview.png, id=436, 508.99838pt x 410.3071pt>
 File: DTA overview.png Graphic file (type png)
 <use DTA overview.png>
-Package pdftex.def Info: DTA overview.png  used on input line 415.
+Package pdftex.def Info: DTA overview.png  used on input line 424.
 (pdftex.def)             Requested size: 236.35544pt x 190.52786pt.
-<fork.PNG, id=411, 518.6878pt x 147.55125pt>
+<fork.PNG, id=437, 518.6878pt x 147.55125pt>
 File: fork.PNG Graphic file (type png)
 <use fork.PNG>
-Package pdftex.def Info: fork.PNG  used on input line 427.
+Package pdftex.def Info: fork.PNG  used on input line 436.
 (pdftex.def)             Requested size: 367.6649pt x 104.59549pt.
 [12 <./DTA overview.png>]
-<refactor.png, id=418, 869.2475pt x 272.01625pt>
+<refactor.png, id=444, 869.2475pt x 272.01625pt>
 File: refactor.png Graphic file (type png)
 <use refactor.png>
-Package pdftex.def Info: refactor.png  used on input line 436.
+Package pdftex.def Info: refactor.png  used on input line 445.
 (pdftex.def)             Requested size: 420.19191pt x 131.4919pt.
-<architecture.PNG, id=419, 541.27219pt x 393.72093pt>
-File: architecture.PNG Graphic file (type png)
-<use architecture.PNG>
-Package pdftex.def Info: architecture.PNG  used on input line 446.
-(pdftex.def)             Requested size: 420.19191pt x 305.65323pt.
- [13 <./fork.PNG> <./refactor.png> <./architecture.PNG>]
-<GCN_model.PNG, id=426, 113.67468pt x 110.66344pt>
-File: GCN_model.PNG Graphic file (type png)
-<use GCN_model.PNG>
-Package pdftex.def Info: GCN_model.PNG  used on input line 461.
-(pdftex.def)             Requested size: 157.57297pt x 153.40125pt.
-<GAT_model.PNG, id=427, 107.65219pt x 110.66344pt>
+<model/architecture.drawio.png, id=445, 722.7pt x 525.965pt>
+File: model/architecture.drawio.png Graphic file (type png)
+<use model/architecture.drawio.png>
+Package pdftex.def Info: model/architecture.drawio.png  used on input line 455.
+
+(pdftex.def)             Requested size: 420.19191pt x 305.80627pt.
+ [13 <./fork.PNG> <./refactor.png> <./model/architecture.drawio.png>]
+<model/Protein branch.drawio.png, id=452, 622.325pt x 1074.0125pt>
+File: model/Protein branch.drawio.png Graphic file (type png)
+<use model/Protein branch.drawio.png>
+Package pdftex.def Info: model/Protein branch.drawio.png  used on input line 46
+3.
+(pdftex.def)             Requested size: 367.6649pt x 634.51407pt.
+ [14 <./model/Protein branch.drawio.png>]
+<model/GCN_Model.drawio.png, id=460, 841.1425pt x 229.85875pt>
+File: model/GCN_Model.drawio.png Graphic file (type png)
+<use model/GCN_Model.drawio.png>
+Package pdftex.def Info: model/GCN_Model.drawio.png  used on input line 483.
+(pdftex.def)             Requested size: 472.71088pt x 129.17947pt.
+<model/GCN-based.drawio.png, id=461, 373.395pt x 906.38625pt>
+File: model/GCN-based.drawio.png Graphic file (type png)
+<use model/GCN-based.drawio.png>
+Package pdftex.def Info: model/GCN-based.drawio.png  used on input line 496.
+(pdftex.def)             Requested size: 262.61894pt x 637.50873pt.
+ [15
+pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.499 
+       <./model/GCN_Model.drawio.png>] [16
+pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.506                 \end{enumerate}
+                                      <./model/GCN-based.drawio.png>]
+<GAT_model.PNG, id=482, 107.65219pt x 110.66344pt>
 File: GAT_model.PNG Graphic file (type png)
 <use GAT_model.PNG>
-Package pdftex.def Info: GAT_model.PNG  used on input line 473.
+Package pdftex.def Info: GAT_model.PNG  used on input line 509.
 (pdftex.def)             Requested size: 157.57297pt x 161.99614pt.
-<GIN_model.PNG, id=428, 107.65219pt x 107.65219pt>
-File: GIN_model.PNG Graphic file (type png)
-<use GIN_model.PNG>
-Package pdftex.def Info: GIN_model.PNG  used on input line 483.
-(pdftex.def)             Requested size: 157.57297pt x 157.5881pt.
- [14 <./GCN_model.PNG> <./GAT_model.PNG>]
-<GAT_GCN.PNG, id=443, 109.1578pt x 107.65219pt>
+<GAT_GCN.PNG, id=483, 109.1578pt x 107.65219pt>
 File: GAT_GCN.PNG Graphic file (type png)
 <use GAT_GCN.PNG>
-Package pdftex.def Info: GAT_GCN.PNG  used on input line 493.
+Package pdftex.def Info: GAT_GCN.PNG  used on input line 519.
 (pdftex.def)             Requested size: 157.57297pt x 155.4001pt.
- [15 <./GIN_model.PNG> <./GAT_GCN.PNG>]
-<train_test_plots/davis GCN train.png, id=455, 1391.9202pt x 381.5856pt>
+<GIN_model.PNG, id=484, 107.65219pt x 107.65219pt>
+File: GIN_model.PNG Graphic file (type png)
+<use GIN_model.PNG>
+Package pdftex.def Info: GIN_model.PNG  used on input line 529.
+(pdftex.def)             Requested size: 157.57297pt x 157.5881pt.
+ [17 <./GAT_model.PNG> <./GAT_GCN.PNG> <./GIN_model.PNG>]
+<model/Combined_representation.drawio.png, id=497, 362.35374pt x 550.055pt>
+File: model/Combined_representation.drawio.png Graphic file (type png)
+<use model/Combined_representation.drawio.png>
+Package pdftex.def Info: model/Combined_representation.drawio.png  used on inpu
+t line 537.
+(pdftex.def)             Requested size: 262.61894pt x 398.66635pt.
+<train_test_plots/davis GCN train.png, id=498, 1391.9202pt x 381.5856pt>
 File: train_test_plots/davis GCN train.png Graphic file (type png)
 <use train_test_plots/davis GCN train.png>
-Package pdftex.def Info: train_test_plots/davis GCN train.png  used on input line 516.
+Package pdftex.def Info: train_test_plots/davis GCN train.png  used on input li
+ne 553.
 (pdftex.def)             Requested size: 525.23788pt x 143.9909pt.
-<train_test_plots/davis GCN test.png, id=456, 436.5108pt x 328.8285pt>
+ [18 <./model/Combined_representation.drawio.png>]
+<train_test_plots/davis GCN test.png, id=510, 436.5108pt x 328.8285pt>
 File: train_test_plots/davis GCN test.png Graphic file (type png)
 <use train_test_plots/davis GCN test.png>
-Package pdftex.def Info: train_test_plots/davis GCN test.png  used on input line 520.
+Package pdftex.def Info: train_test_plots/davis GCN test.png  used on input lin
+e 557.
 (pdftex.def)             Requested size: 315.14594pt x 237.4036pt.
-<train_test_plots/davis GATGCN train.png, id=457, 1391.9202pt x 381.5856pt>
+<train_test_plots/davis GATGCN train.png, id=511, 1391.9202pt x 381.5856pt>
 File: train_test_plots/davis GATGCN train.png Graphic file (type png)
 <use train_test_plots/davis GATGCN train.png>
-Package pdftex.def Info: train_test_plots/davis GATGCN train.png  used on input line 526.
+Package pdftex.def Info: train_test_plots/davis GATGCN train.png  used on input
+ line 563.
 (pdftex.def)             Requested size: 525.23788pt x 143.9909pt.
-<train_test_plots/davis GATGCN test.png, id=458, 441.5697pt x 328.8285pt>
+<train_test_plots/davis GATGCN test.png, id=512, 441.5697pt x 328.8285pt>
 File: train_test_plots/davis GATGCN test.png Graphic file (type png)
 <use train_test_plots/davis GATGCN test.png>
-Package pdftex.def Info: train_test_plots/davis GATGCN test.png  used on input line 530.
+Package pdftex.def Info: train_test_plots/davis GATGCN test.png  used on input 
+line 567.
 (pdftex.def)             Requested size: 315.14594pt x 234.6841pt.
- [16 <./train_test_plots/davis GCN train.png> <./train_test_plots/davis GCN test.png> <./train_test_plots/davis GATGCN train.png>]
-<train_test_plots/davis GAT train.png, id=466, 1391.9202pt x 381.5856pt>
+ [19 <./train_test_plots/davis GCN train.png> <./train_test_plots/davis GCN tes
+t.png> <./train_test_plots/davis GATGCN train.png>]
+<train_test_plots/davis GAT train.png, id=520, 1391.9202pt x 381.5856pt>
 File: train_test_plots/davis GAT train.png Graphic file (type png)
 <use train_test_plots/davis GAT train.png>
-Package pdftex.def Info: train_test_plots/davis GAT train.png  used on input line 536.
+Package pdftex.def Info: train_test_plots/davis GAT train.png  used on input li
+ne 573.
 (pdftex.def)             Requested size: 525.23788pt x 143.9909pt.
-<train_test_plots/davis GAT test.png, id=467, 435.0654pt x 328.8285pt>
+<train_test_plots/davis GAT test.png, id=521, 435.0654pt x 328.8285pt>
 File: train_test_plots/davis GAT test.png Graphic file (type png)
 <use train_test_plots/davis GAT test.png>
-Package pdftex.def Info: train_test_plots/davis GAT test.png  used on input line 540.
+Package pdftex.def Info: train_test_plots/davis GAT test.png  used on input lin
+e 577.
 (pdftex.def)             Requested size: 315.14594pt x 238.19135pt.
- [17 <./train_test_plots/davis GATGCN test.png> <./train_test_plots/davis GAT train.png> <./train_test_plots/davis GAT test.png>]
-<train_test_plots/davis GInCONV train.png, id=475, 1391.9202pt x 381.5856pt>
+ [20 <./train_test_plots/davis GATGCN test.png> <./train_test_plots/davis GAT t
+rain.png> <./train_test_plots/davis GAT test.png>]
+<train_test_plots/davis GInCONV train.png, id=529, 1391.9202pt x 381.5856pt>
 File: train_test_plots/davis GInCONV train.png Graphic file (type png)
 <use train_test_plots/davis GInCONV train.png>
-Package pdftex.def Info: train_test_plots/davis GInCONV train.png  used on input line 546.
+Package pdftex.def Info: train_test_plots/davis GInCONV train.png  used on inpu
+t line 583.
 (pdftex.def)             Requested size: 525.23788pt x 143.9909pt.
-<train_test_plots/davis GINCONV test.png, id=476, 458.1918pt x 328.8285pt>
+<train_test_plots/davis GINCONV test.png, id=530, 458.1918pt x 328.8285pt>
 File: train_test_plots/davis GINCONV test.png Graphic file (type png)
 <use train_test_plots/davis GINCONV test.png>
-Package pdftex.def Info: train_test_plots/davis GINCONV test.png  used on input line 550.
+Package pdftex.def Info: train_test_plots/davis GINCONV test.png  used on input
+ line 587.
 (pdftex.def)             Requested size: 315.14594pt x 226.16939pt.
-<train_test_plots/kiba GCN train.png, id=477, 1391.9202pt x 381.5856pt>
+<train_test_plots/kiba GCN train.png, id=531, 1391.9202pt x 381.5856pt>
 File: train_test_plots/kiba GCN train.png Graphic file (type png)
 <use train_test_plots/kiba GCN train.png>
-Package pdftex.def Info: train_test_plots/kiba GCN train.png  used on input line 557.
+Package pdftex.def Info: train_test_plots/kiba GCN train.png  used on input lin
+e 594.
 (pdftex.def)             Requested size: 525.23788pt x 143.9909pt.
-<train_test_plots/kiba GCN test.png, id=478, 443.0151pt x 328.8285pt>
+<train_test_plots/kiba GCN test.png, id=532, 443.0151pt x 328.8285pt>
 File: train_test_plots/kiba GCN test.png Graphic file (type png)
 <use train_test_plots/kiba GCN test.png>
-Package pdftex.def Info: train_test_plots/kiba GCN test.png  used on input line 561.
+Package pdftex.def Info: train_test_plots/kiba GCN test.png  used on input line
+ 598.
 (pdftex.def)             Requested size: 315.14594pt x 233.92145pt.
- [18 <./train_test_plots/davis GInCONV train.png> <./train_test_plots/davis GINCONV test.png> <./train_test_plots/kiba GCN train.png>]
-<train_test_plots/kiba GATGCN train.png, id=487, 1398.4245pt x 381.5856pt>
+ [21 <./train_test_plots/davis GInCONV train.png> <./train_test_plots/davis GIN
+CONV test.png> <./train_test_plots/kiba GCN train.png>]
+<train_test_plots/kiba GATGCN train.png, id=540, 1398.4245pt x 381.5856pt>
 File: train_test_plots/kiba GATGCN train.png Graphic file (type png)
 <use train_test_plots/kiba GATGCN train.png>
-Package pdftex.def Info: train_test_plots/kiba GATGCN train.png  used on input line 567.
+Package pdftex.def Info: train_test_plots/kiba GATGCN train.png  used on input 
+line 604.
 (pdftex.def)             Requested size: 525.23788pt x 143.32132pt.
-<train_test_plots/kiba GATGCN test.png, id=488, 447.3513pt x 328.8285pt>
+<train_test_plots/kiba GATGCN test.png, id=541, 447.3513pt x 328.8285pt>
 File: train_test_plots/kiba GATGCN test.png Graphic file (type png)
 <use train_test_plots/kiba GATGCN test.png>
-Package pdftex.def Info: train_test_plots/kiba GATGCN test.png  used on input line 571.
+Package pdftex.def Info: train_test_plots/kiba GATGCN test.png  used on input l
+ine 608.
 (pdftex.def)             Requested size: 315.14594pt x 231.64851pt.
-<train_test_plots/kiba GAT train.png, id=489, 1382.5251pt x 381.5856pt>
+<train_test_plots/kiba GAT train.png, id=542, 1382.5251pt x 381.5856pt>
 File: train_test_plots/kiba GAT train.png Graphic file (type png)
 <use train_test_plots/kiba GAT train.png>
-Package pdftex.def Info: train_test_plots/kiba GAT train.png  used on input line 577.
+Package pdftex.def Info: train_test_plots/kiba GAT train.png  used on input lin
+e 614.
 (pdftex.def)             Requested size: 525.23788pt x 144.96909pt.
- [19 <./train_test_plots/kiba GCN test.png> <./train_test_plots/kiba GATGCN train.png> <./train_test_plots/kiba GATGCN test.png>]
-<train_test_plots/kiba GAT test.png, id=497, 441.5697pt x 328.8285pt>
+ [22 <./train_test_plots/kiba GCN test.png> <./train_test_plots/kiba GATGCN tra
+in.png> <./train_test_plots/kiba GATGCN test.png>]
+<train_test_plots/kiba GAT test.png, id=550, 441.5697pt x 328.8285pt>
 File: train_test_plots/kiba GAT test.png Graphic file (type png)
 <use train_test_plots/kiba GAT test.png>
-Package pdftex.def Info: train_test_plots/kiba GAT test.png  used on input line 581.
+Package pdftex.def Info: train_test_plots/kiba GAT test.png  used on input line
+ 618.
 (pdftex.def)             Requested size: 315.14594pt x 234.6841pt.
-<train_test_plots/kiba GINCONV train.png, id=498, 1391.9202pt x 381.5856pt>
+<train_test_plots/kiba GINCONV train.png, id=551, 1391.9202pt x 381.5856pt>
 File: train_test_plots/kiba GINCONV train.png Graphic file (type png)
 <use train_test_plots/kiba GINCONV train.png>
-Package pdftex.def Info: train_test_plots/kiba GINCONV train.png  used on input line 587.
+Package pdftex.def Info: train_test_plots/kiba GINCONV train.png  used on input
+ line 624.
 (pdftex.def)             Requested size: 525.23788pt x 143.9909pt.
-<train_test_plots/kiba GINCONV test.png, id=499, 456.0237pt x 328.8285pt>
+<train_test_plots/kiba GINCONV test.png, id=552, 456.0237pt x 328.8285pt>
 File: train_test_plots/kiba GINCONV test.png Graphic file (type png)
 <use train_test_plots/kiba GINCONV test.png>
-Package pdftex.def Info: train_test_plots/kiba GINCONV test.png  used on input line 591.
+Package pdftex.def Info: train_test_plots/kiba GINCONV test.png  used on input 
+line 628.
 (pdftex.def)             Requested size: 315.14594pt x 227.25317pt.
- [20 <./train_test_plots/kiba GAT train.png> <./train_test_plots/kiba GAT test.png> <./train_test_plots/kiba GINCONV train.png>]
-<train_test_plots/URV GCN train.png, id=507, 1382.5251pt x 381.5856pt>
+ [23 <./train_test_plots/kiba GAT train.png> <./train_test_plots/kiba GAT test.
+png> <./train_test_plots/kiba GINCONV train.png>]
+<train_test_plots/URV GCN train.png, id=560, 1382.5251pt x 381.5856pt>
 File: train_test_plots/URV GCN train.png Graphic file (type png)
 <use train_test_plots/URV GCN train.png>
-Package pdftex.def Info: train_test_plots/URV GCN train.png  used on input line 598.
+Package pdftex.def Info: train_test_plots/URV GCN train.png  used on input line
+ 635.
 (pdftex.def)             Requested size: 525.23788pt x 144.96909pt.
-<train_test_plots/URV GCN test.png, id=508, 430.7292pt x 328.8285pt>
+<train_test_plots/URV GCN test.png, id=561, 430.7292pt x 328.8285pt>
 File: train_test_plots/URV GCN test.png Graphic file (type png)
 <use train_test_plots/URV GCN test.png>
-Package pdftex.def Info: train_test_plots/URV GCN test.png  used on input line 602.
+Package pdftex.def Info: train_test_plots/URV GCN test.png  used on input line 
+639.
 (pdftex.def)             Requested size: 315.14594pt x 240.59473pt.
- [21 <./train_test_plots/kiba GINCONV test.png> <./train_test_plots/URV GCN train.png> <./train_test_plots/URV GCN test.png>]
-<train_test_plots/URV GATGCN train.png, id=516, 1391.9202pt x 381.5856pt>
+ [24 <./train_test_plots/kiba GINCONV test.png> <./train_test_plots/URV GCN tra
+in.png> <./train_test_plots/URV GCN test.png>]
+<train_test_plots/URV GATGCN train.png, id=570, 1391.9202pt x 381.5856pt>
 File: train_test_plots/URV GATGCN train.png Graphic file (type png)
 <use train_test_plots/URV GATGCN train.png>
-Package pdftex.def Info: train_test_plots/URV GATGCN train.png  used on input line 608.
+Package pdftex.def Info: train_test_plots/URV GATGCN train.png  used on input l
+ine 645.
 (pdftex.def)             Requested size: 525.23788pt x 143.9909pt.
-<train_test_plots/URV GATGCN test.png, id=517, 435.0654pt x 328.8285pt>
+<train_test_plots/URV GATGCN test.png, id=571, 435.0654pt x 328.8285pt>
 File: train_test_plots/URV GATGCN test.png Graphic file (type png)
 <use train_test_plots/URV GATGCN test.png>
-Package pdftex.def Info: train_test_plots/URV GATGCN test.png  used on input line 612.
+Package pdftex.def Info: train_test_plots/URV GATGCN test.png  used on input li
+ne 649.
 (pdftex.def)             Requested size: 315.14594pt x 238.19135pt.
-<train_test_plots/URV GAT train.png, id=518, 1389.0294pt x 381.5856pt>
+<train_test_plots/URV GAT train.png, id=572, 1389.0294pt x 381.5856pt>
 File: train_test_plots/URV GAT train.png Graphic file (type png)
 <use train_test_plots/URV GAT train.png>
-Package pdftex.def Info: train_test_plots/URV GAT train.png  used on input line 618.
+Package pdftex.def Info: train_test_plots/URV GAT train.png  used on input line
+ 655.
 (pdftex.def)             Requested size: 525.23788pt x 144.28786pt.
-<train_test_plots/URV GAT test.png, id=519, 429.2838pt x 328.8285pt>
+<train_test_plots/URV GAT test.png, id=573, 429.2838pt x 328.8285pt>
 File: train_test_plots/URV GAT test.png Graphic file (type png)
 <use train_test_plots/URV GAT test.png>
-Package pdftex.def Info: train_test_plots/URV GAT test.png  used on input line 622.
+Package pdftex.def Info: train_test_plots/URV GAT test.png  used on input line 
+659.
 (pdftex.def)             Requested size: 315.14594pt x 241.39754pt.
- [22 <./train_test_plots/URV GATGCN train.png> <./train_test_plots/URV GATGCN test.png> <./train_test_plots/URV GAT train.png>]
-<train_test_plots/URV GINCONV train.png, id=527, 1389.0294pt x 381.5856pt>
+ [25 <./train_test_plots/URV GATGCN train.png> <./train_test_plots/URV GATGCN t
+est.png> <./train_test_plots/URV GAT train.png>]
+<train_test_plots/URV GINCONV train.png, id=581, 1389.0294pt x 381.5856pt>
 File: train_test_plots/URV GINCONV train.png Graphic file (type png)
 <use train_test_plots/URV GINCONV train.png>
-Package pdftex.def Info: train_test_plots/URV GINCONV train.png  used on input line 628.
+Package pdftex.def Info: train_test_plots/URV GINCONV train.png  used on input 
+line 665.
 (pdftex.def)             Requested size: 525.23788pt x 144.28786pt.
-<train_test_plots/URV GINCONV test.png, id=528, 446.6286pt x 328.8285pt>
+<train_test_plots/URV GINCONV test.png, id=582, 446.6286pt x 328.8285pt>
 File: train_test_plots/URV GINCONV test.png Graphic file (type png)
 <use train_test_plots/URV GINCONV test.png>
-Package pdftex.def Info: train_test_plots/URV GINCONV test.png  used on input line 632.
+Package pdftex.def Info: train_test_plots/URV GINCONV test.png  used on input l
+ine 669.
 (pdftex.def)             Requested size: 315.14594pt x 232.02483pt.
-<summary.png, id=529, 590.205pt x 390.7398pt>
+<summary.png, id=583, 590.205pt x 390.7398pt>
 File: summary.png Graphic file (type png)
 <use summary.png>
-Package pdftex.def Info: summary.png  used on input line 638.
+Package pdftex.def Info: summary.png  used on input line 675.
 (pdftex.def)             Requested size: 525.23788pt x 347.73347pt.
- [23 <./train_test_plots/URV GAT test.png> <./train_test_plots/URV GINCONV train.png> <./train_test_plots/URV GINCONV test.png>] [24 <./summary.png>] [25] (deliverable.aux)
+ [26 <./train_test_plots/URV GAT test.png> <./train_test_plots/URV GINCONV trai
+n.png> <./train_test_plots/URV GINCONV test.png>] [27 <./summary.png>] [28] (de
+liverable.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
  ***********
 Package rerunfilecheck Info: File `deliverable.out' has not changed.
-(rerunfilecheck)             Checksum: 4B24C4776B0705DABF4610C6992C5D17;9193.
+(rerunfilecheck)             Checksum: 100520CD1B01E43B745FC86C2B91CC91;10163.
  ) 
 Here is how much of TeX's memory you used:
- 10177 strings out of 474591
- 165666 string characters out of 5747194
+ 10222 strings out of 474591
+ 166978 string characters out of 5747194
  1942533 words of memory out of 5000000
- 32135 multiletter control sequences out of 15000+600000
+ 32162 multiletter control sequences out of 15000+600000
  564477 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,9n,79p,533b,636s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\pc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on deliverable.pdf (26 pages, 3332411 bytes).
+ 75i,9n,79p,533b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\pc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm109
+5.pk><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmbx12.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmcsc10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmmi10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/pc/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/pc/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/pc/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on deliverable.pdf (29 pages, 3370430 bytes).
 PDF statistics:
- 632 PDF objects out of 1000 (max. 8388607)
- 113 named destinations out of 1000 (max. 500000)
- 704 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 689 PDF objects out of 1000 (max. 8388607)
+ 131 named destinations out of 1000 (max. 500000)
+ 767 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -17,7 +17,7 @@
 % \addbibresource{library.bib} %Imports bibliography file
  
 % Title of your project
-\title{Prediction of drug–protein binding affinity using existing graph convolutional neural network models on URV In-house dataset}
+\title{Drug potency prediction of SARS-Cov2-Mpro based on Graph Convolutional Network}
 
 % Name of deliverable
 \newcommand{\deliverableName}{MASTER’S Thesis FINAL PROJECT}
@@ -49,29 +49,38 @@
 \section{Introduction}
 
 
-A virus encodes one or more proteases which are enzymes that spur the formation of new protein products, thus play crucial roles in virus replication ,
-and are important targets for the design and development of potent antiviral agents or drugs.
-Binding affinity is the strength of the binding interaction between a single biomolecule (e.g., a virus protein) to its ligand or binding partner (e.g., a drug).
-it is a key to appreciating the intermolecular interactions driving biological processes and measured as part of the drug discovery process to help design drugs that bind their targets selectively and specifically.
+    A virus encodes one or more proteases which are enzymes that spur the formation of new protein products, thus play crucial roles in virus replication ,
+    and are important targets for the design and development of potent antiviral agents or drugs.
+    Binding affinity is the strength of the binding interaction between a single biomolecule (e.g., a virus protein) to its ligand or binding partner (e.g., a drug).
+    it is a key to appreciating the intermolecular interactions driving biological processes and measured as part of the drug discovery process to help design drugs that bind their targets selectively and specifically.
 
-The development of new drugs is costly, time consuming and often accompanied with safety issues.
-Drug repurposing can avoid the expensive and lengthy process of drug development by finding new uses for already approved drugs. In order to repurpose drugs effectively, it is useful to know which proteins are targeted by
-which drugs which is the definition of Drug-Target-Affinity(DTA)\cite{1}
+    The development of new drugs is costly, time consuming and often accompanied with safety issues.
+    Drug repurposing can avoid the expensive and lengthy process of drug development by finding new uses for already approved drugs. In order to repurpose drugs effectively, it is useful to know which proteins are targeted by
+    which drugs which is the definition of Drug-Target-Affinity(DTA)\cite{1}
 
-there is a strong motivation to build computational models that can estimate the interaction strength of new drug–target pairs based on previous drug–target
-experiments.
+    there is a strong motivation to build computational models that can estimate the interaction strength of new drug–target pairs based on previous drug–target
+    experiments.
 
-the DTA prediction problem as a regression task where the input is a drug–target pair and the output is a continuous measurement of binding affinity
-for that pair.
+    the DTA prediction problem as a regression task where the input is a drug–target pair and the output is a continuous measurement of binding affinity
+    for that pair.
 
-\section{Aim}
-
-The aim of this thesis is to make use of four existing Graph-based convolutional neural network(GCN) models following the paper in \cite{1} - to take advantage of the fact that they represent drugs as graphs and use graph neural networks to predict DTA-
-in order to train a neural network on a new small in-house URV dataset of sample size 332 patterns. but since the CNN models typically require large datasets for training like the datasets 
-davis and kiba that have sample sizes of 30058 ( 25047 train + 5011 test ) and 118257 (98547 train + 19710 test) respectively used to train the CNN models in \cite{1} the approach taken will be:
-the GIT repository of the code \cite{2} used in the referenced paper \cite{1} was forked to Git repository \cite{3} to experiment with the 
-code in the referenced paper and obtain the results. code refactoring was done to run experiments in python notebooks instead of terminals
-
+\section{Abstract}
+    A graph, in general, is a data structure depicting a collection of entities represented as nodes, and
+    their pairwise relationships represented as edges. There is a growing interest in having graph-based
+    techniques applied to machine learning, for instance, in biotechnology, they are used to represent
+    drugs and proteins in order to predict their binding affinity. The aim of this master thesis is to apply
+    graph regression techniques based on graph convolutional networks (GCN) to predict the binding
+    affinity of drugs and the SARS-Cov2 Mpro.
+    \\Thus, the specific aim of this master thesis is to define and code in python a GCN to predict the
+    binding affinity of a database generated in the URV composed of several pairs of the main protease
+    of SARS-Cov2 and a drug.
+    \\The master will include the theoretical explanations of
+    \begin{itemize}
+        \item Binding affinity prediction
+        \item Graph Convolutional Networks    
+    \end{itemize}
+    And also the practical use of the following Python code \url{https://github.com/YoussefEzz/GraphDTA_forked} \cite{3} to perform the prediction.
+    
 \section{Drug Representation}
     \subsection{SMILES notation}
     Simplified Molecular Input Line Entry System (SMILES) was invented to represent molecules to be readable by computers.
@@ -405,7 +414,7 @@ code in the referenced paper and obtain the results. code refactoring was done t
     
         \subsection{Contribution}
             \subsubsection{GraphDTA paper (2020)}
-            a new neural network architecture capable of directly modeling drugs as molecular graphs outperforms previous deep learning models.
+            a graph neural network architecture capable of directly modeling drugs as molecular graphs outperforms previous deep learning models.
             so This paper tests the hypothesis that a graph structure could yield a better representation for drugs
             directly modeling drugs as molecular graphs and the results show that it outperforms previous deep learning models
  
@@ -439,29 +448,56 @@ code in the referenced paper and obtain the results. code refactoring was done t
 
                 \end{itemize}
 
-\section{Network architecture}
+\section{GraphDTA Network architecture}
     The overall architecture combines the information from the molecular graph and the protein sequence to make a prediction. it is a PyTorch implementation of a Graph Convolutional Network (GCN) based model
 
     \begin{center}
-        \includegraphics[width=0.8\textwidth]{architecture.PNG}
+        \includegraphics[width=0.8\textwidth]{model/architecture.drawio.png}
     \end{center}
 
-    The architecture consists of two main branches where the SMILES graph based branch could be replaced by any of the four SMILES graph branch models :
+    The architecture consists of two main branches the protein branch and the drug branch
 
-    \begin{itemize}
-        \item \textbf{SMILES graph branch}: operates on the molecular graph representation of the input SMILES. could be any of four models
-        \begin{itemize}
-            \item \textbf{GCN model} 
-                \begin{enumerate}
-                    \item It uses three GCN layers (GCNConv) to extract features from the graph. The number of filters and feature dimensions are increased in the subsequent layers.
-                    \item After the GCN layers, the extracted features are passed through two fully connected layers (fc\_g1 and fc\_g2) to obtain a fixed-size output representation.
-                \end{enumerate}
+    \subsection{Protein sequence branch}
+    operates on the protein sequence input, which is represented as a sequence of integer indices of characters representing amino acids and the steps of processing are as follows:
+        \begin{center}
+            \includegraphics[width=0.7\textwidth]{model/Protein branch.drawio.png}
+        \end{center}
+        \begin{enumerate}
+            \item \textbf{initial representation}: The protein sequence is a string of ASCII characters which represent amino acids.
+            \item \textbf{label encoding}: Each amino acid type is encoded with an integer based on its associated alphabetical symbol [e.g. Alanine (A) is 1, Cystine (C) is 3, Aspartic Acid (D) is 4 and so on], allowing the protein to be represented as an integer sequence. 
+            \item \textbf{padding}: the sequence is cut or padded to a fixed length sequence of 1000 residues. In case a sequence is shorter, it is padded with zero values.
+            \item \textbf{embedding layer}: The protein sequence is passed through an embedding layer (embedding\_xt) to convert the integer indices into a dense vector representation.
+            \item \textbf{1D convolutional layer}: The embedded sequence is then passed through a 1D convolutional layer (conv\_xt\_1) to extract features from the protein sequence.
+            \item \textbf{flattening}: The convolutional features are flattened and passed through a fully connected layer (fc1\_xt) to obtain a fixed size output representation.
+            \item \textbf{linear layer}: The line effectively creates a linear layer that will take an input of size 3872 (the flattened output from the convolution) and produce an output of size 128
+        \end{enumerate} 
 
-                \begin{center}
-                    \includegraphics[width=0.3\textwidth]{GCN_model.PNG}
-                \end{center}
+    \subsection{SMILES graph branch}
+        operates on the molecular graph representation of the input SMILES. could be any of four models
+        
+            \subsubsection{GCN-based model}
+                
+                it uses graph convolutional(GCN) operater from paper ``Semi-supervised Classification with Graph Convolutional Networks.'' in 2017 and it is impemented in torch geometric as \textbf{GCNConv}
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.9\textwidth]{model/GCN_Model.drawio.png} % Replace 'example-image' with the path to your image file
+                    \caption{GCN operator}
+                \end{figure}
 
-            \item \textbf{GAT model}
+                \begin{itemize}
+                    \item \textbf{A} is the normalized adjacency matrix \textbf{N * N}
+                    \item \textbf{X} is node feature matrix \textbf{N * C}
+                    \item \textbf{W} weight matrix of size \textbf{C * F}
+                    \item \textbf{Z} node-level output matrix \textbf{N * F}
+                \end{itemize}
+
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.5\textwidth]{model/GCN-based.drawio.png} % Replace 'example-image' with the path to your image file
+                    \caption{GCN-based model}
+                \end{figure}
+
+            \subsubsection{GAT-based model}
                 \begin{enumerate}
                     \item The model starts with two GAT layers, gcn1 and gcn2, which operate on the input graph data.
                     \item The first GAT layer, gcn1, takes the initial node features (num\_features\_xd) and outputs a representation with 10 heads, effectively increasing the feature dimensionality by a factor of 10.
@@ -472,8 +508,18 @@ code in the referenced paper and obtain the results. code refactoring was done t
                 \begin{center}
                     \includegraphics[width=0.3\textwidth]{GAT_model.PNG}
                 \end{center}
+            
+            \subsubsection{GATGCN-based model}
+                \begin{enumerate}
+                    \item The first layer is a GATConv layer, which implements the Graph Attention Network mechanism. It takes the input node features (num\_features\_xd) and outputs features with the same dimensionality, but with 10 attention heads.
+                    \item The second layer is a GCNConv layer, which applies a standard Graph Convolutional Network operation. It takes the concatenated output of the previous GAT layer (10 times the original number of features) and outputs the same number of features.
+                \end{enumerate}
 
-            \item \textbf{GIN model}
+                \begin{center}
+                    \includegraphics[width=0.3\textwidth]{GAT_GCN.PNG}
+                \end{center}
+            
+            \subsubsection{GIN-based model}
                 \begin{enumerate}
                     \item The model has 5 GINConv layers, each with a sequential neural network (nn1, nn2, ..., nn5) that consists of a Linear layer, a ReLU activation, and another Linear layer.
                     \item Each GINConv layer is followed by a BatchNorm1d layer to normalize the output.
@@ -483,30 +529,21 @@ code in the referenced paper and obtain the results. code refactoring was done t
                     \includegraphics[width=0.3\textwidth]{GIN_model.PNG}
                 \end{center}
 
-            \item \textbf{GAT-GCN model}
-                \begin{enumerate}
-                    \item The first layer is a GATConv layer, which implements the Graph Attention Network mechanism. It takes the input node features (num\_features\_xd) and outputs features with the same dimensionality, but with 10 attention heads.
-                    \item The second layer is a GCNConv layer, which applies a standard Graph Convolutional Network operation. It takes the concatenated output of the previous GAT layer (10 times the original number of features) and outputs the same number of features.
-                \end{enumerate}
+               
+    \subsection{combined fully connected layers}      
+        After obtaining the output representations from the two branches -protein and drug -, the model concatenates them and passes the combined features through a regular neural network composed of two fully connected layers linear layers to produce the final output.
+        The model uses ReLU activations, dropout for regularization after each linear layer.
+        \begin{center}
+            \includegraphics[width=0.5\textwidth]{model/Combined_representation.drawio.png}
+        \end{center}
 
-                \begin{center}
-                    \includegraphics[width=0.3\textwidth]{GAT_GCN.PNG}
-                \end{center}
-
-        \end{itemize} 
-        \item \textbf{Protein sequence branch}: operates on the protein sequence input, which is represented as a sequence of integer indices of characters representing amino acids.
-            \begin{enumerate}
-                \item The protein sequence is passed through an embedding layer (embedding\_xt) to convert the integer indices into a dense vector representation.
-                \item The embedded sequence is then passed through a 1D convolutional layer (conv\_xt\_1) to extract features from the protein sequence.
-                \item The convolutional features are flattened and passed through a fully connected layer (fc1\_xt) to obtain a fixed size output representation.
-            \end{enumerate} 
-    \end{itemize} 
-    After obtaining the output representations from the two branches, the model concatenates them and passes the combined features through two more fully connected layers (fc1 and fc2) to produce the final output.
-
-The model uses ReLU activations, dropout for regularization, and global max pooling (gmp) to aggregate the graph-level features.
-
-    \subsection{GCN-based graph representation learning}
-        The GCNNet class is a neural network model designed for processing two types of input data: molecular graphs (represented by SMILES strings) and protein sequences. This model uses a combination of Graph Convolutional Networks (GCNs) for the molecular graphs and 1D Convolutional Networks (Conv1D) for the protein sequences.
+        \begin{enumerate}
+            \item \textbf{drug branch output}: tensor of length 128 of the output of the drug graph branch
+            \item \textbf{protein branch output}: tensor of length 128 of the output of the protein branch
+            \item \textbf{Linear layer 1}: takes as input the concatenation of two tensors of length 256 - 128 each that represent the output of drug and protein branch - and produces a tensor of length 1024 by applying weight matrix 1024 * 256 followed by RELU activation function
+            \item \textbf{Linear layer 2}: take as input a tensor of length 1024 which is the output of the first linear layer and produces a tensor of length 512 by applying weight matrix 512 * 1024 followed by RELU activation function
+            \item \textbf{Linear layer 3}: take as input a tensor of length 512 which is the output of the second linear layer and produces a tensor of length 1 which is the output affinity by applying weight matrix 1 * 512 
+        \end{enumerate} 
 
 \section{Results}
     \subsection{for davis dataset}
